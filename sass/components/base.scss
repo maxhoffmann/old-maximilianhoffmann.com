@@ -1,0 +1,135 @@
+/**
+ * Base Component
+ *
+ * @author Maximilian Hoffmann
+ */
+
+html {
+  font: 100% myriad-pro, "Helvetica Neue", sans-serif;
+  color: #555;
+  background-color: hsl(0,0%,97%);
+
+  &.wf-inactive {
+    font: 100% "Helvetica Neue", sans-serif;
+  }
+}
+
+p {
+  color: #555;
+  line-height: 1.8;
+
+  .wf-inactive & {
+    @include font-size(15px);
+  }
+}
+
+h1,
+h2,
+h3,
+strong,
+blockquote {
+  font-weight: 600;
+}
+
+h1 {
+  @include font-size(32px);
+  @include padding-bottom(24px);
+
+  .wf-inactive & {
+    @include font-size(28px);
+  }
+}
+
+h2 {
+  @include font-size(21px);
+  @include padding(16px 0 24px 0);
+
+  .wf-inactive & {
+    @include font-size(18px);
+  }
+}
+
+h3 {
+  @include font-size(18px);
+  @include padding-bottom(16px);
+}
+
+a {
+  color: hsl(209, 56%, 47%);
+  @include transition( color .2s ease );
+
+  &:hover {
+    color: #000;
+  }
+}
+
+ul,
+ol {
+  @extend %centered;
+  @include padding-bottom(24px);
+  width: 88%;
+
+  @media (min-width: 34.375em) {
+    width: 100%;
+  }
+}
+
+blockquote {
+  @include padding(24px 0);
+  width: 100%;
+  @include font-size(21px);
+  font-family: "skolar", Georgia, serif;
+  font-style: italic;
+  line-height: 1.4;
+  color: #444;
+  text-align: center;
+
+  p:before {
+    content: '\201C';
+  }
+  p:after {
+    content: '\201D';
+  }
+}
+
+.space-around {
+  @include padding(48px 0);
+
+  @media (min-width: 48em) {
+    & {
+      @include padding(64px 0);
+    }
+  }
+}
+@media (min-width: 48em) {
+  footer.space-around {
+    @include padding-top(160px);
+  }
+}
+.space-above {
+  @include padding-top(24px);
+
+  @media (min-width: 48em) {
+    & {
+      @include padding-top(48px);
+    }
+  }
+}
+.space-below,
+.col {
+  @include padding-bottom(24px);
+}
+@media (min-width: 48em) {
+  .space-below {
+    @include padding-bottom(48px);
+  }
+}
+
+.muted {
+  @include font-size(14px);
+  color: #aaa;
+}
+
+.text-center {
+  text-align: center;
+}

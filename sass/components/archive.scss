@@ -1,0 +1,61 @@
+/**
+ * Archive Component
+ *
+ * @author Maximilian Hoffmann
+ */
+
+.archive {
+  display: block;
+  @include margin-bottom(24px);
+  @include padding(16px 32px);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: white;
+  }
+
+  &:first-of-type {
+    @include margin-top(32px);
+  }
+
+  @media (min-width: 48em) {
+    @include margin-bottom(0);
+    @include padding-top(36px);
+  }
+}
+
+.archive-title {
+  @include font-size(32px);
+  font-weight: 600;
+  color: #333;
+}
+
+.archive-date {
+  @extend .muted;
+  @include padding-bottom(0);
+
+  @media (min-width: 48em) {
+    @include padding-top(16px);
+    text-align: right;
+  }
+  @media (max-width: 20em) {
+    float: none;
+    display: block;
+  }
+}
+
+.archive-category {
+  float: right;
+  @extend .muted;
+  @include padding-bottom(0);
+
+  @media (min-width: 48em) {
+    float: left;
+    @include padding-top(16px);
+  }
+  @media (max-width: 20em) {
+    float: none;
+    display: block;
+    @include margin-bottom(16px);
+  }
+}

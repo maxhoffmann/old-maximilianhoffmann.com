@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1">
+
+  <title>Filtering Input in CodeIgniter by Maximilian Hoffmann</title>
+  <meta name="description" content="I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.">
+  <meta name="author" content="Maximilian Hoffmann">
+  <link rel="author" href="https://plus.google.com/101144444133821135563">
+
+  <script type="text/javascript">
+    (function() {var config = {kitId: 'ffc4zgd',scriptTimeout: 1000};
+      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+    })();
+  </script>
+  <link rel='stylesheet' href='../../60fa6df3a5870d080df18803791b2d0e.css'>
+
+  <!--[if lt IE 9]>
+  <script src="/js/ext/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <div class="container centered">
+
+  <header class="space-around clear">
+    <h1 class="blog-title col"><a href="/" title="home">Maximilian Hoffmann</a></h1>
+    <nav class="col right">
+      <ul class="nav-horizontal">
+        <li class="nav-item"><a class="nav-link" href="/archive">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+<article class="article">
+
+<h1 id="filtering-input-in-codeigniter">Filtering Input in CodeIgniter</h1>
+
+<h4 id="th-of-december">12th of December</h4>
+
+<p>I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.</p>
+
+<p>Let’s start with CodeIgniter’s user guide example of inserting data.</p>
+
+<pre class="language-php"><code>$data = array(
+	'title' =&gt; 'My title',
+	'name' =&gt; 'My Name',
+	'date' =&gt; 'My date'
+);
+
+$this-&gt;db-&gt;insert('mytable', $data);</code></pre>
+
+<p><strong>Insert</strong> accepts two parameters. First is the table name and second is the data to insert provided as an associative array having keys as row names and values as the actual data.</p>
+
+<p>The main problem is building a CodeIgniter compatible array from POST or GET data. To create it we will use the <code>elements</code> function, which is provided by CodeIgniter&#8217;s array_helper and lets you fetch a number of items from an array. This is what I’ve come up with:</p>
+
+<pre class="language-php"><code>$filter = array(
+	'name',
+	'age',
+	'gender'
+);
+
+$data = elements($filter, array_filter($this-&gt;input-&gt;post(NULL, TRUE)), NULL);
+$this-&gt;db-&gt;insert('person', $data);
+</code></pre>
+
+<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up MySQL correctly. If any of these rows are not in the POST array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <strong>elements</strong> function. This also ensures that fields in your database being set to NOT NULL  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <strong>post</strong> if you have globals xss filtering enabled.</p>
+
+<p>While this works fine for inserting data we need to add another function for updating. This is how it looks like:</p>
+
+<pre class="language-php"><code>$filter = array(
+	'name',
+	'age',
+	'gender'
+	);
+
+$data = array_filter(elements($filter, $this-&gt;input-&gt;post(NULL, TRUE)));
+
+$this-&gt;db-&gt;where('id', $id);
+$this-&gt;db-&gt;update('person', $data);</code></pre>
+
+<p>This time we leave out the third parameter of <strong>elements</strong>. Its default value is false, that’s why each data not provided by POST, but required by our filter array will be set to false. Afterwards we filter the result of elements with <code>array_filter</code>, a standard PHP function, iterating over each element of its input array and passing it to a callback function. We haven’t provided a callback which as a result removes every item with a false value <code>(null, false,'',0)</code>. As post items being always strings &#8216;null&#8217; and &#8216;0&#8217; will still work, but not provided data won’t be passed to the update function. To summarize only items of the filter array will be passed to the update function if any of those are provided.</p>
+
+<p>I hope this could help you and I appreciate your feedback.</p>
+
+<p><strong>UPDATE:</strong> I’ve just recognized that you should use <code>array_filter</code> on inserts too, but in reverse order to avoid empty strings being inserted in fields which do not allow <code>NULL</code>. I’ve updated the code sample in the article.</p>
+
+
+</article>
+
+
+  <footer class="new-row space-around">
+    <p class="col third muted">I am a front-end engineer studying media and computer science at the Stuttgart Media University in Germany. I love building beautiful products with web technologies.</p>
+    <p class="col third space-third muted">If you like you can follow me on <a class="twitter" href="//twitter.com/max_hoffmann" title="my twitter profile">twitter</a> or draft me on <a class="dribbble" href="http://dribbble.com/maxhoffmann" title="my dribbble profile">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:contact@maximilianhoffmann.com" title="contact me">email</a>.</p>
+    <p class="text-center space-above new-row">&copy; 2013 Maximilian Hoffmann</p>
+  </footer>
+
+  </div>
+
+  <script>/* GOOGLE ANALYTICS */
+  var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));</script>
+  <script src='../../57d8914f3511fdc7bcc6ed257fab9246.js'></script>
+
+</body>
+</html>

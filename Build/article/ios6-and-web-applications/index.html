@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1">
+
+  <title>iOS6 and Web Applications by Maximilian Hoffmann</title>
+  <meta name="description" content="During the first half of 2012 I worked on a project to enhance my JavaScript knowledge and to build something for myself. This project is called flibbble. My goal was to build a web application which feels like a native one on the latest iPhone.">
+  <meta name="author" content="Maximilian Hoffmann">
+  <link rel="author" href="https://plus.google.com/101144444133821135563">
+
+  <script type="text/javascript">
+    (function() {var config = {kitId: 'ffc4zgd',scriptTimeout: 1000};
+      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+    })();
+  </script>
+  <link rel='stylesheet' href='../../60fa6df3a5870d080df18803791b2d0e.css'>
+
+  <!--[if lt IE 9]>
+  <script src="/js/ext/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <div class="container centered">
+
+  <header class="space-around clear">
+    <h1 class="blog-title col"><a href="/" title="home">Maximilian Hoffmann</a></h1>
+    <nav class="col right">
+      <ul class="nav-horizontal">
+        <li class="nav-item"><a class="nav-link" href="/archive">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+<article class="article">
+
+<h1 id="ios6-and-web-applications">iOS6 and Web Applications</h1>
+
+<h4 id="st-of-january">21st of January</h4>
+
+<p>During the first half of 2012 I worked on a project to enhance my JavaScript knowledge and to build something for myself. This project is called <a href="http://flibbble.com">flibbble</a>. My goal was to build a web application which feels like a native one on the latest iPhone. At that point in time iPhone 5 was not released and there was no web inspector for iOS, but it was a lot of fun, because I have found that it is possible to write web applications with great performance. flibbble is a dribbble feed viewer which displays the latest shots without any application frame. Browsing shots uses CSS 3D transforms and new shots are loaded via AJAX. Swiping to the right reveals navigation where users can select which feed they want to browse. Swiping to the left reveals additional information of the shot. Landscape mode displays the shot in original size and state is stored using localStorage. The main challenge was to maintain a stable framerate for the flipping effect having a lot of images loaded. I rewrote the flipping effect multiple times and used Chrome’s developer tools to find bottlenecks in my code. To gain performance I dropped z-index and moved animations to CSS so that I just had to add or remove one class to animate the images. This lead to great performance with few images, but while browsing iOS’s memory filled up and performance decreased. On iOS5 I was able to handle this problem by adding <code>visibility: hidden</code> to images which are covered and therefore not visible. This probably freed up memory and I could display up to 50 shots without performance issues.</p>
+
+<div class="image-inline"><img src="http://maximilianhoffmann.com/img/flibbble1.png" alt="flibbble screenshot" /></div>
+
+<h2 id="disappointment">Disappointment</h2>
+
+<p>Having read lots of <a href="http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers">good things about iOS6</a> I looked forward to update my iPhone’s operating system and test flibbble. iOS5 had some rendering issues so I was excited to see them fixed and to try the new web inspector, but loading my app the first time on iOS6 was a huge disappointment. Images loaded way slower, performance dropped with more than 20 images and the app crashed when rotating to landscape mode. This was the moment I stopped working on this project. How could an app which worked perfectly on iOS5 fail so hard on iOS6? I searched for another way to free up memory on iOS6, but Apple’s documentation for web applications is dated and very limited. If you know a way to free up memory on iOS6 without removing elements from the DOM feel free to contact me. Having seen <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story">fastbook by Sencha</a> I know that there seems to be a solution. I have uploaded <a href="https://github.com/maxhoffmann/flibbble">flibbble’s current source code</a> to github and would appreciate if you have a look at it. The latest beta version is online on <a href="http://flibbble.com">flibbble.com</a>. There is no descriptive web page, but after adding the site to your homescreen it will load. For the final version I wanted to implement a better way to switch between users and a history of viewed shots, but I won’t officially release it until there is a way to gain the same performance on iOS6 as on iOS5.</p>
+
+
+</article>
+
+
+  <footer class="new-row space-around">
+    <p class="col third muted">I am a front-end engineer studying media and computer science at the Stuttgart Media University in Germany. I love building beautiful products with web technologies.</p>
+    <p class="col third space-third muted">If you like you can follow me on <a class="twitter" href="//twitter.com/max_hoffmann" title="my twitter profile">twitter</a> or draft me on <a class="dribbble" href="http://dribbble.com/maxhoffmann" title="my dribbble profile">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:contact@maximilianhoffmann.com" title="contact me">email</a>.</p>
+    <p class="text-center space-above new-row">&copy; 2013 Maximilian Hoffmann</p>
+  </footer>
+
+  </div>
+
+  <script>/* GOOGLE ANALYTICS */
+  var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));</script>
+  <script src='../../57d8914f3511fdc7bcc6ed257fab9246.js'></script>
+
+</body>
+</html>

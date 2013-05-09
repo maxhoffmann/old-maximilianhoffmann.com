@@ -1,0 +1,22 @@
+/**
+ * Color Component
+ *
+ * @author Maximilian Hoffmann
+ */
+
+.twitter {
+  color: #00ACED;
+
+  &:hover {
+    color: #00749E;
+  }
+
+}
+
+.dribbble {
+  color: #ea4c89;
+
+  &:hover {
+    color: #BB1655;
+  }
+}
