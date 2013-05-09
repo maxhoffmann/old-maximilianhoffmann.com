@@ -20,3 +20,11 @@
     color: #BB1655;
   }
 }
+
+.github {
+	color: #171515;
+
+	&:hover {
+		color: lighten(#171515, 40%);
+	}
+}
