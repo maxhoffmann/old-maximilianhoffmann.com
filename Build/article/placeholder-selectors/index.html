@@ -40,13 +40,13 @@
 
 <article class="article">
 
-<h1 id="placeholder-selectors">Placeholder Selectors</h1>
+<h1>Placeholder Selectors</h1>
 
-<h4 id="th-of-february">14th of February</h4>
+<h4>14th of February</h4>
 
 <p>Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS, by extending classes which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML <strong>and</strong> CSS.</p>
 
-<h2 id="plain-css">Plain CSS</h2>
+<h2>Plain CSS</h2>
 
 <p>Let’s assume we want to implement a website which has tiles with different colors. Each tile has the same width, height and margin.</p>
 
@@ -70,7 +70,7 @@
 <pre class="language-markup"><code>&lt;div class=&quot;tile tile-blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;tile tile-red&quot;&gt;&lt;/div&gt;</code></pre>
 
-<h2 id="without-placeholder-selectors">Without Placeholder Selectors</h2>
+<h2>Without Placeholder Selectors</h2>
 
 <p>We now have two classes in our HTML one for basic tile styles and one for color. To reduce the number of classes we could simply extend <code>.tile</code> and remove it from our HTML.</p>
 
@@ -98,7 +98,7 @@
 
 <p>Additionally it could be the case that we don’t want those basic tile styles used independently without a color.</p>
 
-<h2 id="using-placeholder-selectors">Using Placeholder Selectors</h2>
+<h2>Using Placeholder Selectors</h2>
 
 <p>Changing the dot before a class to a percent sign tells Sass to use it as a placeholder class.</p>
 
