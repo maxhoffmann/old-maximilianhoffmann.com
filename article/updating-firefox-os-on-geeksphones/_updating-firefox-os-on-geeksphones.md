@@ -1,5 +1,7 @@
 # Updating Firefox OS On Geeksphones
 
+#### 31st of May, 2013
+
 If you are one of the lucky guys owning a geeksphone you may have thought about updating to a nightly build. Since geeksphone publishes stable releases over the air you should already have the latest stable version installed. Updating to a nightly build is pretty easy if you don’t want a custom build. This small guide is for Mac OS X. Updating on Linux or Windows is slightly different.
 
 ## Installing adb and fastboot
