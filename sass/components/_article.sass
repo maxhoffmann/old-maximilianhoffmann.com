@@ -1,0 +1,152 @@
+
+// ARTICLE
+
+.article
+	padding-top: 2em
+	line-height: 1.5
+
+	p,
+	h1,
+	h2,
+	h3,
+	blockquote
+		+block-center
+	p
+		+_(container)
+		max-width: em(832,26)
+		margin-bottom: em(52,26)
+		+hyphens
+
+
+		&:first-child:first-letter
+			float: left
+			padding-top: .185em
+			padding-right: .1em
+			font-size: 5em
+			font-weight: bold
+			line-height: .7em
+			color: #333
+
+		code
+			display: inline-block
+			padding: .2em .4em
+			font-family: Consolas, Monaco, 'Andale Mono', monospace
+			font-size: em(18, 26)
+			color: #555
+			background: white
+			border: 1px solid #ddd
+			border-radius: 4px
+
+	h2
+		+_(container)
+		font-family: $font-headlines
+		margin-top: em(104,64)
+		margin-bottom: em(52,64)
+		max-width: em(832,64)
+		font-size: em(64,26)
+		text-align: center
+
+	h3
+		+_(container)
+		margin-top: em(104,42)
+		margin-bottom: em(52,42)
+		max-width: em(832,42)
+		line-height: 1.2
+		font-size: em(42,26)
+
+	blockquote
+		+_(container)
+		margin: em(104,64) auto
+		max-width: em(832,64)
+		font-size: em(64,26)
+		text-align: center
+		font-weight: bold
+		line-height: 1.2
+		color: #bbb
+		&:before
+			content: '\201C'
+		&:after
+			content: '\201D'
+
+	pre
+		+box-sizing(border-box)
+		margin-top: em(104, 18)
+		margin-bottom: em(104, 18)
+		margin-left: 0
+		margin-right: 0
+		padding: 2em
+		width: 100%
+		font-size: em(18, 26)
+		background-color: #fff
+		overflow: auto
+		+media("min-width: 60em")
+			margin-top: em(52, 18)
+			margin-bottom: em(52, 18)
+			max-width: em(832, 18)
+			+block-center
+			border-radius: .3em
+			+box-shadow(0 2px 3px black(.2))
+
+
+	code,
+	pre
+		font-family: Consolas, Monaco, 'Andale Mono', monospace
+		direction: ltr
+		text-align: left
+		white-space: pre
+		word-spacing: normal
+		-moz-tab-size: 4
+		-o-tab-size: 4
+		tab-size: 4
+		+hyphens(none)
+		-webkit-font-smoothing: subpixel-antialiased
+
+	a
+		color: hsl(120,30%,50%)
+		+transition(color .3s)
+		&:hover
+			color: hsl(120,30%,30%)
+
+	ul
+		+_(container)
+		margin-top: em(52,26)
+		margin-bottom: em(52,26)
+		padding: 0
+		max-width: em(832,26)
+		+media("max-width: 30em")
+			padding-left: 2.4em
+
+	.image-inline
+		display: block
+		margin-top: em(52, 26)
+		margin-bottom: em(52, 26)
+		width: 100%
+		img
+			display: block
+			+block-center
+			max-width: 100%
+
+@-moz-document url-prefix()
+	.article p:first-child:first-letter
+		padding-top: 0.105em
+
+.article-meta
+	+_(container)
+	max-width: em(832, 26)
+	padding: 4em 0 2em
+	color: #333
+
+.article-date
+	font-size: 1em
+	color: #bbb
+	font-family: $font-headlines
+	+media("min-width: 40em")
+		text-align: center
+
+.article-title
+	line-height: 1.2
+	font-size: 2.5em
+	font-family: $font-headlines
+	+media("min-width: 40em")
+		font-size: 4em
+		text-align: center

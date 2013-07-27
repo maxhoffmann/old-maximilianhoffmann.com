@@ -1,0 +1,242 @@
+/*
+ * architect.sass
+ *
+ * architect.sass is a sass mixin library which aims to abstract positioning elements for responsive webdesign.
+ * it doesn’t add any classes to your compiled css and uses when-set-undo-methods for easier responsive styling.
+ *
+ * @license http://www.apache.org/licenses/LICENSE-2.0
+ * @copyright Maximilian Hoffmann 2013
+ *
+ * @author Maximilian Hoffmann http://maximilianhoffmann.com
+ * @twitter @max_hoffmann
+ */
+/* architect.sass by Maximilian Hoffmann - @max_hoffmann - maximilianhoffmann.com */
+/*
+ * _ mixin
+ *
+ * just some syntactic sugar for .sass files as there is no shorter syntax for @extend
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+_(bar)
+ *
+ */
+/*
+ * initial mixin
+ *
+ * sets the passed properties back to there initial values (as documented on MDN)
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+initial(height, margin-top)
+ *
+ */
+/*
+ * when mixin
+ *
+ * shorter syntax for media queries
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+when('min-width: 40em')
+ *
+ */
+/*
+ * border-box
+ *
+ * changes the element’s box-sizing to border-box
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+border-box
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * center
+ *
+ * centers the specified child element horizontally and/or vertically
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+center('.bar')
+ * 		color: red
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * center-horizontally
+ *
+ * centers the element horizontally inside its parent
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+center-horizontally
+ *
+ */
+/*
+ *
+ * IS horizontally centered
+ *
+ */
+/*
+ *
+ * NO horizontally centered
+ *
+ */
+/*
+ * clear
+ *
+ * centers the specified child element horizontally and/or vertically
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+clear
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * media mixin
+ *
+ * place an image and text side by side
+ *
+ * thanks to @stubbornella and @csswizardry
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+media('.media-img', '.media-body')
+ *
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * row mixin
+ *
+ * stack child elements horizontally
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+row('.bar')
+ * 		background-color: blue
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * stretch
+ *
+ * let child elements occupy 100% of the available width
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+stretch('.bar')
+ * 		color: red
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * (min/max)-viewport-height
+ *
+ * let child elements occupy 100% of the available width
+ *
+ * Usage:
+ *
+ * +min-viewport-height('.full-height')
+ * 	background-color: blue
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */
+/*
+ * drop-cap
+ *
+ * styles the first letter of an element as a drop cap
+ *
+ * Usage:
+ *
+ * .foo
+ * 	+drop-cap(middle)
+ * 		font-size: 3em
+ *
+ */
+/*
+ *
+ * SET
+ *
+ */
+/*
+ *
+ * UNDO
+ *
+ */

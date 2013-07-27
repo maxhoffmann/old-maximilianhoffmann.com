@@ -1,10 +1,7 @@
-# Mobile First
-
-#### 9th of December
 
 I have been familiar with mobile first and its advantages for a long time, but my blog’s latest iteration is the first site which actually uses this approach. First I had started implementing the new design desktop first and added mobile styles later via media queries, but after having seen Brad Frost’s inspiring talk [“Beyond Media Queries”](https://vimeo.com/55076713) I have finally changed my mind and wrote the CSS from scratch, which was the best decision I could make. My styles are smaller in file size, easier to maintain and flexible like never before. Additionally I have started my own small Sass framework full of useful components and mixins, which faciliates things like using rems instead of pixels and includes my new way of laying out elements on a page. This “new” way has a lot in common with grids as it uses floats, but I think it is superior to most grids, because of its missing row divs and its mobile first approach.
 
-## Reverse Engineering
+### Reverse Engineering
 
 I started with looking at the new design based on my old desktop first approach and reverse engineered the grid. The first thing I recognized is that most designs on mobile devices have centered elements, so I wrote a placeholder class, which were introduced in Sass 3.2, to center elements:
 
@@ -32,7 +29,7 @@ Now it’s time to add columns, which will later lay out as a grid on wider scre
 
 This time `max-width` prevents columns of enlarging too wide, so that their content is good to read on tablet devices. These classes are enough to give your site a basic and readable layout for most mobile and tablet devices. Browsers without media queries like IE8 and below render the page fine as columns are never too wide for their content and centered by default.
 
-##Applying the grid
+### Applying the grid
 
 The actual grid is wrapped in a media query. The following styles are inside this query:
 

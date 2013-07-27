@@ -1,6 +1,3 @@
-# Filtering Input in CodeIgniter
-
-#### 12th of December
 
 I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.
 

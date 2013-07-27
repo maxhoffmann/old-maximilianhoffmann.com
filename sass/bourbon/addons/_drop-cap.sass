@@ -1,0 +1,30 @@
+=drop-cap($position: inset)
+
+	@if position == inset
+		+drop-cap-to-inset
+	@if position == middle
+		+drop-cap-to-middle
+	@if position == left
+		+drop-cap-to-left
+
+	&:first-letter
+		float: left
+		padding-top: 0.16em
+		line-height: 0.7em
+		padding-right: 0.1em
+		@content
+
+=drop-cap-to-inset
+	&:first-letter
+		margin-left: 0
+		@content
+
+=drop-cap-to-middle
+	&:first-letter
+		margin-left: -.83em
+		@content
+
+=drop-cap-to-left
+	&:first-letter
+		margin-left: -2em
+		@content

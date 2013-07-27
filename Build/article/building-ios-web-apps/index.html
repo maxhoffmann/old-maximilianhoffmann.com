@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Building iOS Web Apps by Maximilian Hoffmann</title>
+	<meta name="description" content="Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered CSS and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest Nightly WebKit, which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found on https://gist.github.com/paulmillr/4056234.">
+	<meta name="author" content="Maximilian Hoffmann">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script type="text/javascript" src="//use.typekit.net/ukz6xxx.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="author" href="https://plus.google.com/101144444133821135563">
+	<link rel='stylesheet' href='../../b576bcd3423bd0dc6e1179cae206871b.css'>
 
-  <title>Building iOS Web Apps by Maximilian Hoffmann</title>
-  <meta name="description" content="Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered CSS and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest Nightly WebKit, which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found on https://gist.github.com/paulmillr/4056234.">
-  <meta name="author" content="Maximilian Hoffmann">
-  <link rel="author" href="https://plus.google.com/101144444133821135563">
-
-  <script type="text/javascript">
-    (function() {var config = {kitId: 'ffc4zgd',scriptTimeout: 1000};
-      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-    })();
-  </script>
-  <link rel='stylesheet' href='../../21bfcff602c85776a7f6e75c57d0c262.css'>
-
-  <!--[if lt IE 9]>
-  <script src="/js/ext/html5shiv.min.js"></script>
-  <![endif]-->
-
+	<!--[if lt IE 9]>
+	<script src="/js/ext/html5shiv.min.js"></script>
+	<![endif]-->
 </head>
-<body>
+<body class="dark-on-light">
 
-  <div class="container centered">
-
-  <header class="space-around clear">
-    <h1 class="blog-title col"><a href="/" title="home">Maximilian Hoffmann</a></h1>
-    <nav class="col right">
-      <ul class="nav-horizontal">
-        <li class="nav-item"><a class="nav-link" href="/archive">Archive</a></li>
-      </ul>
-    </nav>
-  </header>
+	<nav class="navigation">
+		<div class="centered navigation-content">
+			<a href="/" class="navigation-name">Maximilian Hoffmann</a>
+			<a href="/archive" class="navigation-archive">Archive</a>
+		</div>
+	</nav>
 
 
 
+
+<header class="article-meta">
+	<h2 class="article-date">22nd of February, 2013</h2>
+	<h1 class="article-title">Building iOS Web Apps</h1>
+</header>
 
 <article class="article">
 
-<h1>Building iOS Web Apps</h1>
 
-<h4>22nd of February</h4>
-
-<h2>Web Inspector</h2>
+<h3>Web Inspector</h3>
 <p>Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered CSS and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest <a href="http://nightly.webkit.org/">Nightly WebKit</a>, which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found <a href="https://gist.github.com/paulmillr/4056234">here</a>.</p>
 
 <p>To enable developer tools on your computer go to <strong>Preferences &gt; Advanced</strong> in Webkit/Safari and check the box next to “Show Develop menu in menu bar”.</p>
@@ -55,17 +46,17 @@ On your mobile device go to <strong>Settings &gt; Safari &gt; Advanced</strong> 
 <p><a href="/images/ios_web_inspector.png" class="image-inline"><img src="/images/ios_web_inspector.png" /></a>
 Afterwards you can connect the device with your computer using a <strong>cable</strong>. If you have opened a website on mobile Safari, its desktop counterpart should now list your device in its develop menu including your open tabs. Clicking on one of these should open the developer tools for the selected website.</p>
 
-<h2>Local Web Server</h2>
+<h3>Local Web Server</h3>
 
 <p>While developing your application it is useful to see changes instantly and without the need of a server. That’s why I recommend you to install and start <a href="http://www.mamp.info/">MAMP</a>. This application allows you to choose a folder, which will be displayed at <code>http://localhost</code> and at your IP address on mobile devices if they are in the same wireless network as your computer. To find your computer’s IP go to <strong>System Preferences &gt; Network</strong>. It will probably look like 192.168.0.X therefore you should be able to open the web app from your device at <code>http://192.168.0.X</code>. For instant updates when saving a file you can use tools like <a href="http://livereload.com/">LiveReload</a>.</p>
 
-<h2>Hiding Safari’s chrome</h2>
+<h3>Hiding Safari’s chrome</h3>
 
 <p>Users have always the ability to add websites to their homescreen, but If you want to hide Safari’s chrome after they have added yours, you need to include this meta tag:</p>
 
 <pre class="language-markup"><code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</code></pre>
 
-<h2>Zooming and Viewports</h2>
+<h3>Zooming and Viewports</h3>
 
 <p>On websites users may pinch to zoom at anytime anywhere, but this shouldn’t be possible for web apps in most cases. This meta tag disables zooming with gestures and sets the viewport to its ”default” value:</p>
 
@@ -73,13 +64,13 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <p>I have to admit that “default value” is not quite right as viewport is a larger topic, but you can read more about it on <a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW1">Apple’s Safari Web Content Guide</a>.</p>
 
-<h2>Status bar options</h2>
+<h3>Status bar options</h3>
 
 <p>The status bar above your web app is black by default on iOS6. You may change this to black translucent, but keep in mind that this will add 20px and 40px on retina screens respectively to your app’s height.</p>
 
 <pre class="language-markup"><code>&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot;&gt;</code></pre>
 
-<h2>Your app’s name</h2>
+<h3>Your app’s name</h3>
 
 <p>If a user wants to add your site to his homescreen, Safari uses the webpage&#8217;s title as a suggestion for the name of your web app. Since iOS6 you can suggest another name:</p>
 
@@ -87,7 +78,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <p>In both cases it is just a proposal and users will always be able to define another name.</p>
 
-<h2>Icon sizes</h2>
+<h3>Icon sizes</h3>
 
 <p>By default iOS uses a screenshot of your website as icon for the web app. You can set your own by appending a <code>link</code> tag to your website with the <code>rel</code> attribute of “apple-touch-icon”.  As there are different screen resolutions across Apple’s devices you can define an icon for each of them, but iOS is also able to scale icons down (or even up). This means you can define an icon for the retina iPad, which has the size of 144 by 144 pixels and it will work on every other device for example an iPhone 3G. I prefer defining one icon for each retina device and leave standard displays behind as retina will be everywhere. So if your web app will work on both iPhone and iPad, make and include both in retina sizes. If it’s intended to work on iPhone only like <a href="http://doubbble.com">doubbble</a>, include just the retina iPhone icon. To tell iOS which icon it should use if both options are available, give it a hint with the <code>sizes</code> attribute. Example:</p>
 
@@ -99,7 +90,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <p>You may leave out the <code>link</code> tags if your icons are stored in your website’s root directory and start with ”apple-touch-icon-&#8230;”, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added <strong>precomposed</strong> to the icon’s name and the <code>rel</code> attribute of the <code>link</code> tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at <a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4">Apple’s Guide</a>.</p>
 
-<h2>Startup image</h2>
+<h3>Startup image</h3>
 
 <p>As for native apps you have the ability to display an image when the user starts your web app. <a href="http://doubbble.com">doubbble</a> for example displays an image of its initial screen so that the first start of the app feels much faster. A startup image is always the size of the device’s resolution minus the status bar. iPads can have one startup image for portrait mode and one for landscape mode whereas iPhone web apps will always start in portrait mode. Furthermore iOS doesn’t scale startup images. You have to include images for every device you support with the correct dimensions to work. Additionally startup images in landscape mode have to be saved in portrait mode rotated 90 degrees clockwise. According to the <code>media</code> attribute of the <code>link</code> tags iOS applies the matching image. A full list with every possible startup image definition can be found on this <a href="https://gist.github.com/tfausak/2222823">gist</a>. The code is pretty heavy if you support a broad range of devices, but it’s easy and short if you just support iPhone 5 and iPhone 4 for example:</p>
 
@@ -111,7 +102,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <p>Image dimension of startup images for iPhone 4/4S is 640x920 and for iPhone 5 it’s 640x1096.</p>
 
-<h2>Writing the first lines</h2>
+<h3>Writing the first lines</h3>
 
 <p>Taking everything into account I have written an <code>index.html</code> for the dribbble feed viewer:</p>
 
@@ -137,7 +128,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <p><a href="/images/icon.jpg" class="image-inline"><img src="/images/icon.jpg" /></a></p>
 
-<h2>Questions?</h2>
+<h3>Questions?</h3>
 
 <p>Is anything unclear to you or have you found grammatical errors due to the fact that I am not a native speaker? I’d value your feedback on this article on <a href="http://branch.com/b/building-ios-web-apps-part-1-maximilian-hoffmann/invite_link/m7YHa4NJhx7Mzw">Branch</a>.</p>
 
@@ -145,20 +136,21 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 </article>
 
 
-  <footer class="new-row space-around">
-    <p class="col third muted">I am a web engineer studying media and computer science at the Stuttgart Media University in Germany. I love building beautiful products with web technologies.</p>
-    <p class="col third space-third muted">I also <a class="twitter" href="http://twitter.maximilianhoffmann.com" title="my twitter profile">tweet</a> about web development, share code on <a class="github" href="http://github.maximilianhoffmann.com">github</a> and follow great designers on <a class="dribbble" href="http://dribbble.maximilianhoffmann.com" title="my dribbble profile">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:contact@maximilianhoffmann.com" title="contact me">email</a>.</p>
-    <p class="text-center space-above new-row">&copy; 2013 Maximilian Hoffmann</p>
-  </footer>
+	<footer class="footer">
+		<div class="centered footer-content">
+			<p class="footer-about">I am a web engineer studying media and computer science at the Stuttgart Media University in Germany. I love building beautiful products with web technologies.</p>
+			<p class="footer-social">I also <a href="https://twitter.com/max_hoffmann" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<p class="footer-copy">&copy; Maximilian Hoffmann</p>
+		</div>
+	</footer>
 
-  </div>
+	<script>/* GOOGLE ANALYTICS */
+	var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));</script>
 
-  <script>/* GOOGLE ANALYTICS */
-  var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));</script>
-  <script src='../../890812ccb60a7c9d7e3410382a00c2b8.js'></script>
+	<script src='../../890812ccb60a7c9d7e3410382a00c2b8.js'></script>
 
 </body>
 </html>
