@@ -1,9 +1,9 @@
 
-Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS, by extending classes which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS.
+Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS.
 
 ### Plain CSS
 
-Let’s assume we want to implement a website which has tiles with different colors. Each tile has the same width, height and margin.
+Let’s assume we want to implement a website, which has tiles with different colors. Each tile has the same width, height and margin.
 
 <pre class="language-css"><code>.tile {
 	width: 200px;
@@ -11,7 +11,7 @@ Let’s assume we want to implement a website which has tiles with different col
 	margin-right: 20px;
 }</code></pre>
 
-For having the ability of adding different colors to those tiles we add two theme classes to our tile module.
+For the ability to add different colors to the tiles we included two theme classes in our CSS.
 
 <pre class="language-css"><code>.tile-blue {
 	background-color: blue;
@@ -20,14 +20,14 @@ For having the ability of adding different colors to those tiles we add two them
 	background-color: red;
 }</code></pre>
 
-Using our tile classes in HTML could look like this:
+The corresponding markup could look like this:
 
 <pre class="language-markup"><code>&lt;div class=&quot;tile tile-blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;tile tile-red&quot;&gt;&lt;/div&gt;</code></pre>
 
 ### Without Placeholder Selectors
 
-We now have two classes in our HTML one for basic tile styles and one for color. To reduce the number of classes we could simply extend `.tile` and remove it from our HTML.
+We’ve added two classes to the tile element: one for basic tile styles and one for the color. To reduce the number of classes we could simply extend `.tile` and remove it from our HTML.
 
 <pre class="language-css"><code>.tile {
 	width: 200px;
@@ -43,7 +43,7 @@ We now have two classes in our HTML one for basic tile styles and one for color.
 	background-color: red;
 }</code></pre>
 
-Although we wouldn’t have to use `.tile` in our HTML anymore it would still be in our compiled CSS:
+Although we wouldn’t have to use the `.tile` class in our markup anymore, it would still be in our compiled CSS:
 
 <pre class="language-css"><code>.tile, .tile-blue, .tile-red {
 	width: 200px;
@@ -51,7 +51,7 @@ Although we wouldn’t have to use `.tile` in our HTML anymore it would still be
 	margin-right: 20px;
 }</code></pre>
 
-Additionally it could be the case that we don’t want those basic tile styles used independently without a color.
+To save some bytes or to prevent other developers from using the basic tile class without a color, we could also remove it from the compiled CSS.
 
 ### Using Placeholder Selectors
 
@@ -71,12 +71,12 @@ Changing the dot before a class to a percent sign tells Sass to use it as a plac
 	background-color: red;
 }</code></pre>
 
-Finally we are able use just the theme classes in our HTML.
+Now we just need to use our theme classes.
 
 <pre class="language-markup"><code>&lt;div class=&quot;tile-red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;tile-blue&quot;&gt;&lt;/div&gt;</code></pre>
 
-And our compiled CSS doesn’t contain our tile module anymore.
+And our compiled CSS doesn’t contain the basic tile class anymore.
 
 <pre class="language-css"><code>.tile-blue, .tile-red {
 	width: 200px;
@@ -90,7 +90,7 @@ And our compiled CSS doesn’t contain our tile module anymore.
 	background-color: red;
 }</code></pre>
 
-To sum up placeholder classes are not included in your compiled CSS so that you can prevent developers to use those classes in their HTML or building a framework of placeholder classes which will only be included if extended by another class.
+To sum up placeholder classes are not included in your compiled CSS so that you can prevent developers from using those classes in their HTML. It is also possible to build a framework solely out of placeholder classes, which will only be added to the compiled CSS if developers extend them.
 
 ### Further Reading
 
