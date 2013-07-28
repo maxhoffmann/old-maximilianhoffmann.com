@@ -3,7 +3,7 @@ If you are one of the lucky guys owning a geeksphone you may have thought about 
 
 ### Installing adb and fastboot
 
-`adb` and `fastboot` are small executables provided by the Android SDK. Simply download the Android SDK from [the official website](http://developer.android.com/sdk/index.html) and unzip the file. Then open the folder __platform-tools__ inside of __sdk__ and copy the files __adb__ and __fastboot__ to a folder in your PATH, e.g. `/bin/`.
+`adb` and `fastboot` are small executables provided by the Android <abbr>SDK</abbr>. Simply download the Android <abbr>SDK</abbr> from [the official website](http://developer.android.com/sdk/index.html) and unzip the file. Then open the folder __platform-tools__ inside of __sdk__ and copy the files __adb__ and __fastboot__ to a folder in your <abbr>PATH</abbr>, e.g. `/bin/`.
 
 ### Download the latest nightly build
 
@@ -11,7 +11,7 @@ Now head over to [geeksphone’s official images](http://downloads.geeksphone.co
 
 ### Updating your device
 
-Before the final step be sure that your device has at least 50% power. If that’s the case connect it to your Mac via USB and open the unzipped folder with the image from geeksphone in terminal. Now simply flash the phone by executing:
+Before the final step be sure that your device has at least 50% power. If that’s the case connect it to your Mac via <abbr>USB</abbr> and open the unzipped folder with the image from geeksphone in terminal. Now simply flash the phone by executing:
 
 	./flash_mac.sh
 

@@ -9,7 +9,7 @@ You probably know that advertisment before, inside or overlaying your content is
 ### 2. Progressive Enhancement
 As content is the most important part of your website, it should be accessible from anywhere. Start with the content and don’t force details.
 
-Animations are great if they run smoothly. CSS transitions and animations are hardware accelerated and have a good performance even on mobile devices whereas Javascript animations are rendered by the CPU, which looks choppy in most cases. Don’t let your clients expect to see animations in browsers without CSS transitions/animations support.
+Animations are great if they run smoothly. <abbr>CSS</abbr> transitions and animations are hardware accelerated and have a good performance even on mobile devices whereas Javascript animations are rendered by the <abbr>CPU</abbr>, which looks choppy in most cases. Don’t let your clients expect to see animations in browsers without <abbr>CSS</abbr> transitions/animations support.
 
 ### 3. Functional Beauty
 To emphasize your content by design, make it beautiful, but unobtrusive. Design to convey a point.

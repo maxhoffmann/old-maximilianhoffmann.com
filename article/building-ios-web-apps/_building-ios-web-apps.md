@@ -1,6 +1,6 @@
 
 ### Web Inspector
-Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered CSS and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest [Nightly WebKit](http://nightly.webkit.org/), which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found [here](https://gist.github.com/paulmillr/4056234).
+Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered <abbr>CSS</abbr> and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest [Nightly WebKit](http://nightly.webkit.org/), which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found [here](https://gist.github.com/paulmillr/4056234).
 
 To enable developer tools on your computer go to __Preferences > Advanced__ in Webkit/Safari and check the box next to “Show Develop menu in menu bar”.
 
@@ -12,7 +12,7 @@ Afterwards you can connect the device with your computer using a __cable__. If y
 
 ### Local Web Server
 
-While developing your application it is useful to see changes instantly and without the need of a server. That’s why I recommend you to install and start [MAMP](http://www.mamp.info/). This application allows you to choose a folder, which will be displayed at `http://localhost` and at your IP address on mobile devices if they are in the same wireless network as your computer. To find your computer’s IP go to __System Preferences > Network__. It will probably look like 192.168.0.X therefore you should be able to open the web app from your device at `http://192.168.0.X`. For instant updates when saving a file you can use tools like [LiveReload](http://livereload.com/).
+While developing your application it is useful to see changes instantly and without the need of a server. That’s why I recommend you to install and start [MAMP](http://www.mamp.info/). This application allows you to choose a folder, which will be displayed at `http://localhost` and at your <abbr>IP</abbr> address on mobile devices if they are in the same wireless network as your computer. To find your computer’s <abbr>IP</abbr> go to __System Preferences > Network__. It will probably look like 192.168.0.X therefore you should be able to open the web app from your device at `http://192.168.0.X`. For instant updates when saving a file you can use tools like [LiveReload](http://livereload.com/).
 
 ### Hiding Safari’s chrome
 
@@ -30,7 +30,7 @@ I have to admit that “default value” is not quite right as viewport is a lar
 
 ###  Status bar options
 
-The status bar above your web app is black by default on iOS6. You may change this to black translucent, but keep in mind that this will add 20px and 40px on retina screens respectively to your app’s height.
+The status bar above your web app is black by default on iOS6. You may change this to black translucent, but keep in mind that this will add `20px` and `40px` on retina screens respectively to your app’s height.
 
 <pre class="language-markup"><code>&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot;&gt;</code></pre>
 

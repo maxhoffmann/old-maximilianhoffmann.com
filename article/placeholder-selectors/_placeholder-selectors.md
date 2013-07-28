@@ -1,5 +1,5 @@
 
-Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS.
+Introduced with Sass 3.2 placeholder selectors enable us to write better modular <abbr>CSS</abbr> by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your <abbr>HTML</abbr> __and__ <abbr>CSS</abbr>.
 
 ### Plain CSS
 
@@ -11,7 +11,7 @@ Let’s assume we want to implement a website, which has tiles with different co
 	margin-right: 20px;
 }</code></pre>
 
-For the ability to add different colors to the tiles we included two theme classes in our CSS.
+For the ability to add different colors to the tiles we included two theme classes in our <abbr>CSS</abbr>.
 
 <pre class="language-css"><code>.tile-blue {
 	background-color: blue;
@@ -27,7 +27,7 @@ The corresponding markup could look like this:
 
 ### Without Placeholder Selectors
 
-We’ve added two classes to the tile element: one for basic tile styles and one for the color. To reduce the number of classes we could simply extend `.tile` and remove it from our HTML.
+We’ve added two classes to the tile element: one for basic tile styles and one for the color. To reduce the number of classes we could simply extend `.tile` and remove it from our <abbr>HTML</abbr>.
 
 <pre class="language-css"><code>.tile {
 	width: 200px;
@@ -43,7 +43,7 @@ We’ve added two classes to the tile element: one for basic tile styles and one
 	background-color: red;
 }</code></pre>
 
-Although we wouldn’t have to use the `.tile` class in our markup anymore, it would still be in our compiled CSS:
+Although we wouldn’t have to use the `.tile` class in our markup anymore, it would still be in our compiled <abbr>CSS</abbr>:
 
 <pre class="language-css"><code>.tile, .tile-blue, .tile-red {
 	width: 200px;
@@ -51,7 +51,7 @@ Although we wouldn’t have to use the `.tile` class in our markup anymore, it w
 	margin-right: 20px;
 }</code></pre>
 
-To save some bytes or to prevent other developers from using the basic tile class without a color, we could also remove it from the compiled CSS.
+To save some bytes or to prevent other developers from using the basic tile class without a color, we could also remove it from the compiled <abbr>CSS</abbr>.
 
 ### Using Placeholder Selectors
 
@@ -76,7 +76,7 @@ Now we just need to use our theme classes.
 <pre class="language-markup"><code>&lt;div class=&quot;tile-red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;tile-blue&quot;&gt;&lt;/div&gt;</code></pre>
 
-And our compiled CSS doesn’t contain the basic tile class anymore.
+And our compiled <abbr>CSS</abbr> doesn’t contain the basic tile class anymore.
 
 <pre class="language-css"><code>.tile-blue, .tile-red {
 	width: 200px;
@@ -90,7 +90,7 @@ And our compiled CSS doesn’t contain the basic tile class anymore.
 	background-color: red;
 }</code></pre>
 
-To sum up placeholder classes are not included in your compiled CSS so that you can prevent developers from using those classes in their HTML. It is also possible to build a framework solely out of placeholder classes, which will only be added to the compiled CSS if developers extend them.
+To sum up placeholder classes are not included in your compiled <abbr>CSS</abbr> so that you can prevent developers from using those classes in their <abbr>HTML</abbr>. It is also possible to build a framework solely out of placeholder classes, which will only be added to the compiled <abbr>CSS</abbr> if developers extend them.
 
 ### Further Reading
 

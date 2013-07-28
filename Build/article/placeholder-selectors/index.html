@@ -6,7 +6,7 @@
 	<meta name="description" content="Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../ebf92ae0e850757d01de97f5c56636b9.css'>
+	<link rel='stylesheet' href='../../def4116670d4c577b1db731c8de466e7.css'>
 	<script type="text/javascript" src="//use.typekit.net/ukz6xxx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
@@ -34,7 +34,7 @@
 <article class="article">
 
 
-<p>Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML <strong>and</strong> CSS.</p>
+<p>Introduced with Sass 3.2 placeholder selectors enable us to write better modular <abbr>CSS</abbr> by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your <abbr>HTML</abbr> <strong>and</strong> <abbr>CSS</abbr>.</p>
 
 <h3>Plain CSS</h3>
 
@@ -46,7 +46,7 @@
 	margin-right: 20px;
 }</code></pre>
 
-<p>For the ability to add different colors to the tiles we included two theme classes in our CSS.</p>
+<p>For the ability to add different colors to the tiles we included two theme classes in our <abbr>CSS</abbr>.</p>
 
 <pre class="language-css"><code>.tile-blue {
 	background-color: blue;
@@ -62,7 +62,7 @@
 
 <h3>Without Placeholder Selectors</h3>
 
-<p>We’ve added two classes to the tile element: one for basic tile styles and one for the color. To reduce the number of classes we could simply extend <code>.tile</code> and remove it from our HTML.</p>
+<p>We’ve added two classes to the tile element: one for basic tile styles and one for the color. To reduce the number of classes we could simply extend <code>.tile</code> and remove it from our <abbr>HTML</abbr>.</p>
 
 <pre class="language-css"><code>.tile {
 	width: 200px;
@@ -78,7 +78,7 @@
 	background-color: red;
 }</code></pre>
 
-<p>Although we wouldn’t have to use the <code>.tile</code> class in our markup anymore, it would still be in our compiled CSS:</p>
+<p>Although we wouldn’t have to use the <code>.tile</code> class in our markup anymore, it would still be in our compiled <abbr>CSS</abbr>:</p>
 
 <pre class="language-css"><code>.tile, .tile-blue, .tile-red {
 	width: 200px;
@@ -86,7 +86,7 @@
 	margin-right: 20px;
 }</code></pre>
 
-<p>To save some bytes or to prevent other developers from using the basic tile class without a color, we could also remove it from the compiled CSS.</p>
+<p>To save some bytes or to prevent other developers from using the basic tile class without a color, we could also remove it from the compiled <abbr>CSS</abbr>.</p>
 
 <h3>Using Placeholder Selectors</h3>
 
@@ -111,7 +111,7 @@
 <pre class="language-markup"><code>&lt;div class=&quot;tile-red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;tile-blue&quot;&gt;&lt;/div&gt;</code></pre>
 
-<p>And our compiled CSS doesn’t contain the basic tile class anymore.</p>
+<p>And our compiled <abbr>CSS</abbr> doesn’t contain the basic tile class anymore.</p>
 
 <pre class="language-css"><code>.tile-blue, .tile-red {
 	width: 200px;
@@ -125,7 +125,7 @@
 	background-color: red;
 }</code></pre>
 
-<p>To sum up placeholder classes are not included in your compiled CSS so that you can prevent developers from using those classes in their HTML. It is also possible to build a framework solely out of placeholder classes, which will only be added to the compiled CSS if developers extend them.</p>
+<p>To sum up placeholder classes are not included in your compiled <abbr>CSS</abbr> so that you can prevent developers from using those classes in their <abbr>HTML</abbr>. It is also possible to build a framework solely out of placeholder classes, which will only be added to the compiled <abbr>CSS</abbr> if developers extend them.</p>
 
 <h3>Further Reading</h3>
 
