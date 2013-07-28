@@ -1,7 +1,7 @@
 
 I have been familiar with mobile first and its advantages for a long time, but my blog’s latest iteration is the first site which actually uses this approach. First I had started implementing the new design desktop first and added mobile styles later via media queries, but after having seen Brad Frost’s inspiring talk [“Beyond Media Queries”](https://vimeo.com/55076713) I have finally changed my mind and wrote the <abbr>CSS</abbr> from scratch, which was the best decision I could make.
 
-My styles are smaller in file size, easier to maintain and flexible like never before. Additionally I have started my own small Sass framework full of useful components and mixins, which faciliates things like using rems instead of pixels and includes my new way of laying out elements on a page. This “new” way has a lot in common with grids as it uses floats, but I think it is superior to most grids, because of its missing row divs and its mobile first approach.
+My styles are smaller in file size, easier to maintain and flexible like never before. Additionally I have started my own small Sass framework full of useful components and mixins, which faciliates things like using ems instead of pixels and includes my new way of laying out elements on a page. This “new” way has a lot in common with grids as it uses floats, but I think it is superior to most grids, because of its missing row divs and its mobile first approach.
 
 ### Reverse Engineering
 
@@ -17,7 +17,7 @@ Next I added a __container__ class to give elements some horizontal space.
 <pre class="language-css"><code>.container {
 	@extend %centered;
 	width: 88%;
-	max-width: 64rem;
+	max-width: 64em;
 }</code></pre>
 
 Notice `max-width` limiting the width of my site to `1024px`, which fits best for my design, but you could change the value to your needs or omit it completely.
@@ -26,7 +26,7 @@ Now it’s time to add columns, which will later lay out as a grid on wider scre
 
 <pre class="language-css"><code>.col {
 	@extend %centered;
-	max-width: 30rem;
+	max-width: 30em;
 }</code></pre>
 
 This time `max-width` prevents columns of enlarging too wide, so that their content is good to read on tablet devices. These classes are enough to give your site a basic and readable layout for most mobile and tablet devices. Browsers without media queries like <abbr>IE8</abbr> and below render the page fine as columns are never too wide for their content and centered by default.
@@ -35,7 +35,7 @@ This time `max-width` prevents columns of enlarging too wide, so that their cont
 
 The actual grid is wrapped in a media query. The following styles are inside this query:
 
-<pre class="language-css"><code>@media (min-width: 48rem) {
+<pre class="language-css"><code>@media (min-width: 48em) {
 	/* styles */
 }</code></pre>
 
