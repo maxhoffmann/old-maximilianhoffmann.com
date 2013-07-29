@@ -44,7 +44,7 @@ In both cases it is just a proposal and users will always be able to define anot
 
 ### Icon sizes
 
-By default iOS uses a screenshot of your website as icon for the web app. You can set your own by appending a `link` tag to your website with the `rel` attribute of “apple-touch-icon”.  As there are different screen resolutions across Apple’s devices you can define an icon for each of them, but iOS is also able to scale icons down (or even up). This means you can define an icon for the retina iPad, which has the size of 144 by 144 pixels and it will work on every other device for example an iPhone 3G. I prefer defining one icon for each retina device and leave standard displays behind as retina will be everywhere. So if your web app will work on both iPhone and iPad, make and include both in retina sizes. If it’s intended to work on iPhone only like [doubbble](http://doubbble.com), include just the retina iPhone icon. To tell iOS which icon it should use if both options are available, give it a hint with the `sizes` attribute. Example:
+By default iOS uses a screenshot of your website as icon for the web app. You can set your own by appending a `link` tag to your website with the `rel` attribute of <code>apple-touch-icon</code>.  As there are different screen resolutions across Apple’s devices you can define an icon for each of them, but iOS is also able to scale icons down (or even up). This means you can define an icon for the retina iPad, which has the size of <code>144x144</code> pixels and it will work on every other device for example an iPhone 3G. I prefer defining one icon for each retina device and leave standard displays behind as retina will be everywhere. So if your web app will work on both iPhone and iPad, make and include both in retina sizes. If it’s intended to work on iPhone only like [doubbble](http://doubbble.com), include just the retina iPhone icon. To tell iOS which icon it should use if both options are available, give it a hint with the `sizes` attribute. Example:
 
 <pre class="language-markup"><code>&lt;!-- iPhone Retina --&gt;
 &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;apple-touch-icon-114x114-precomposed.png&quot;&gt;
@@ -52,7 +52,7 @@ By default iOS uses a screenshot of your website as icon for the web app. You ca
 &lt;!-- iPad Retina --&gt;
 &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;apple-touch-icon-144x144-precomposed.png&quot;&gt;</code></pre>
 
-You may leave out the `link` tags if your icons are stored in your website’s root directory and start with “apple-touch-icon-...”, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added __precomposed__ to the icon’s name and the `rel` attribute of the `link` tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at [Apple’s Guide](http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4).
+You may leave out the `link` tags if your icons are stored in your website’s root directory and start with <code>apple-touch-icon-</code>, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added __precomposed__ to the icon’s name and the `rel` attribute of the `link` tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at [Apple’s Guide](http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4).
 
 ### Startup image
 
@@ -64,7 +64,7 @@ As for native apps you have the ability to display an image when the user starts
 &lt;!-- iPhone 5 --&gt;
 &lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;images/iphone5.png&quot; media=&quot;(device-height:568px)&quot;&gt;</code></pre>
 
-Image dimension of startup images for iPhone 4/4S is 640x920 and for iPhone 5 it’s 640x1096.
+Image dimension of startup images for iPhone 4/4S is <code>640x920</code> and for iPhone 5 it’s <code>640x1096</code>.
 
 ### Writing the first lines
 

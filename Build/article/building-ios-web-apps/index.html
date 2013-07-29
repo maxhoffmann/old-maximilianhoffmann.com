@@ -78,7 +78,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <h3>Icon sizes</h3>
 
-<p>By default iOS uses a screenshot of your website as icon for the web app. You can set your own by appending a <code>link</code> tag to your website with the <code>rel</code> attribute of “apple-touch-icon”.  As there are different screen resolutions across Apple’s devices you can define an icon for each of them, but iOS is also able to scale icons down (or even up). This means you can define an icon for the retina iPad, which has the size of 144 by 144 pixels and it will work on every other device for example an iPhone 3G. I prefer defining one icon for each retina device and leave standard displays behind as retina will be everywhere. So if your web app will work on both iPhone and iPad, make and include both in retina sizes. If it’s intended to work on iPhone only like <a href="http://doubbble.com">doubbble</a>, include just the retina iPhone icon. To tell iOS which icon it should use if both options are available, give it a hint with the <code>sizes</code> attribute. Example:</p>
+<p>By default iOS uses a screenshot of your website as icon for the web app. You can set your own by appending a <code>link</code> tag to your website with the <code>rel</code> attribute of <code>apple-touch-icon</code>.  As there are different screen resolutions across Apple’s devices you can define an icon for each of them, but iOS is also able to scale icons down (or even up). This means you can define an icon for the retina iPad, which has the size of <code>144x144</code> pixels and it will work on every other device for example an iPhone 3G. I prefer defining one icon for each retina device and leave standard displays behind as retina will be everywhere. So if your web app will work on both iPhone and iPad, make and include both in retina sizes. If it’s intended to work on iPhone only like <a href="http://doubbble.com">doubbble</a>, include just the retina iPhone icon. To tell iOS which icon it should use if both options are available, give it a hint with the <code>sizes</code> attribute. Example:</p>
 
 <pre class="language-markup"><code>&lt;!-- iPhone Retina --&gt;
 &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;apple-touch-icon-114x114-precomposed.png&quot;&gt;
@@ -86,7 +86,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 &lt;!-- iPad Retina --&gt;
 &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;apple-touch-icon-144x144-precomposed.png&quot;&gt;</code></pre>
 
-<p>You may leave out the <code>link</code> tags if your icons are stored in your website’s root directory and start with “apple-touch-icon-&#8230;”, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added <strong>precomposed</strong> to the icon’s name and the <code>rel</code> attribute of the <code>link</code> tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at <a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4">Apple’s Guide</a>.</p>
+<p>You may leave out the <code>link</code> tags if your icons are stored in your website’s root directory and start with <code>apple-touch-icon-</code>, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added <strong>precomposed</strong> to the icon’s name and the <code>rel</code> attribute of the <code>link</code> tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at <a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4">Apple’s Guide</a>.</p>
 
 <h3>Startup image</h3>
 
@@ -98,7 +98,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 &lt;!-- iPhone 5 --&gt;
 &lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;images/iphone5.png&quot; media=&quot;(device-height:568px)&quot;&gt;</code></pre>
 
-<p>Image dimension of startup images for iPhone 4/4S is 640x920 and for iPhone 5 it’s 640x1096.</p>
+<p>Image dimension of startup images for iPhone 4/4S is <code>640x920</code> and for iPhone 5 it’s <code>640x1096</code>.</p>
 
 <h3>Writing the first lines</h3>
 
