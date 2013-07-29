@@ -6,7 +6,7 @@
 	<meta name="description" content="During the first half of 2012 I worked on a project to enhance my JavaScript knowledge and to build something for myself. This project is called flibbble. My goal was to build a web application which feels like a native one on the latest iPhone.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../def4116670d4c577b1db731c8de466e7.css'>
+	<link rel='stylesheet' href='../../dc6e419decb893d5f2fda97eab72cd0e.css'>
 	<script type="text/javascript" src="//use.typekit.net/ukz6xxx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
@@ -36,9 +36,9 @@
 
 <p>During the first half of 2012 I worked on a project to enhance my JavaScript knowledge and to build something for myself. This project is called <a href="http://flibbble.com">flibbble</a>. My goal was to build a web application which feels like a native one on the latest iPhone.</p>
 
-<p>At that point in time iPhone 5 was not released and there was no web inspector for iOS, but it was a lot of fun, because I have found that it is possible to write web applications with great performance. flibbble is a dribbble feed viewer which displays the latest shots without any application frame. Browsing shots uses <abbr>CSS</abbr> 3D transforms and new shots are loaded via <abbrc>AJAX</abbrc>. Swiping to the right reveals navigation where users can select which feed they want to browse. Swiping to the left reveals additional information of the shot. Landscape mode displays the shot in original size and state is stored using localStorage.</p>
+<p>At that point in time iPhone 5 was not released and there was no web inspector for iOS, but it was a lot of fun, because I have found that it is possible to write web applications with great performance. flibbble is a dribbble feed viewer which displays the latest shots without any application frame. Browsing shots uses <abbr>CSS</abbr> 3D transforms and new shots are loaded via <abbr>AJAX</abbr>. Swiping to the right reveals navigation where users can select which feed they want to browse. Swiping to the left reveals additional information of the shot. Landscape mode displays the shot in original size and state is stored using localStorage.</p>
 
-<p>The main challenge was to maintain a stable framerate for the flipping effect having a lot of images loaded. I rewrote the flipping effect multiple times and used Chrome’s developer tools to find bottlenecks in my code. To gain performance I dropped z-index and moved animations to <abbr>CSS</abbr> so that I just had to add or remove one class to animate the images. This lead to great performance with few images, but while browsing iOS’s memory filled up and performance decreased. On iOS5 I was able to handle this problem by adding <code>visibility: hidden</code> to images which are covered and therefore not visible. This probably freed up memory and I could display up to 50 shots without performance issues.</p>
+<p>The main challenge was to maintain a stable framerate for the flipping effect having a lot of images loaded. I rewrote the flipping effect multiple times and used Chrome’s developer tools to find bottlenecks in my code. To gain performance I dropped <code>z-index</code> and moved animations to <abbr>CSS</abbr> so that I just had to add or remove one class to animate the images. This lead to great performance with few images, but while browsing iOS’s memory filled up and performance decreased. On iOS5 I was able to handle this problem by adding <code>visibility: hidden</code> to images which are covered and therefore not visible. This probably freed up memory and I could display up to 50 shots without performance issues.</p>
 
 <h3>Disappointment</h3>
 

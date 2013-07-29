@@ -3,7 +3,7 @@ If you are one of the lucky guys owning a geeksphone you may have thought about 
 
 ### Installing adb and fastboot
 
-`adb` and `fastboot` are small executables provided by the Android <abbr>SDK</abbr>. Simply download the Android <abbr>SDK</abbr> from [the official website](http://developer.android.com/sdk/index.html) and unzip the file. Then open the folder 'platform-tools' inside of 'sdk' and copy the files 'adb' and 'fastboot' to a folder in your <abbr>PATH</abbr>, e.g. `/bin/`.
+`adb` and `fastboot` are small executables provided by the Android <abbr>SDK</abbr>. Simply download the Android <abbr>SDK</abbr> from [the official website](http://developer.android.com/sdk/index.html) and unzip the file. Then open the folder <code>platform-tools</code> inside of <code>sdk</code> and copy the files <code>adb</code> and <code>fastboot</code> to a folder in your <abbr>PATH</abbr>, e.g. `/bin/`.
 
 ### Download the latest nightly build
 

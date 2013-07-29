@@ -25,7 +25,7 @@ $data = elements($filter, array_filter($this->input->post(NULL, TRUE)), NULL);
 $this->db->insert('person', $data);
 </code></pre>
 
-At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to `NULL`, which we have defined with the third parameter of the __elements__ function. This also ensures that fields in your database being set to `NOT NULL`  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals xss filtering enabled.
+At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to `NULL`, which we have defined with the third parameter of the __elements__ function. This also ensures that fields in your database being set to `NOT NULL`  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals <abbr>xss</abbr> filtering enabled.
 
 While this works fine for inserting data we need to add another function for updating. This is how it looks like:
 

@@ -22,35 +22,35 @@
 	line-height: 21px
 	overflow: hidden
 
-	.navigation-name
-		padding: 12px 40px
-		margin-left: -40px
-		vertical-align: top
-		font-size: 21px
+.navigation-name
+	padding: 12px 40px
+	margin-left: -40px
+	vertical-align: top
+	font-size: 21px
 
-	.navigation-archive
+.navigation-archive
+	position: absolute
+	top: 6px
+	right: -80px
+	padding: 12px 80px
+	vertical-align: top
+	font-size: 21px
+
+.navigation-menu
+	position: relative
+	position: absolute
+	display: inline-block
+	top: 0
+	right: -110px
+	height: 55px
+	width: 200px
+
+	&:before
+		content: ""
 		position: absolute
-		top: 6px
-		right: -80px
-		padding: 12px 80px
-		vertical-align: top
-		font-size: 21px
-
-	.navigation-menu
-		position: relative
-		position: absolute
-		display: inline-block
-		top: 0
-		right: -110px
-		height: 55px
-		width: 200px
-
-		&:before
-			content: ""
-			position: absolute
-			top: 22px
-			left: 70px
-			width: 20px
-			height: 3px
-			border-top: 9px double #777
-			border-bottom: 3px solid #777
+		top: 22px
+		left: 70px
+		width: 20px
+		height: 3px
+		border-top: 9px double #777
+		border-bottom: 3px solid #777

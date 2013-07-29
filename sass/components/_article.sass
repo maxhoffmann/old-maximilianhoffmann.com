@@ -29,13 +29,10 @@
 
 		code
 			display: inline-block
-			padding: .2em .4em
+			padding: 0 .1em
 			font-family: Consolas, Monaco, 'Andale Mono', monospace
-			font-size: em(18, 26)
-			color: #555
-			background: white
-			border: 1px solid #ddd
-			border-radius: 4px
+			font-size: em(21,26)
+			color: #357abb
 
 	h2
 		+_(container)
@@ -70,19 +67,19 @@
 
 	pre
 		+box-sizing(border-box)
-		margin-top: em(104, 18)
-		margin-bottom: em(104, 18)
+		margin-top: em(104,18)
+		margin-bottom: em(104,18)
 		margin-left: 0
 		margin-right: 0
 		padding: 2em
 		width: 100%
-		font-size: em(18, 26)
+		font-size: em(18,26)
 		background-color: #fff
 		overflow: auto
 		+media("min-width: 60em")
-			margin-top: em(52, 18)
-			margin-bottom: em(52, 18)
-			max-width: em(832, 18)
+			margin-top: em(52,18)
+			margin-bottom: em(52,18)
+			max-width: em(832,18)
 			+block-center
 			border-radius: .3em
 			+box-shadow(0 2px 3px black(.2))
@@ -102,10 +99,11 @@
 		-webkit-font-smoothing: subpixel-antialiased
 
 	a
-		color: hsl(120,30%,50%)
+		color: #539f50
 		+transition(color .3s)
+		-webkit-font-smoothing: subpixel-antialiased
 		&:hover
-			color: hsl(120,30%,30%)
+			color: darken(#539f50,10%)
 
 	ul
 		+_(container)
@@ -118,8 +116,8 @@
 
 	.image-inline
 		display: block
-		margin-top: em(52, 26)
-		margin-bottom: em(52, 26)
+		margin-top: em(52,26)
+		margin-bottom: em(52,26)
 		width: 100%
 		img
 			display: block
@@ -132,7 +130,7 @@
 
 .article-meta
 	+_(container)
-	max-width: em(832, 26)
+	max-width: em(832,26)
 	padding: 4em 0 2em
 	color: #333
 
