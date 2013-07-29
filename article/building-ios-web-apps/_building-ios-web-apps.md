@@ -7,7 +7,7 @@ To enable developer tools on your computer go to __Preferences > Advanced__ in W
 <a href="/images/AdvancedSettings.png" class="image-inline"><img src="/images/AdvancedSettings.png"></a>
 On your mobile device go to __Settings > Safari > Advanced__ and toggle the Web Inspector there.
 
-<a href="/images/ios_web_inspector.png" class="image-inline"><img src="/images/ios_web_inspector.png"></a>
+<a href="/images/ios_web_inspector.png" class="image-inline"><img class="img-bordered" src="/images/ios_web_inspector.png"></a>
 Afterwards you can connect the device with your computer using a __cable__. If you have opened a website on mobile Safari, its desktop counterpart should now list your device in its develop menu including your open tabs. Clicking on one of these should open the developer tools for the selected website.
 
 ### Local Web Server
@@ -90,7 +90,7 @@ Taking everything into account I have written an `index.html` for the dribbble f
 
 I have uploaded the complete code with images to [github](https://github.com/maxhoffmann/ios-web-apps). After adding this site to your homescreen it should look like this:
 
-<a href="/images/icon.jpg" class="image-inline"><img src="/images/icon.jpg"></a>
+<a href="/images/icon.jpg" class="image-inline"><img class="img-bordered" src="/images/icon.jpg"></a>
 
 ### Questions?
 
