@@ -22,7 +22,7 @@ Users have always the ability to add websites to their homescreen, but If you wa
 
 ### Zooming and Viewports
 
-On websites users may pinch to zoom at anytime anywhere, but this shouldn’t be possible for web apps in most cases. This meta tag disables zooming with gestures and sets the viewport to its ”default” value:
+On websites users may pinch to zoom at anytime anywhere, but this shouldn’t be possible for web apps in most cases. This meta tag disables zooming with gestures and sets the viewport to its “default” value:
 
 <pre class="language-markup"><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1&quot;&gt;</code></pre>
 
@@ -52,7 +52,7 @@ By default iOS uses a screenshot of your website as icon for the web app. You ca
 &lt;!-- iPad Retina --&gt;
 &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;apple-touch-icon-144x144-precomposed.png&quot;&gt;</code></pre>
 
-You may leave out the `link` tags if your icons are stored in your website’s root directory and start with ”apple-touch-icon-...”, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added __precomposed__ to the icon’s name and the `rel` attribute of the `link` tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at [Apple’s Guide](http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4).
+You may leave out the `link` tags if your icons are stored in your website’s root directory and start with “apple-touch-icon-...”, but as there are some Android devices using theses tags too, it is possible that it won’t work for them. In the example I’ve also added __precomposed__ to the icon’s name and the `rel` attribute of the `link` tag. This tells iOS not to overlay its default glossy gradient over your icons. For further information about naming conventions have a look at [Apple’s Guide](http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4).
 
 ### Startup image
 
