@@ -15,7 +15,7 @@
 		+_(container)
 		max-width: em(832,26)
 		margin-bottom: em(52,26)
-		+hyphens
+		+hyphens(auto)
 
 
 		&:first-child:first-letter
@@ -97,11 +97,14 @@
 		tab-size: 4
 		+hyphens(none)
 		-webkit-font-smoothing: subpixel-antialiased
+		-moz-osx-font-smoothing: auto
 
 	a
+		display: inline-block // fix font-smoothing (FF)
 		color: #539f50
 		+transition(color .3s)
 		-webkit-font-smoothing: subpixel-antialiased
+		-moz-osx-font-smoothing: auto
 		&:hover
 			color: darken(#539f50,10%)
 
