@@ -1,0 +1,12 @@
+{
+  "name": "maximilianhoffmann.com",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "repository": {
+    "type": "git",
+    "url": "https://maxhoffmann@github.com/maxhoffmann/maximilianhoffmann.com"
+  },
+  "author": "Maximilian Hoffmann",
+  "gitHead": "5a193768c76c689c0a5876f66f8dee523588627c",
+  "readmeFilename": "README.md"
+}
