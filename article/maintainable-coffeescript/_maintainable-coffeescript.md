@@ -15,20 +15,20 @@ Readability is important. Without parentheses it’s hard to see where functions
 ##### without parentheses
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest
-	request.responseType = type
-	request.onload = handleResponse
-	request.open method, url, true
-	request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
-	request.send()</code></pre>
+    request.responseType = type
+    request.onload = handleResponse
+    request.open method, url, true
+    request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
+    request.send()</code></pre>
 
 ##### with parentheses
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest()
-	request.responseType = type
-	request.onload = handleResponse
-	request.open(method, url, true)
-	request.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-	request.send()</code></pre>
+    request.responseType = type
+    request.onload = handleResponse
+    request.open(method, url, true)
+    request.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+    request.send()</code></pre>
 
 Now you can see on the first sight which parts of the codes are assignments and which ones are function calls.
 
@@ -39,18 +39,18 @@ CoffeeScript always returns the last statement of a function. This leads to line
 ##### without return
 
 <pre class="language-coffeescript"><code>getVar = (para) ->
-	context = this or window
-	if not /^\'/g.test(para)
-		return context[para]
-	para</code></pre>
+    context = this or window
+    if not /^\'/g.test(para)
+        return context[para]
+    para</code></pre>
 
 ##### with return
 
 <pre class="language-coffeescript"><code>getVar = (para) ->
-	context = this or window
-	if not /^\'/g.test(para)
-		return context[para]
-	return para</code></pre>
+    context = this or window
+    if not /^\'/g.test(para)
+        return context[para]
+    return para</code></pre>
 
 #### 3. wrap functions which are not the last argument in parentheses
 
@@ -59,14 +59,14 @@ Without parantheses and the return statement this looks like a syntax error to m
 ##### without parentheses
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce (obj,i) ->
-	obj[i] or false
+    obj[i] or false
 , obj</code></pre>
 
 
 ##### with parentheses
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce( ((obj,i) ->
- 	return obj[i] or false
+    return obj[i] or false
 ), obj)</code></pre>
 
 
@@ -77,36 +77,36 @@ This again fights inconsistency. Arrays have to be wrapped in braces so should o
 ##### without braces
 
 <pre class="language-coffeescript"><code>obj =
-  	name: 'Max'
-  	age: 23
-  	likes: [
-    	'javascript'
-    	'es6'
-    	'code conventions'
-  	]
-  	hobbies:
-   		sport: 'fitness'
-    	music: 'piano'
-    	other: 'web development'
-  	from: 'germany'</code></pre>
+    name: 'Max'
+    age: 23
+    likes: [
+        'javascript'
+        'es6'
+        'code conventions'
+    ]
+    hobbies:
+        sport: 'fitness'
+        music: 'piano'
+        other: 'web development'
+    from: 'germany'</code></pre>
 
 
 ##### with braces
 
 <pre class="language-coffeescript"><code>obj = {
-  	name: 'Max'
-  	age: 23
-  	likes: [
-    	'javascript'
-    	'es6'
-    	'code conventions'
-  	]
-  	hobbies: {
-    	sport: 'fitness'
-    	music: 'piano'
-    	other: 'web development'
-  	}
-  	from: 'germany'
+    name: 'Max'
+    age: 23
+    likes: [
+        'javascript'
+        'es6'
+        'code conventions'
+    ]
+    hobbies: {
+        sport: 'fitness'
+        music: 'piano'
+        other: 'web development'
+    }
+    from: 'germany'
 }</code></pre>
 
 ### Why should I use more parentheses?

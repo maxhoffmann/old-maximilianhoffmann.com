@@ -48,20 +48,20 @@
 <h5>without parentheses</h5>
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest
-	request.responseType = type
-	request.onload = handleResponse
-	request.open method, url, true
-	request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
-	request.send()</code></pre>
+    request.responseType = type
+    request.onload = handleResponse
+    request.open method, url, true
+    request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
+    request.send()</code></pre>
 
 <h5>with parentheses</h5>
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest()
-	request.responseType = type
-	request.onload = handleResponse
-	request.open(method, url, true)
-	request.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-	request.send()</code></pre>
+    request.responseType = type
+    request.onload = handleResponse
+    request.open(method, url, true)
+    request.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+    request.send()</code></pre>
 
 <p>Now you can see on the first sight which parts of the codes are assignments and which ones are function calls.</p>
 
@@ -72,18 +72,18 @@
 <h5>without return</h5>
 
 <pre class="language-coffeescript"><code>getVar = (para) -&gt;
-	context = this or window
-	if not /^\'/g.test(para)
-		return context[para]
-	para</code></pre>
+    context = this or window
+    if not /^\'/g.test(para)
+        return context[para]
+    para</code></pre>
 
 <h5>with return</h5>
 
 <pre class="language-coffeescript"><code>getVar = (para) -&gt;
-	context = this or window
-	if not /^\'/g.test(para)
-		return context[para]
-	return para</code></pre>
+    context = this or window
+    if not /^\'/g.test(para)
+        return context[para]
+    return para</code></pre>
 
 <h4>3. wrap functions which are not the last argument in parentheses</h4>
 
@@ -92,13 +92,13 @@
 <h5>without parentheses</h5>
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce (obj,i) -&gt;
-	obj[i] or false
+    obj[i] or false
 , obj</code></pre>
 
 <h5>with parentheses</h5>
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce( ((obj,i) -&gt;
- 	return obj[i] or false
+    return obj[i] or false
 ), obj)</code></pre>
 
 <h4>4. wrap objects in curly braces</h4>
@@ -108,35 +108,35 @@
 <h5>without braces</h5>
 
 <pre class="language-coffeescript"><code>obj =
-  	name: 'Max'
-  	age: 23
-  	likes: [
-    	'javascript'
-    	'es6'
-    	'code conventions'
-  	]
-  	hobbies:
-   		sport: 'fitness'
-    	music: 'piano'
-    	other: 'web development'
-  	from: 'germany'</code></pre>
+    name: 'Max'
+    age: 23
+    likes: [
+        'javascript'
+        'es6'
+        'code conventions'
+    ]
+    hobbies:
+        sport: 'fitness'
+        music: 'piano'
+        other: 'web development'
+    from: 'germany'</code></pre>
 
 <h5>with braces</h5>
 
 <pre class="language-coffeescript"><code>obj = {
-  	name: 'Max'
-  	age: 23
-  	likes: [
-    	'javascript'
-    	'es6'
-    	'code conventions'
-  	]
-  	hobbies: {
-    	sport: 'fitness'
-    	music: 'piano'
-    	other: 'web development'
-  	}
-  	from: 'germany'
+    name: 'Max'
+    age: 23
+    likes: [
+        'javascript'
+        'es6'
+        'code conventions'
+    ]
+    hobbies: {
+        sport: 'fitness'
+        music: 'piano'
+        other: 'web development'
+    }
+    from: 'germany'
 }</code></pre>
 
 <h3>Why should I use more parentheses?</h3>
