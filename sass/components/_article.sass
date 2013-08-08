@@ -11,12 +11,12 @@
 	h3,
 	blockquote
 		+block-center
+
 	p
 		+_(container)
 		max-width: em(832,26)
 		margin-bottom: em(52,26)
 		+hyphens(auto)
-
 
 		&:first-child:first-letter
 			float: left
@@ -55,7 +55,7 @@
 		+_(container)
 		margin-top: em(78,36)
 		margin-bottom: em(52,42)
-		max-width: em(832, 36)
+		max-width: em(832,36)
 		font-size: em(36,26)
 
 	h5
@@ -98,6 +98,12 @@
 			border-radius: .3em
 			+box-shadow(0 2px 3px black(.2))
 
+	h1 + pre,
+	h2 + pre,
+	h3 + pre,
+	h4 + pre,
+	h5 + pre
+		margin-top: em(26,18)
 
 	code,
 	pre
