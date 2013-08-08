@@ -14,11 +14,13 @@ $blue: hsl(209, 56%, 47%)
 $lightBlue: hsl(205, 75%, 72%)
 $purple: hsl(268, 30%, 50%)
 
-/* CSS */
+/* CSS and SCSS */
 
-.language-css
+.language-css,
+.language-scss
 
-	.language-css // values
+	.language-css,
+	.language-scss // values
 		color: $green
 
 	.punctuation
@@ -27,13 +29,17 @@ $purple: hsl(268, 30%, 50%)
 	.property
 		color: $red
 
-	.selector
+	.selector,
+	.atrule
 		color: $blue
 
 	.comment
 		color: $gray
 
-/* HHTML */
+	.keyword
+		color: $purple
+
+/* HTML */
 
 .language-markup
 
@@ -69,7 +75,6 @@ $purple: hsl(268, 30%, 50%)
 
 	.keyword
 		color: $purple
-		font-weight: bold
 
 	.operator
 		color: $black
@@ -79,3 +84,43 @@ $purple: hsl(268, 30%, 50%)
 
 	.string
 		color: $green
+
+/* PHP */
+
+.language-php
+
+	.language-php
+		color: $blue
+
+	.punctuation
+		color: $gray
+
+	.comment
+		color: $gray
+
+	.keyword,
+	.constant
+		color: $black
+
+	.operator
+		color: $gray
+
+	.number
+		color: $purple
+
+	.function
+		color: $red
+
+	.string
+		color: $green
+
+/* BASH */
+
+.language-bash
+
+	.language-bash
+		color: $blue
+
+	.punctuation,
+	.operator
+		color: $black

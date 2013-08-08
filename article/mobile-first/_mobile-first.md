@@ -7,14 +7,14 @@ My styles are smaller in file size, easier to maintain and flexible like never b
 
 I started with looking at the new design based on my old desktop first approach and reverse engineered the grid. The first thing I recognized is that most designs on mobile devices have centered elements, so I wrote a placeholder class, which were introduced in Sass 3.2, to center elements:
 
-<pre class="language-css"><code>%centered {
+<pre class="language-scss"><code>%centered {
 	margin-left: auto;
 	margin-right: auto;
 }</code></pre>
 
 Next I added a __container__ class to give elements some horizontal space.
 
-<pre class="language-css"><code>.container {
+<pre class="language-scss"><code>.container {
 	@extend %centered;
 	width: 88%;
 	max-width: 64em;
@@ -24,7 +24,7 @@ Notice `max-width` limiting the width of my site to `1024px`, which fits best fo
 
 Now it’s time to add columns, which will later lay out as a grid on wider screens. On mobile devices these again look like centered boxes.
 
-<pre class="language-css"><code>.col {
+<pre class="language-scss"><code>.col {
 	@extend %centered;
 	max-width: 30em;
 }</code></pre>
@@ -35,13 +35,13 @@ This time `max-width` prevents columns of enlarging too wide, so that their cont
 
 The actual grid is wrapped in a media query. The following styles are inside this query:
 
-<pre class="language-css"><code>@media (min-width: 48em) {
+<pre class="language-scss"><code>@media (min-width: 48em) {
 	/* styles */
 }</code></pre>
 
 For viewport sizes wider than `767px` columns will float and form the grid.
 
-<pre class="language-css"><code>.col {
+<pre class="language-scss"><code>.col {
 	float: left;
 	overflow: hidden;
 	max-width: none;
@@ -54,7 +54,7 @@ Columns are floated left by default, but may be floated to the right by adding `
 
 You could add a lot of grid sizes to define a flexible 12-column grid, but for my purposes I’ve chosen the following sizes as my grid may have nested columns to further split up columns.
 
-<pre class="language-css"><code>/* col sizes */
+<pre class="language-scss"><code>/* col sizes */
 .full { width: 100%; }
 .half { width: 50%;  }
 
@@ -70,7 +70,7 @@ You could add a lot of grid sizes to define a flexible 12-column grid, but for m
 
 Like in [Bootstrap](http://getbootstrap.com) I have added space classes to avoid the usage of empty columns for layout purposes.
 
-<pre class="language-css"><code>/* space sizes */
+<pre class="language-scss"><code>/* space sizes */
 .space-half { margin-left: 50%; }
 
 .space-third      { margin-left: 33.33%; }
@@ -84,7 +84,7 @@ Like in [Bootstrap](http://getbootstrap.com) I have added space classes to avoid
 
 The last thing we need is a class to start a new row if columns don’t add up to 100%.
 
-<pre class="language-css"><code>.new-row {
+<pre class="language-scss"><code>.new-row {
 	clear: both;
 }</code></pre>
 

@@ -13,7 +13,7 @@ Now head over to [geeksphone’s official images](http://downloads.geeksphone.co
 
 Before the final step be sure that your device has at least 50% power. If that’s the case connect it to your Mac via <abbr>USB</abbr> and open the unzipped folder with the image from geeksphone in terminal. Now simply flash the phone by executing:
 
-	./flash_mac.sh
+<pre class="language-bash"><code>./flash_mac.sh</code></pre>
 
 The command should now flash your phone and run the update. Just wait until the device automatically restarts and don’t try turning it on if the screen goes black.
 
