@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Better font-rendering on OSX</title>
+	<meta name="description" content="Developers can influence how browsers render text on OS X. Webkit/Chromium-based browsers offer -webkit-font-smoothing and Firefox recently added -moz-osx-font-smoothing to version 25 (currently Nightly build).">
+	<meta name="author" content="Maximilian Hoffmann">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel='stylesheet' href='../../e59dab7857c272223f45cca89b60d922.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel="author" href="https://plus.google.com/101144444133821135563">
+	<!--[if lt IE 9]>
+	<script src="/js/ext/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<nav class="navigation">
+		<div class="centered navigation-content">
+			<a href="/" class="navigation-name">Maximilian Hoffmann</a>
+		</div>
+	</nav>
+
+
+
+
+<header class="article-meta">
+	<div class="article-meta-content">
+		<h2 class="article-date">10th of August, 2013</h2>
+		<h1 class="article-title">Better font rendering on OSX</h1>
+	</div>
+</header>
+
+<article class="article">
+
+
+<p>The two main factors how fonts will look on displays are their hinting and the operating system’s rendering algorithm. That’s the reason why trying different fonts is important as well as testing them on different devices, operating systems, browsers and browser versions.</p>
+
+<p>Photoshop doesn’t use the system’s font rendering and therefore text looks very differently. One could use <a href="http://www.bohemiancoding.com/sketch/">Sketch</a> as an alternative, but it’s best to design in the medium itself—the browser. Style guides or new tools like <a href="http://typecast.com/">Typecast</a> and <a href="http://macaw.co/">Macaw</a> are great for a responsive workflow.</p>
+
+<h3>Font rendering on OS X</h3>
+
+<p>Due to its sub-pixel antialiasing algorithm OS X tends to render light text on dark backgrounds too bold. Using icon fonts sometimes leads to more <a href="http://people.mozilla.org/~jdaggett/tests/social-waterfall.html">blurry</a> rendering.</p>
+
+<p>Fortunately developers can influence how browsers render text on OS X. Webkit/Chromium-based browsers offer <code>-webkit-font-smoothing</code> and  Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=857142">recently added</a> <code>-moz-osx-font-smoothing</code> to version 25 (currently Nightly build).</p>
+
+<p>These properties switch the rendering algorithm to grayscaling, which will result in a thinner and sharper appearance of fonts. As both are non-standard I’ve created a simple mixin to normalize the syntax differences.</p>
+
+<h4>Mixin</h4>
+
+<pre class="language-scss"><code>=font-smoothing($value: on)
+    @if $value == on
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+    @else
+        -webkit-font-smoothing: subpixel-antialiased
+        -moz-osx-font-smoothing: auto</code></pre>
+
+<h4>Usage</h4>
+
+<pre class="language-scss"><code>.dark-on-light
+    +font-smoothing(off)
+
+.light-on-dark
+    +font-smoothing(on)</code></pre>
+
+<p>My website also uses these properties for better rendering. If you are browsing with Firefox (version &lt; 25) try the Nightly build or Chrome to see the difference. Keep in mind that these properties should be used as a solution and <a href="http://www.usabilitypost.com/2012/11/05/stop-fixing-font-smoothing">not in general</a> as it may lead to worse results.</p>
+
+
+</article>
+
+
+	<footer class="footer">
+		<div class="centered footer-content">
+			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
+		</div>
+	</footer>
+
+	<script>
+	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));</script>
+
+</body>
+</html>
