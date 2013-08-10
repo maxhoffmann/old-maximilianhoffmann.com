@@ -6,7 +6,7 @@
 	<meta name="description" content="I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../9bc3d8e9c320d5597f9a564cfd369d60.css'>
+	<link rel='stylesheet' href='../../96584fca3e4230f687bca5ab2c9521f1.css'>
 	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<!--[if lt IE 9]>
@@ -46,9 +46,9 @@
 
 $this-&gt;db-&gt;insert('mytable', $data);</code></pre>
 
-<p><strong>Insert</strong> accepts two parameters. First is the table name and second is the data to insert provided as an associative array having keys as row names and values as the actual data.</p>
+<p><code>insert</code> accepts two parameters. First is the table name and second is the data to insert provided as an associative array having keys as row names and values as the actual data.</p>
 
-<p>The main problem is building a CodeIgniter compatible array from <abbr>POST</abbr> or <abbr>GET</abbr> data. To create it we will use the <strong>elements</strong> function, which is provided by CodeIgniter&#8217;s <code>array_helper</code> and lets you fetch a number of items from an array. This is what I’ve come up with:</p>
+<p>The main problem is building a CodeIgniter compatible array from <abbr>POST</abbr> or <abbr>GET</abbr> data. To create it we will use the <code>elements function, which is provided by CodeIgniter's </code>array_helper` and lets you fetch a number of items from an array. This is what I’ve come up with:</p>
 
 <pre class="language-php"><code>$filter = array(
 	'name',
@@ -60,7 +60,7 @@ $data = elements($filter, array_filter($this-&gt;input-&gt;post(NULL, TRUE)), NU
 $this-&gt;db-&gt;insert('person', $data);
 </code></pre>
 
-<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <strong>elements</strong> function. This also ensures that fields in your database being set to <code>NOT NULL</code>  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals <abbr>xss</abbr> filtering enabled.</p>
+<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <code>elements function. This also ensures that fields in your database being set to </code>NOT NULL`  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals <abbr>XSS</abbr> filtering enabled.</p>
 
 <p>While this works fine for inserting data we need to add another function for updating. This is how it looks like:</p>
 
@@ -75,11 +75,13 @@ $data = array_filter(elements($filter, $this-&gt;input-&gt;post(NULL, TRUE)));
 $this-&gt;db-&gt;where('id', $id);
 $this-&gt;db-&gt;update('person', $data);</code></pre>
 
-<p>This time we leave out the third parameter of <strong>elements</strong>. Its default value is false, that’s why each data not provided by <abbr>POST</abbr>, but required by our filter array will be set to false. Afterwards we filter the result of elements with <code>array_filter</code>, a standard <abbr>PHP</abbr> function, iterating over each element of its input array and passing it to a callback function. We haven’t provided a callback which as a result removes every item with a false value <code>(null, false,'',0)</code>. As post items being always strings <code>NULL</code> and <code>0</code> will still work, but not provided data won’t be passed to the update function. To summarize only items of the filter array will be passed to the update function if any of those are provided.</p>
+<p>This time we leave out the third parameter of elements. Its default value is false, that’s why each data not provided by <abbr>POST</abbr>, but required by our filter array will be set to false. Afterwards we filter the result of elements with <code>array_filter</code>, a standard <abbr>PHP</abbr> function, iterating over each element of its input array and passing it to a callback function. We haven’t provided a callback which as a result removes every item with a false value <code>(null, false,'',0)</code>. As post items being always strings <code>NULL</code> and <code>0</code> will still work, but not provided data won’t be passed to the update function. To summarize only items of the filter array will be passed to the update function if any of those are provided.</p>
 
 <p>I hope this could help you and I appreciate your feedback.</p>
 
-<p><strong>UPDATE:</strong> I’ve just recognized that you should use <code>array_filter</code> on inserts too, but in reverse order to avoid empty strings being inserted in fields which do not allow <code>NULL</code>. I’ve updated the code sample in the article.</p>
+<h4>UPDATE:</h4>
+
+<p>I’ve just recognized that you should use <code>array_filter</code> on inserts too, but in reverse order to avoid empty strings being inserted in fields which do not allow <code>NULL</code>. I’ve updated the code sample in the article.</p>
 
 
 </article>

@@ -12,7 +12,7 @@ I started with looking at the new design based on my old desktop first approach 
 	margin-right: auto;
 }</code></pre>
 
-Next I added a __container__ class to give elements some horizontal space.
+Next I added a `.container` class to give elements some horizontal space.
 
 <pre class="language-scss"><code>.container {
 	@extend %centered;
@@ -92,4 +92,4 @@ The advantage of starting rows by just adding a class to an element is its flexi
 
 This is my small insight into my blog’s foundation. You can take a look at the full code in my [Sass framework](https://github.com/maxhoffmann/sass-framework/blob/master/components/grid.scss) repository. For vertical spacing I have added default padding-bottom of `24px` to `.col` and wrote some generic space classes, but those are different in every project that’s why I have left them out of my grid component.
 
-PS: This is my first article written in English and I’m really thankful for feedback and critique.
+_Note:_ This is my first article written in English and I’m really thankful for feedback and critique.

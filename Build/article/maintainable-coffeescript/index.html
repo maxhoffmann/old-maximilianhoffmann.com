@@ -6,7 +6,7 @@
 	<meta name="description" content="In 2012 I decided to master JavaScript. I started with Addy Osmani’s free “Learning JavaScript Design Patterns”, read “JavaScript: The Good Parts” by Douglas Crockford, then went on with “Effective JavaScript” by David Herman, learned about “Maintainable JavaScript” from Nicolas Zarkasas and am currently half through “Secrets of the JavaScript Ninja” by John Resig and Bear Bibeault.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../9bc3d8e9c320d5597f9a564cfd369d60.css'>
+	<link rel='stylesheet' href='../../96584fca3e4230f687bca5ab2c9521f1.css'>
 	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<!--[if lt IE 9]>
@@ -47,7 +47,7 @@
 
 <p>Readability is important. Without parentheses it’s hard to see where functions are called—even for syntax highlighters like <a href="http://prismjs.com/">prism.js</a>. It’s also inconsistent as one has to use parantheses calling functions without parameters.</p>
 
-<h4>without parentheses</h4>
+<h6>without parentheses</h6>
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest
     request.responseType = type
@@ -56,7 +56,7 @@
     request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
     request.send()</code></pre>
 
-<h4>with parentheses</h4>
+<h6>with parentheses</h6>
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest()
     request.responseType = type
@@ -71,7 +71,7 @@
 
 <p>CoffeeScript always returns the last statement of a function. This leads to lines with just a variable name, but lines with just a variable name could also be part of an array for example. It’s also not explicit if you return early. Look at the last line. In my opinion it looks unintentional.</p>
 
-<h4>without return</h4>
+<h6>without return</h6>
 
 <pre class="language-coffeescript"><code>getVar = (para) -&gt;
     context = this or window
@@ -79,7 +79,7 @@
         return context[para]
     para</code></pre>
 
-<h4>with return</h4>
+<h6>with return</h6>
 
 <pre class="language-coffeescript"><code>getVar = (para) -&gt;
     context = this or window
@@ -91,13 +91,13 @@
 
 <p>Without parantheses and the return statement this looks like a syntax error to me. Apparently this is also hard to understand for CoffeeScript’s compiler as this syntax isn’t valid when compiled with the new <a href="http://michaelficarra.github.io/CoffeeScriptRedux/">CoffeeScript Redux compiler</a>. The Redux compiler is also smart enough not to wrap the function in parentheses when compiled.</p>
 
-<h4>without parentheses</h4>
+<h6>without parentheses</h6>
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce (obj,i) -&gt;
     obj[i] or false
 , obj</code></pre>
 
-<h4>with parentheses</h4>
+<h6>with parentheses</h6>
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce( ((obj,i) -&gt;
     return obj[i] or false
@@ -107,7 +107,7 @@
 
 <p>This again fights inconsistency. Arrays have to be wrapped in braces so should objects.</p>
 
-<h4>without braces</h4>
+<h6>without braces</h6>
 
 <pre class="language-coffeescript"><code>obj =
     name: 'Max'
@@ -123,7 +123,7 @@
         other: 'web development'
     from: 'germany'</code></pre>
 
-<h4>with braces</h4>
+<h6>with braces</h6>
 
 <pre class="language-coffeescript"><code>obj = {
     name: 'Max'
