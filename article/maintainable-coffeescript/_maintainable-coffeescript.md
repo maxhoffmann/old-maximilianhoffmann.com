@@ -8,11 +8,11 @@ Until the standard has been implemented in most browsers we can use _compile-to-
 
 ## Code Conventions
 
-#### 1. always wrap function parameters in parentheses
+### 1. always wrap function parameters in parentheses
 
 Readability is important. Without parentheses it’s hard to see where functions are called—even for syntax highlighters like [prism.js](http://prismjs.com/). It’s also inconsistent as one has to use parantheses calling functions without parameters.
 
-##### without parentheses
+#### without parentheses
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest
     request.responseType = type
@@ -21,7 +21,7 @@ Readability is important. Without parentheses it’s hard to see where functions
     request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
     request.send()</code></pre>
 
-##### with parentheses
+#### with parentheses
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest()
     request.responseType = type
@@ -32,11 +32,11 @@ Readability is important. Without parentheses it’s hard to see where functions
 
 Now you can see on the first sight which parts of the codes are assignments and which ones are function calls.
 
-#### 2. always write return if you intend to do so
+### 2. always write return if you intend to do so
 
 CoffeeScript always returns the last statement of a function. This leads to lines with just a variable name, but lines with just a variable name could also be part of an array for example. It’s also not explicit if you return early. Look at the last line. In my opinion it looks unintentional.
 
-##### without return
+#### without return
 
 <pre class="language-coffeescript"><code>getVar = (para) ->
     context = this or window
@@ -44,7 +44,7 @@ CoffeeScript always returns the last statement of a function. This leads to line
         return context[para]
     para</code></pre>
 
-##### with return
+#### with return
 
 <pre class="language-coffeescript"><code>getVar = (para) ->
     context = this or window
@@ -52,29 +52,29 @@ CoffeeScript always returns the last statement of a function. This leads to line
         return context[para]
     return para</code></pre>
 
-#### 3. wrap functions which are not the last argument in parentheses
+### 3. wrap functions which are not the last argument in parentheses
 
 Without parantheses and the return statement this looks like a syntax error to me. Apparently this is also hard to understand for CoffeeScript’s compiler as this syntax isn’t valid when compiled with the new [CoffeeScript Redux compiler](http://michaelficarra.github.io/CoffeeScriptRedux/). The Redux compiler is also smart enough not to wrap the function in parentheses when compiled.
 
-##### without parentheses
+#### without parentheses
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce (obj,i) ->
     obj[i] or false
 , obj</code></pre>
 
 
-##### with parentheses
+#### with parentheses
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce( ((obj,i) ->
     return obj[i] or false
 ), obj)</code></pre>
 
 
-#### 4. wrap objects in curly braces
+### 4. wrap objects in curly braces
 
 This again fights inconsistency. Arrays have to be wrapped in braces so should objects.
 
-##### without braces
+#### without braces
 
 <pre class="language-coffeescript"><code>obj =
     name: 'Max'
@@ -91,7 +91,7 @@ This again fights inconsistency. Arrays have to be wrapped in braces so should o
     from: 'germany'</code></pre>
 
 
-##### with braces
+#### with braces
 
 <pre class="language-coffeescript"><code>obj = {
     name: 'Max'
@@ -117,7 +117,7 @@ If you want to write CoffeeScript, learn JavaScript first. For beginners I recom
 
 I can not wait for the next version of JavaScript and CoffeeScript is a foretaste of what’s to come. ECMAScript.next has powerful features like modules, Proxies, Weakmaps etc. which will make JavaScript more beaufitul and powerful than ever before.
 
-#### Further Reading
+### Further Reading
 
 - [Short summary of ECMAScript 6](http://espadrine.github.io/New-In-A-Spec/es6/)
 - [[Video] David Herman: The Future of JavaScript](http://www.youtube.com/watch?v=u4IdoBU1uKE)

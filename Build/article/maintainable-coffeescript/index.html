@@ -6,7 +6,7 @@
 	<meta name="description" content="In 2012 I decided to master JavaScript. I started with Addy Osmani’s free “Learning JavaScript Design Patterns”, read “JavaScript: The Good Parts” by Douglas Crockford, then went on with “Effective JavaScript” by David Herman, learned about “Maintainable JavaScript” from Nicolas Zarkasas and am currently half through “Secrets of the JavaScript Ninja” by John Resig and Bear Bibeault.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../84ab26ad32984651218090e3ecd93bdf.css'>
+	<link rel='stylesheet' href='../../9bc3d8e9c320d5597f9a564cfd369d60.css'>
 	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<!--[if lt IE 9]>
@@ -43,11 +43,11 @@
 
 <h2>Code Conventions</h2>
 
-<h4>1. always wrap function parameters in parentheses</h4>
+<h3>1. always wrap function parameters in parentheses</h3>
 
 <p>Readability is important. Without parentheses it’s hard to see where functions are called—even for syntax highlighters like <a href="http://prismjs.com/">prism.js</a>. It’s also inconsistent as one has to use parantheses calling functions without parameters.</p>
 
-<h5>without parentheses</h5>
+<h4>without parentheses</h4>
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest
     request.responseType = type
@@ -56,7 +56,7 @@
     request.setRequestHeader 'X-Requested-With', 'XMLHttpRequest'
     request.send()</code></pre>
 
-<h5>with parentheses</h5>
+<h4>with parentheses</h4>
 
 <pre class="language-coffeescript"><code>request = new XMLHttpRequest()
     request.responseType = type
@@ -67,11 +67,11 @@
 
 <p>Now you can see on the first sight which parts of the codes are assignments and which ones are function calls.</p>
 
-<h4>2. always write return if you intend to do so</h4>
+<h3>2. always write return if you intend to do so</h3>
 
 <p>CoffeeScript always returns the last statement of a function. This leads to lines with just a variable name, but lines with just a variable name could also be part of an array for example. It’s also not explicit if you return early. Look at the last line. In my opinion it looks unintentional.</p>
 
-<h5>without return</h5>
+<h4>without return</h4>
 
 <pre class="language-coffeescript"><code>getVar = (para) -&gt;
     context = this or window
@@ -79,7 +79,7 @@
         return context[para]
     para</code></pre>
 
-<h5>with return</h5>
+<h4>with return</h4>
 
 <pre class="language-coffeescript"><code>getVar = (para) -&gt;
     context = this or window
@@ -87,27 +87,27 @@
         return context[para]
     return para</code></pre>
 
-<h4>3. wrap functions which are not the last argument in parentheses</h4>
+<h3>3. wrap functions which are not the last argument in parentheses</h3>
 
 <p>Without parantheses and the return statement this looks like a syntax error to me. Apparently this is also hard to understand for CoffeeScript’s compiler as this syntax isn’t valid when compiled with the new <a href="http://michaelficarra.github.io/CoffeeScriptRedux/">CoffeeScript Redux compiler</a>. The Redux compiler is also smart enough not to wrap the function in parentheses when compiled.</p>
 
-<h5>without parentheses</h5>
+<h4>without parentheses</h4>
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce (obj,i) -&gt;
     obj[i] or false
 , obj</code></pre>
 
-<h5>with parentheses</h5>
+<h4>with parentheses</h4>
 
 <pre class="language-coffeescript"><code>func = string.split('.').reduce( ((obj,i) -&gt;
     return obj[i] or false
 ), obj)</code></pre>
 
-<h4>4. wrap objects in curly braces</h4>
+<h3>4. wrap objects in curly braces</h3>
 
 <p>This again fights inconsistency. Arrays have to be wrapped in braces so should objects.</p>
 
-<h5>without braces</h5>
+<h4>without braces</h4>
 
 <pre class="language-coffeescript"><code>obj =
     name: 'Max'
@@ -123,7 +123,7 @@
         other: 'web development'
     from: 'germany'</code></pre>
 
-<h5>with braces</h5>
+<h4>with braces</h4>
 
 <pre class="language-coffeescript"><code>obj = {
     name: 'Max'
@@ -149,7 +149,7 @@
 
 <p>I can not wait for the next version of JavaScript and CoffeeScript is a foretaste of what’s to come. ECMAScript.next has powerful features like modules, Proxies, Weakmaps etc. which will make JavaScript more beaufitul and powerful than ever before.</p>
 
-<h4>Further Reading</h4>
+<h3>Further Reading</h3>
 
 <ul>
   <li><a href="http://espadrine.github.io/New-In-A-Spec/es6/">Short summary of ECMAScript 6</a></li>
