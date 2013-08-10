@@ -36,3 +36,13 @@ a
 abbr
 	font-weight: 600
 	color: #777
+
+.navigation > div,
+.footer > div,
+.article-meta > div,
+.archive,
+.article
+	+transition(opacity 1s)
+
+	.wf-loading &
+		opacity: 0
