@@ -1,5 +1,5 @@
 
-The two main factors how fonts will look on displays are their hinting and the operating system’s rendering algorithm. That’s the reason why trying different fonts is important as well as testing them on different devices, operating systems, browsers and browser versions.
+The two main factors which define how fonts will look on displays are their hinting and the operating system’s rendering algorithm. That’s the reason why trying different fonts is important as well as testing them on different devices, operating systems, browsers and browser versions.
 
 Photoshop doesn’t use the system’s font rendering and therefore text looks very differently. One could use [Sketch](http://www.bohemiancoding.com/sketch/) as an alternative, but it’s best to design in the medium itself—the browser. Style guides or new tools like [Typecast](http://typecast.com/) and [Macaw](http://macaw.co/) are great for a responsive workflow.
 
