@@ -48,7 +48,7 @@ $this-&gt;db-&gt;insert('mytable', $data);</code></pre>
 
 <p><code>insert</code> accepts two parameters. First is the table name and second is the data to insert provided as an associative array having keys as row names and values as the actual data.</p>
 
-<p>The main problem is building a CodeIgniter compatible array from <abbr>POST</abbr> or <abbr>GET</abbr> data. To create it we will use the <code>elements function, which is provided by CodeIgniter's </code>array_helper` and lets you fetch a number of items from an array. This is what I’ve come up with:</p>
+<p>The main problem is building a CodeIgniter compatible array from <abbr>POST</abbr> or <abbr>GET</abbr> data. To create it we will use the <code>elements</code> function, which is provided by CodeIgniter&#8217;s <code>array_helper</code> and lets you fetch a number of items from an array. This is what I’ve come up with:</p>
 
 <pre class="language-php"><code>$filter = array(
 	'name',
@@ -60,7 +60,7 @@ $data = elements($filter, array_filter($this-&gt;input-&gt;post(NULL, TRUE)), NU
 $this-&gt;db-&gt;insert('person', $data);
 </code></pre>
 
-<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <code>elements function. This also ensures that fields in your database being set to </code>NOT NULL`  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals <abbr>XSS</abbr> filtering enabled.</p>
+<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <code>elements</code> function. This also ensures that fields in your database being set to <code>NOT NULL</code>  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals <abbr>XSS</abbr> filtering enabled.</p>
 
 <p>While this works fine for inserting data we need to add another function for updating. This is how it looks like:</p>
 
@@ -75,7 +75,7 @@ $data = array_filter(elements($filter, $this-&gt;input-&gt;post(NULL, TRUE)));
 $this-&gt;db-&gt;where('id', $id);
 $this-&gt;db-&gt;update('person', $data);</code></pre>
 
-<p>This time we leave out the third parameter of elements. Its default value is false, that’s why each data not provided by <abbr>POST</abbr>, but required by our filter array will be set to false. Afterwards we filter the result of elements with <code>array_filter</code>, a standard <abbr>PHP</abbr> function, iterating over each element of its input array and passing it to a callback function. We haven’t provided a callback which as a result removes every item with a false value <code>(null, false,'',0)</code>. As post items being always strings <code>NULL</code> and <code>0</code> will still work, but not provided data won’t be passed to the update function. To summarize only items of the filter array will be passed to the update function if any of those are provided.</p>
+<p>This time we leave out the third parameter of <code>elements</code>. Its default value is false, that’s why each data not provided by <abbr>POST</abbr>, but required by our filter array will be set to false. Afterwards we filter the result of elements with <code>array_filter</code>, a standard <abbr>PHP</abbr> function, iterating over each element of its input array and passing it to a callback function. We haven’t provided a callback which as a result removes every item with a false value <code>(null, false,'',0)</code>. As post items being always strings <code>NULL</code> and <code>0</code> will still work, but not provided data won’t be passed to the update function. To summarize only items of the filter array will be passed to the update function if any of those are provided.</p>
 
 <p>I hope this could help you and I appreciate your feedback.</p>
 
