@@ -3,7 +3,7 @@
 
 html
 	font-size: em(18)
-	font-family: ff-meta-serif-web-pro, serif
+	font-family: $font-main
 	text-rendering: optimizeLegibility
 	color: #222
 	background-color: #eee
@@ -16,9 +16,6 @@ html
 	+media("min-width: 90em")
 		font-size: em(26)
 
-body
-	padding-top: 4em
-
 ::-moz-selection
 	color: #fff
 	background: #aaa
@@ -29,9 +26,6 @@ body
 	background: #aaa
 	text-shadow: none
 
-h1,h2,h3,h4,h5,h6
-	font-family: $font-small
-
 p, h1, h2, h3, h4, h5, h6, ul
 	margin: 0
 
@@ -40,7 +34,5 @@ a
 	text-decoration: none
 
 abbr
-	text-transform: uppercase
-	font-size: .9em
-	font-weight: bold
-	color: #888
+	font-weight: 600
+	color: #777

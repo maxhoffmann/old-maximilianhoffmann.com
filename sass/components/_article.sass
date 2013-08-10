@@ -2,7 +2,7 @@
 // ARTICLE
 
 .article
-	padding-top: 2em
+	padding-top: em(130,26)
 	line-height: 1.5
 
 	p,
@@ -18,15 +18,6 @@
 		margin-bottom: em(52,26)
 		+hyphens(auto)
 
-		&:first-child:first-letter
-			float: left
-			padding-top: .185em
-			padding-right: .1em
-			font-size: 5em
-			font-weight: bold
-			line-height: .7em
-			color: #333
-
 		code
 			display: inline-block
 			padding: 0 .1em
@@ -36,7 +27,6 @@
 
 	h2
 		+_(container)
-		font-family: $font-headlines
 		margin-top: em(104,64)
 		margin-bottom: em(52,64)
 		max-width: em(832,64)
@@ -64,6 +54,12 @@
 		margin-bottom: em(52,42)
 		max-width: em(832, 26)
 		font-size: em(26,26)
+
+
+	h1,h2,h3,h4,h5,h6
+		&:first-child
+			margin-top: 0
+
 
 	blockquote
 		+_(container)
@@ -122,8 +118,7 @@
 	a
 		color: #539f50
 		+transition(color .3s)
-		-webkit-font-smoothing: subpixel-antialiased
-		-moz-osx-font-smoothing: auto
+		font-weight: 600
 		&:hover
 			color: darken(#539f50,10%)
 
@@ -159,22 +154,27 @@
 		padding-top: 0.105em
 
 .article-meta
+	padding: 5em 0 3em
+	color: #eee
+	background-color: #222
+
+.article-meta-content
 	+_(container)
-	max-width: em(832,26)
-	padding: 4em 0 2em
-	color: #333
+	max-width: em(832, 26)
 
 .article-date
-	font-size: 1em
+	margin-bottom: em(26,26)
+	font-size: em(26,26)
 	color: #bbb
-	font-family: $font-headlines
+	font-weight: 400
+	font-style: italic
 	+media("min-width: 40em")
 		text-align: center
 
 .article-title
 	line-height: 1.2
 	font-size: 2.5em
-	font-family: $font-headlines
+	font-weight: 400
 	+media("min-width: 40em")
 		font-size: 4em
 		text-align: center

@@ -6,8 +6,8 @@
 	<meta name="description" content="In 2012 I decided to master JavaScript. I started with Addy Osmani’s free “Learning JavaScript Design Patterns”, read “JavaScript: The Good Parts” by Douglas Crockford, then went on with “Effective JavaScript” by David Herman, learned about “Maintainable JavaScript” from Nicolas Zarkasas and am currently half through “Secrets of the JavaScript Ninja” by John Resig and Bear Bibeault.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../f1d0e4c815740692b75dfd3064aa8644.css'>
-	<script type="text/javascript">(function(){var config={kitId:'ukz6xxx',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel='stylesheet' href='../../f1c040652b619e88769a88fc3895cc67.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<!--[if lt IE 9]>
 	<script src="/js/ext/html5shiv.min.js"></script>
@@ -25,13 +25,15 @@
 
 
 <header class="article-meta">
-	<h2 class="article-date">8th of August, 2013</h2>
-	<h1 class="article-title">Maintainable CoffeeScript</h1>
+	<div class="article-meta-content">
+		<h2 class="article-date">8th of August, 2013</h2>
+		<h1 class="article-title">Maintainable CoffeeScript</h1>
+	</div>
 </header>
 
 <article class="article">
 
-<p><strong>In 2012 I decided to master JavaScript.</strong> I started with Addy Osmani’s free <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">&#8220;Learning JavaScript Design Patterns&#8221;</a>, read <a href="http://shop.oreilly.com/product/9780596517748.do">&#8220;JavaScript: The Good Parts&#8221;</a> by Douglas Crockford, then went on with <a href="http://effectivejs.com">&#8220;Effective JavaScript&#8221;</a> by David Herman, learned about <a href="http://shop.oreilly.com/product/0636920025245.do">&#8220;Maintainable JavaScript&#8221;</a> from Nicholas Zakas and am currently half through <a href="http://jsninja.com/">&#8220;Secrets of the JavaScript Ninja&#8221;</a> by John Resig and Bear Bibeault. I also had a glimpse into <a href="http://eloquentjavascript.net/">&#8220;Eloquent JavaScript&#8221;</a> by Marijn Haverbeke and <a href="http://www.packtpub.com/object-oriented-javascript/book">&#8220;Object Oriented JavaScript&#8221;</a> by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: <a href="http://tddjs.com/">&#8220;Test-Driven JavaScript Development&#8221;</a> by Christian Johansen.</p>
+<p>In 2012 I decided to master JavaScript. I started with Addy Osmani’s free <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">&#8220;Learning JavaScript Design Patterns&#8221;</a>, read <a href="http://shop.oreilly.com/product/9780596517748.do">&#8220;JavaScript: The Good Parts&#8221;</a> by Douglas Crockford, then went on with <a href="http://effectivejs.com">&#8220;Effective JavaScript&#8221;</a> by David Herman, learned about <a href="http://shop.oreilly.com/product/0636920025245.do">&#8220;Maintainable JavaScript&#8221;</a> from Nicholas Zakas and am currently half through <a href="http://jsninja.com/">&#8220;Secrets of the JavaScript Ninja&#8221;</a> by John Resig and Bear Bibeault. I also had a glimpse into <a href="http://eloquentjavascript.net/">&#8220;Eloquent JavaScript&#8221;</a> by Marijn Haverbeke and <a href="http://www.packtpub.com/object-oriented-javascript/book">&#8220;Object Oriented JavaScript&#8221;</a> by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: <a href="http://tddjs.com/">&#8220;Test-Driven JavaScript Development&#8221;</a> by Christian Johansen.</p>
 
 <p>While learning to avoid the quirks of JavaScript I started to value its good parts and then felt in love with the expressiveness of the language. Having written some web applications without and with frameworks like <a href="http://angularjs.org">Angular.js</a>, I got aware of the boilerplate code one has to write though. Class inheritance is pretty painful without a library and some things like type or existence checking isn’t fun.</p>
 
