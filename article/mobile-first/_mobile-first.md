@@ -50,7 +50,7 @@ For viewport sizes wider than `767px` columns will float and form the grid.
 	float: right;
 }</code></pre>
 
-Columns are floated left by default, but may be floated to the right by adding `.right`. Overflowing content is hidden and `max-width` is resetted allowing columns to use more space depending on their size class.
+Columns are floated left by default, but may be floated to the right by adding `.right`. Overflowing content is hidden and `max-width` is reset allowing columns to use more space depending on their size class.
 
 You could add a lot of grid sizes to define a flexible 12-column grid, but for my purposes I’ve chosen the following sizes as my grid may have nested columns to further split up columns.
 
