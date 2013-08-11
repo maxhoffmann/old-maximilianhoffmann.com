@@ -60,7 +60,7 @@ $data = elements($filter, array_filter($this-&gt;input-&gt;post(NULL, TRUE)), NU
 $this-&gt;db-&gt;insert('person', $data);
 </code></pre>
 
-<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <code>elements</code> function. This also ensures that fields in your database being set to <code>NOT NULL</code>  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <abbr>POST</abbr> if you have globals <abbr>XSS</abbr> filtering enabled.</p>
+<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <code>elements</code> function. This also ensures that fields in your database being set to <code>NOT NULL</code>  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <code>post()</code> if you have globals <abbr>XSS</abbr> filtering enabled.</p>
 
 <p>While this works fine for inserting data we need to add another function for updating. This is how it looks like:</p>
 
