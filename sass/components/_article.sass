@@ -2,8 +2,10 @@
 // ARTICLE
 
 .article
-	padding-top: em(130,26)
 	line-height: 1.5
+	padding-top: em(78,26)
+	+media("min-width: 40em")
+		padding-top: em(130,26)
 
 	p,
 	h1,
@@ -160,10 +162,6 @@
 		border: .3em solid white
 		border-radius: 0.3em
 		+box-shadow(0 2px 3px black(.2))
-
-@-moz-document url-prefix()
-	.article p:first-child:first-letter
-		padding-top: 0.105em
 
 .article-meta
 	padding: 5em 0 3em
