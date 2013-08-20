@@ -1,11 +1,11 @@
 
-The two main factors which define how fonts will look on displays are their hinting and the operating system’s rendering algorithm. That’s the reason why trying different fonts is important as well as testing them on different devices, operating systems, browsers and browser versions.
+The two main factors which define how fonts will look on displays are their hinting and the operating system’s rendering algorithm. Therefore trying different fonts on different devices, operating systems, browsers and browser versions is the only way to get an idea how they will be presented to users.
 
-Photoshop doesn’t use the system’s font rendering and therefore text looks very differently. One could use [Sketch](http://www.bohemiancoding.com/sketch/) as an alternative, but it’s best to design in the medium itself—the browser. Style guides or new tools like [Typecast](http://typecast.com/) and [Macaw](http://macaw.co/) are great for a responsive workflow.
+Photoshop doesn’t use the system’s font rendering so that text looks very differently. One could use [Sketch](http://www.bohemiancoding.com/sketch/) as an alternative, but it’s best to design in the medium itself—the browser. Style guides or new tools like [Typecast](http://typecast.com/) and [Macaw](http://macaw.co/) are great for a responsive workflow.
 
 ### Font rendering on OS X
 
-Due to its sub-pixel antialiasing algorithm OS X tends to render light text on dark backgrounds too bold. Using icon fonts sometimes leads to more [blurry](http://people.mozilla.org/~jdaggett/tests/social-waterfall.html) rendering.
+Due to its sub-pixel antialiasing algorithm OS X tends to render light text on dark backgrounds too bold. Using icon fonts sometimes leads to [blurry](http://people.mozilla.org/~jdaggett/tests/social-waterfall.html) rendering.
 
 Fortunately developers can influence how browsers render text on OS X. Webkit/Chromium-based browsers offer `-webkit-font-smoothing` and  Firefox [recently added](https://bugzilla.mozilla.org/show_bug.cgi?id=857142) `-moz-osx-font-smoothing` to version 25 (currently Nightly build).
 
