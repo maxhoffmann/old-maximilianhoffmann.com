@@ -1,0 +1,43 @@
+
+// ARCHIVE
+
+.archive
+	@extend %container
+	max-width: em(832,26)
+	margin-top: 4em
+
+.archive-item
+	display: block
+	padding: em(52,26) 0
+	border-bottom: 1px solid #ccc
+
+.archive-title
+	font-size: em(64,26)
+	font-weight: 600
+	line-height: 1.2
+
+.archive-date
+	margin-bottom: em(9,26)
+	color: #bbb
+	font-weight: 400
+	font-size: em(26,26)
+	font-style: italic
+
+.archive-preview
+	margin-top: em(13,26)
+	font-weight: 400
+	// +hyphens(auto)
+
+.archive-button
+	display: inline-block
+	margin-top: em(39,26)
+	padding: .15em .6em .25em
+	color: #aaa
+	border: 1px solid #aaa
+	border-radius: .2em
+	+transition(color .3s, border-color .3s)
+
+	.archive-item:hover &,
+	&:hover
+		color: #618D60
+		border-color: #618D60
