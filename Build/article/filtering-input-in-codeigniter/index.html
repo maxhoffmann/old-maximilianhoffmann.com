@@ -6,9 +6,13 @@
 	<meta name="description" content="I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../fe9306388f31f2e452fa4798ba9b780f.css'>
+	<link rel='stylesheet' href='../../92c7deffea62501e1e55ec72454b2fe3.css'>
 	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@max_hoffmann">
+	<meta name="twitter:title" content="Filtering Input in CodeIgniter">
+	<meta name="twitter:description" content="I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.">
 	<!--[if lt IE 9]>
 	<script src="/js/ext/html5shiv.min.js"></script>
 	<![endif]-->
@@ -16,24 +20,28 @@
 <body>
 
 	<nav class="navigation">
-		<div class="centered navigation-content">
-			<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-		</div>
-	</nav>
+	<div class="centered navigation-content">
+		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
+	</div>
+</nav>
 
 
+	
+	
+	
+	
 
-
-<header class="article-meta">
-	<div class="article-meta-content">
+	
+<header class="article-meta-header">
+	<div class="article-meta-container">
 		<h2 class="article-date">12th of December, 2012</h2>
 		<h1 class="article-title">Filtering Input in CodeIgniter</h1>
 	</div>
 </header>
 
-<article class="article">
+	<article class="article">
 
-
+		
 <p>I use CodeIgniter for my backend and have been struggling to find a good way to pass <abbr>POST</abbr> or <abbr>GET</abbr> data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.</p>
 
 <p>Let’s start with CodeIgniter’s user guide example of inserting data.</p>
@@ -84,7 +92,15 @@ $this-&gt;db-&gt;update('person', $data);</code></pre>
 <p>I’ve just recognized that you should use <code>array_filter</code> on inserts too, but in reverse order to avoid empty strings being inserted in fields which do not allow <code>NULL</code>. I’ve updated the code sample in the article.</p>
 
 
-</article>
+	</article>
+
+	
+<div class="article-meta-container">
+	<div class="article-meta-footer">
+		<a href="https://twitter.com/intent/tweet?text=%22Filtering Input in CodeIgniter%22&url=http://maximilianhoffmann.com/article/filtering-input-in-codeigniter&via=max_hoffmann" class="twitter">share on twitter</a>
+		<a href="/#filtering-input-in-codeigniter" class="articles">&laquo; back to articles</a>
+	</div>
+</div>
 
 
 	<footer class="footer">
@@ -97,7 +113,9 @@ $this-&gt;db-&gt;update('person', $data);</code></pre>
 
 	<script>
 	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));</script>
+	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
+	/* TWITTER */(function(d,t){var s=d.createElement(t);s.src="//platform.twitter.com/widgets.js";d.body.appendChild(s);}(document,'script'));
+	</script>
 
 </body>
 </html>

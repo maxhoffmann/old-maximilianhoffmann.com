@@ -18,7 +18,7 @@
 		@extend %container
 		max-width: em(832,26)
 		margin-bottom: em(52,26)
-		// +hyphens(auto)
+		+hyphens(auto)
 
 		code
 			display: inline-block
@@ -125,7 +125,7 @@
 		-moz-tab-size: 4
 		-o-tab-size: 4
 		tab-size: 4
-		// +hyphens(none)
+		+hyphens(none)
 		-webkit-font-smoothing: subpixel-antialiased
 		-moz-osx-font-smoothing: auto
 
@@ -163,12 +163,15 @@
 		border-radius: 0.3em
 		+box-shadow(0 2px 3px black(.2))
 
-.article-meta
+	.button
+		font-weight: 400
+
+.article-meta-header
 	padding: 5em 0 3em
 	color: #eee
 	background-color: #222
 
-.article-meta-content
+.article-meta-container
 	@extend %container
 	max-width: em(832, 26)
 
@@ -188,3 +191,22 @@
 	+when("min-width: 40em")
 		font-size: 4em
 		text-align: center
+
+.article-meta-footer
+	margin-top: em(104,26)
+	padding: em(52,26) 0
+	border-top: 1px solid #ccc
+
+	a
+		+transition(color .2s)
+		&:hover
+			color: #888
+
+	.articles
+		color: #666
+		vertical-align: top
+
+	.twitter
+		float: right
+		&:hover
+			color: darken(#00ACED, 10%)

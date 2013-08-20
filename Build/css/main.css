@@ -489,12 +489,12 @@ abbr {
 .text-centered {
   text-align: center; }
 
-.navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul, .article-meta-content, .archive {
+.navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul, .article-meta-container, .archive {
   margin-left: auto;
   margin-right: auto;
   width: 86%; }
   @media screen and (min-width: 30em) {
-    .navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul, .article-meta-content, .archive {
+    .navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul, .article-meta-container, .archive {
       width: 80%; } }
 
 .navigation {
@@ -596,7 +596,11 @@ abbr {
     margin-right: auto; }
   .article p {
     max-width: 32em;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
     .article p code {
       display: inline-block;
       padding: 0 0.1em;
@@ -685,6 +689,10 @@ abbr {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto; }
   .article a {
@@ -722,13 +730,15 @@ abbr {
     border: 0.3em solid white;
     border-radius: 0.3em;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); }
+  .article .button {
+    font-weight: 400; }
 
-.article-meta {
+.article-meta-header {
   padding: 5em 0 3em;
   color: #eeeeee;
   background-color: #222222; }
 
-.article-meta-content {
+.article-meta-container {
   max-width: 32em; }
 
 .article-date {
@@ -749,6 +759,24 @@ abbr {
     .article-title {
       font-size: 4em;
       text-align: center; } }
+
+.article-meta-footer {
+  margin-top: 4em;
+  padding: 2em 0;
+  border-top: 1px solid #cccccc; }
+  .article-meta-footer a {
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s; }
+    .article-meta-footer a:hover {
+      color: #888888; }
+  .article-meta-footer .articles {
+    color: #666666;
+    vertical-align: top; }
+  .article-meta-footer .twitter {
+    float: right; }
+    .article-meta-footer .twitter:hover {
+      color: #0087ba; }
 
 .archive {
   max-width: 32em;
@@ -773,7 +801,11 @@ abbr {
 
 .archive-preview {
   margin-top: 0.5em;
-  font-weight: 400; }
+  font-weight: 400;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
 
 .archive-button {
   display: inline-block;
@@ -812,4 +844,4 @@ abbr {
   color: #4183c4; }
 
 .email {
-  color: #539f50; }
+  color: #618d60; }

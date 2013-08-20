@@ -6,9 +6,13 @@
 	<meta name="description" content="In 2012 I decided to master JavaScript. I started with Addy Osmani’s free “Learning JavaScript Design Patterns”, read “JavaScript: The Good Parts” by Douglas Crockford, then went on with “Effective JavaScript” by David Herman, learned about “Maintainable JavaScript” from Nicolas Zarkasas and am currently half through “Secrets of the JavaScript Ninja” by John Resig and Bear Bibeault.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../fe9306388f31f2e452fa4798ba9b780f.css'>
+	<link rel='stylesheet' href='../../92c7deffea62501e1e55ec72454b2fe3.css'>
 	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@max_hoffmann">
+	<meta name="twitter:title" content="Maintainable CoffeeScript">
+	<meta name="twitter:description" content="In 2012 I decided to master JavaScript. I started with Addy Osmani’s free “Learning JavaScript Design Patterns”, read “JavaScript: The Good Parts” by Douglas Crockford, then went on with “Effective JavaScript” by David Herman, learned about “Maintainable JavaScript” from Nicolas Zarkasas and am currently half through “Secrets of the JavaScript Ninja” by John Resig and Bear Bibeault.">
 	<!--[if lt IE 9]>
 	<script src="/js/ext/html5shiv.min.js"></script>
 	<![endif]-->
@@ -16,24 +20,28 @@
 <body>
 
 	<nav class="navigation">
-		<div class="centered navigation-content">
-			<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-		</div>
-	</nav>
+	<div class="centered navigation-content">
+		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
+	</div>
+</nav>
 
 
+	
+	
+	
+	
 
-
-<header class="article-meta">
-	<div class="article-meta-content">
+	
+<header class="article-meta-header">
+	<div class="article-meta-container">
 		<h2 class="article-date">8th of August, 2013</h2>
 		<h1 class="article-title">Maintainable CoffeeScript</h1>
 	</div>
 </header>
 
-<article class="article">
+	<article class="article">
 
-<p>In 2012 I decided to master JavaScript. I started with Addy Osmani’s free <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">&#8220;Learning JavaScript Design Patterns&#8221;</a>, read <a href="http://shop.oreilly.com/product/9780596517748.do">&#8220;JavaScript: The Good Parts&#8221;</a> by Douglas Crockford, then went on with <a href="http://effectivejs.com">&#8220;Effective JavaScript&#8221;</a> by David Herman, learned about <a href="http://shop.oreilly.com/product/0636920025245.do">&#8220;Maintainable JavaScript&#8221;</a> from Nicholas Zakas and am currently half through <a href="http://jsninja.com/">&#8220;Secrets of the JavaScript Ninja&#8221;</a> by John Resig and Bear Bibeault. I also had a glimpse into <a href="http://eloquentjavascript.net/">&#8220;Eloquent JavaScript&#8221;</a> by Marijn Haverbeke and <a href="http://www.packtpub.com/object-oriented-javascript/book">&#8220;Object Oriented JavaScript&#8221;</a> by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: <a href="http://tddjs.com/">&#8220;Test-Driven JavaScript Development&#8221;</a> by Christian Johansen.</p>
+		<p>In 2012 I decided to master JavaScript. I started with Addy Osmani’s free <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">&#8220;Learning JavaScript Design Patterns&#8221;</a>, read <a href="http://shop.oreilly.com/product/9780596517748.do">&#8220;JavaScript: The Good Parts&#8221;</a> by Douglas Crockford, then went on with <a href="http://effectivejs.com">&#8220;Effective JavaScript&#8221;</a> by David Herman, learned about <a href="http://shop.oreilly.com/product/0636920025245.do">&#8220;Maintainable JavaScript&#8221;</a> from Nicholas Zakas and am currently half through <a href="http://jsninja.com/">&#8220;Secrets of the JavaScript Ninja&#8221;</a> by John Resig and Bear Bibeault. I also had a glimpse into <a href="http://eloquentjavascript.net/">&#8220;Eloquent JavaScript&#8221;</a> by Marijn Haverbeke and <a href="http://www.packtpub.com/object-oriented-javascript/book">&#8220;Object Oriented JavaScript&#8221;</a> by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: <a href="http://tddjs.com/">&#8220;Test-Driven JavaScript Development&#8221;</a> by Christian Johansen.</p>
 
 <p>While learning to avoid the quirks of JavaScript I started to value its good parts and then felt in love with the expressiveness of the language. Having written some web applications without and with frameworks like <a href="http://angularjs.org">Angular.js</a>, I got aware of the boilerplate code one has to write though. Class inheritance is pretty painful without a library and some things like type or existence checking isn’t fun.</p>
 
@@ -157,7 +165,15 @@
 </ul>
 
 
-</article>
+	</article>
+
+	
+<div class="article-meta-container">
+	<div class="article-meta-footer">
+		<a href="https://twitter.com/intent/tweet?text=%22Maintainable CoffeeScript%22&url=http://maximilianhoffmann.com/article/maintainable-coffeescript&via=max_hoffmann" class="twitter">share on twitter</a>
+		<a href="/#maintainable-coffeescript" class="articles">&laquo; back to articles</a>
+	</div>
+</div>
 
 
 	<footer class="footer">
@@ -170,7 +186,9 @@
 
 	<script>
 	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));</script>
+	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
+	/* TWITTER */(function(d,t){var s=d.createElement(t);s.src="//platform.twitter.com/widgets.js";d.body.appendChild(s);}(document,'script'));
+	</script>
 
 </body>
 </html>
