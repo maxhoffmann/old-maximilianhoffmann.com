@@ -1,101 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<link rel="dns-prefetch" href="//use.typekit.com">
-	<title>Updating Firefox OS on Geeksphones by Maximilian Hoffmann</title>
-	<meta name="description" content="If you are one of the lucky guys owning a geeksphone you may have thought about updating to a nightly build.">
-	<meta name="author" content="Maximilian Hoffmann">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../f77f5bd24320cc4ccc69c3309d558ccd.css'>
-	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
-	<link rel="author" href="https://plus.google.com/101144444133821135563">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:creator" content="max_hoffmann">
-	<meta name="twitter:site" content="max_hoffmann">
-	<meta name="twitter:title" content="Updating Firefox OS on Geeksphones">
-	<meta name="twitter:description" content="If you are one of the lucky guys owning a geeksphone you may have thought about updating to a nightly build.">
-	<!--[if lt IE 9]>
-	<script src="/js/ext/html5shiv.min.js"></script>
-	<![endif]-->
-</head>
-<body>
+<!-- @include article/_header -->
 
-	<nav class="navigation">
-	<div class="centered navigation-content">
-		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-	</div>
-</nav>
+	<!-- $title Updating Firefox OS on Geeksphones -->
+	<!-- $url updating-firefox-os-on-geeksphones -->
+	<!-- $date 31st of May, 2013 -->
+	<!-- $description If you are one of the lucky guys owning a geeksphone you may have thought about updating to a nightly build. -->
 
-
-	
-	
-	
-	
-
-	
-<header class="article-meta-header">
-	<div class="article-meta-container">
-		<h2 class="article-date">31st of May, 2013</h2>
-		<h1 class="article-title">Updating Firefox OS on Geeksphones</h1>
-	</div>
-</header>
+	<!-- @include article/_meta-header -->
 
 	<article class="article">
 
-		
-<p>If you are one of the lucky guys owning a geeksphone you may have thought about updating to a nightly build. Since geeksphone publishes stable releases over the air you should already have the latest stable version installed. Updating to a nightly build is pretty easy if you don’t want a custom build. This small guide is for Mac OS X. Updating on Linux or Windows is slightly different.</p>
-
-<h3>Installing adb and fastboot</h3>
-
-<p><code>adb</code> and <code>fastboot</code> are small executables provided by the Android <abbr>SDK</abbr>. Simply download the Android <abbr>SDK</abbr> from <a href="http://developer.android.com/sdk/index.html">the official website</a> and unzip the file. Then open the folder <code>platform-tools</code> inside of <code>sdk</code> and copy the files <code>adb</code> and <code>fastboot</code> to a folder in your <abbr>PATH</abbr>, e.g. <code>/bin/</code>.</p>
-
-<h3>Download the latest nightly build</h3>
-
-<p>Now head over to <a href="http://downloads.geeksphone.com/">geeksphone’s official images</a> and download the latest nightly build for your device, which you’ll also have to unzip.</p>
-
-<h3>Updating your device</h3>
-
-<p>Before the final step be sure that your device has at least 50% power. If that’s the case connect it to your Mac via <abbr>USB</abbr> and open the unzipped folder with the image from geeksphone in terminal. Now simply flash the phone by executing:</p>
-
-<pre class="language-bash"><code>./flash_mac.sh</code></pre>
-
-<p>The command should now flash your phone and run the update. Just wait until the device automatically restarts and don’t try turning it on if the screen goes black.</p>
-
-<p>Have fun with the latest builds!</p>
-
-<h3 class="space-above">Further Reading</h3>
-
-<ul>
-  <li><a href="http://downloads.geeksphone.com/drivers/Manual_flash_geeksphone-eng.txt">geeksphones official guide</a></li>
-  <li><a href="http://forum.geeksphone.com/">geeksphones forum</a></li>
-  <li><a href="http://www.geeksphone.com/manifests/index.php">geeksphones manifests</a></li>
-</ul>
-
+		<!-- @include _updating-firefox-os-on-geeksphones -->
 
 	</article>
 
-	
-<div class="article-meta-container">
-	<div class="article-meta-footer">
-		<a href="https://twitter.com/intent/tweet?text=%22Updating Firefox OS on Geeksphones%22&url=http://maximilianhoffmann.com/article/updating-firefox-os-on-geeksphones&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
-		<a href="/#updating-firefox-os-on-geeksphones" class="articles">&laquo; back to articles</a>
-	</div>
-</div>
+	<!-- @include article/_meta-footer -->
 
-
-	<footer class="footer">
-		<div class="centered footer-content">
-			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
-			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
-			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
-		</div>
-	</footer>
-
-	<script>
-	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
-	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
-
-</body>
-</html>
+<!-- @include site/_footer  -->
