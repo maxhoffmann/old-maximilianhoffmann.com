@@ -1,3 +1,6 @@
 [submodule "css/ext/bourbon"]
 	path = css/ext/bourbon
 	url = https://maxhoffmann@github.com/thoughtbot/bourbon
+[submodule "css/ext/normalize-scss"]
+	path = css/ext/normalize-scss
+	url = https://maxhoffmann@github.com/hail2u/normalize.scss

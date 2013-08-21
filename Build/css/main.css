@@ -1,5 +1,5 @@
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-/* ==========================================================================
+/*!! _normalize.css v2.1.2 | MIT License | http://github.com/hail2u/normalize.scss */
+/* =============================================================================
    HTML5 display definitions
    ========================================================================== */
 /**
@@ -27,21 +27,25 @@ canvas,
 video {
   display: inline-block; }
 
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  /* 1 */
+  height: 0;
+  /* 2 */ }
 
-/**
- * Address styling not present in IE 8/9.
+/*
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-[hidden] {
+[hidden],
+template {
   display: none; }
 
-/* ==========================================================================
+/* =============================================================================
    Base
    ========================================================================== */
 /**
@@ -63,9 +67,15 @@ html {
 body {
   margin: 0; }
 
-/* ==========================================================================
+/* =============================================================================
    Links
    ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
@@ -79,7 +89,7 @@ a:active,
 a:hover {
   outline: 0; }
 
-/* ==========================================================================
+/* =============================================================================
    Typography
    ========================================================================== */
 /**
@@ -104,10 +114,11 @@ strong {
   font-weight: bold; }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in IE 8/9.
  */
-dfn {
-  font-style: italic; }
+mark {
+  background: #ff0;
+  color: #000; }
 
 /**
  * Address differences between Firefox and other browsers.
@@ -168,7 +179,7 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* ==========================================================================
+/* =============================================================================
    Embedded content
    ========================================================================== */
 /**
@@ -183,7 +194,7 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-/* ==========================================================================
+/* =============================================================================
    Figures
    ========================================================================== */
 /**
@@ -192,7 +203,7 @@ svg:not(:root) {
 figure {
   margin: 0; }
 
-/* ==========================================================================
+/* =============================================================================
    Forms
    ========================================================================== */
 /**
@@ -230,14 +241,6 @@ textarea {
   /* 3 */ }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-button,
-input {
-  line-height: normal; }
-
-/**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
@@ -246,6 +249,14 @@ input {
 button,
 select {
   text-transform: none; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -320,7 +331,7 @@ textarea {
   vertical-align: top;
   /* 2 */ }
 
-/* ==========================================================================
+/* =============================================================================
    Tables
    ========================================================================== */
 /**
