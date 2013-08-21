@@ -1,18 +1,170 @@
-<!-- @include article/_header -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="dns-prefetch" href="//use.typekit.com">
+	<title>Placeholder Selectors by Maximilian Hoffmann</title>
+	<meta name="description" content="Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS.">
+	<meta name="author" content="Maximilian Hoffmann">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel='stylesheet' href='../../f77f5bd24320cc4ccc69c3309d558ccd.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel="author" href="https://plus.google.com/101144444133821135563">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="max_hoffmann">
+	<meta name="twitter:site" content="max_hoffmann">
+	<meta name="twitter:title" content="Placeholder Selectors">
+	<meta name="twitter:description" content="Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS.">
+	<!--[if lt IE 9]>
+	<script src="/js/ext/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
 
-	<!-- $title Placeholder Selectors -->
-	<!-- $url placeholder-selectors -->
-	<!-- $date 14th of February, 2013 -->
-	<!-- $description Introduced with Sass 3.2 placeholder selectors enable us to write better modular CSS by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your HTML __and__ CSS. -->
+	<nav class="navigation">
+	<div class="centered navigation-content">
+		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
+	</div>
+</nav>
 
-	<!-- @include article/_meta-header -->
+
+	
+	
+	
+	
+
+	
+<header class="article-meta-header">
+	<div class="article-meta-container">
+		<h2 class="article-date">14th of February, 2013</h2>
+		<h1 class="article-title">Placeholder Selectors</h1>
+	</div>
+</header>
 
 	<article class="article">
 
-		<!-- @include _placeholder-selectors -->
+		
+<p>Introduced with Sass 3.2 placeholder selectors enable us to write better modular <abbr>CSS</abbr> by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your <abbr>HTML</abbr> <strong>and</strong> <abbr>CSS</abbr>.</p>
+
+<h3>Plain CSS</h3>
+
+<p>Let’s assume we want to implement a website, which has tiles with different colors. Each tile has the same width, height and margin.</p>
+
+<pre class="language-scss"><code>.tile {
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+}</code></pre>
+
+<p>For the ability to add different colors to the tiles we included two theme classes in our <abbr>CSS</abbr>.</p>
+
+<pre class="language-scss"><code>.tile-blue {
+	background-color: blue;
+}
+.tile-red {
+	background-color: red;
+}</code></pre>
+
+<p>The corresponding markup could look like this:</p>
+
+<pre class="language-markup"><code>&lt;div class=&quot;tile tile-blue&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;tile tile-red&quot;&gt;&lt;/div&gt;</code></pre>
+
+<h3>Without Placeholder Selectors</h3>
+
+<p>We’ve added two classes to the tile element: one for basic tile styles and one for the color. To reduce the number of classes we could simply extend <code>.tile</code> and remove it from our <abbr>HTML</abbr>.</p>
+
+<pre class="language-scss"><code>.tile {
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+}
+.tile-blue {
+	@extend .tile;
+	background-color: blue;
+}
+.tile-red {
+	@extend .tile;
+	background-color: red;
+}</code></pre>
+
+<p>Although we wouldn’t have to use the <code>.tile</code> class in our markup anymore, it would still be in our compiled <abbr>CSS</abbr>:</p>
+
+<pre class="language-scss"><code>.tile, .tile-blue, .tile-red {
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+}</code></pre>
+
+<p>To save some bytes or to prevent other developers from using the basic tile class without a color, we could also remove it from the compiled <abbr>CSS</abbr>.</p>
+
+<h3>Using Placeholder Selectors</h3>
+
+<p>Changing the dot before a class to a percent sign tells Sass to use it as a placeholder class.</p>
+
+<pre class="language-scss"><code>%tile {
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+}
+.tile-blue {
+	@extend %tile;
+	background-color: blue;
+}
+.tile-red {
+	@extend %tile;
+	background-color: red;
+}</code></pre>
+
+<p>Now we just need to use our theme classes.</p>
+
+<pre class="language-markup"><code>&lt;div class=&quot;tile-red&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;tile-blue&quot;&gt;&lt;/div&gt;</code></pre>
+
+<p>And our compiled <abbr>CSS</abbr> doesn’t contain the basic tile class anymore.</p>
+
+<pre class="language-scss"><code>.tile-blue, .tile-red {
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+}
+.tile-blue {
+	background-color: blue;
+}
+.tile-red {
+	background-color: red;
+}</code></pre>
+
+<p>To sum up placeholder classes are not included in your compiled <abbr>CSS</abbr> so that you can prevent developers from using those classes in their <abbr>HTML</abbr>. It is also possible to build a framework solely out of placeholder classes, which will only be added to the compiled <abbr>CSS</abbr> if developers extend them.</p>
+
+<h3>Further Reading</h3>
+
+<p><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_">Sass Reference: Placeholder Selectors</a></p>
+
 
 	</article>
 
-	<!-- @include article/_meta-footer -->
+	
+<div class="article-meta-container">
+	<div class="article-meta-footer">
+		<a href="https://twitter.com/intent/tweet?text=%22Placeholder Selectors%22&url=http://maximilianhoffmann.com/article/placeholder-selectors&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
+		<a href="/#placeholder-selectors" class="articles">&laquo; back to articles</a>
+	</div>
+</div>
 
-<!-- @include site/_footer  -->
+
+	<footer class="footer">
+		<div class="centered footer-content">
+			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
+		</div>
+	</footer>
+
+	<script>
+	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
+	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
+
+</body>
+</html>

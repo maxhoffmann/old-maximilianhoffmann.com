@@ -1,0 +1,106 @@
+<p><a href="http://bourbon.io"><img src="http://bourbon.io/images/shared/bourbon-logo.png" alt="Bourbon Sass Mixin Library" /></a></p>
+
+<h1>A simple and lightweight mixin library for Sass</h1>
+<p>Bourbon is a comprehensive library of sass mixins that are designed to be simple
+and easy to use. No configuration required.<br />
+The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.</p>
+
+<p>The mixins contain vendor specific prefixes for all CSS3 properties for support
+amongst modern browsers. The prefixes also ensure graceful degradation for older
+browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+
+<h1><a href="http://bourbon.io">Documentation &amp; Demo</a></h1>
+
+<h2>Requirements</h2>
+<p>Sass 3.2+</p>
+
+<h1>Install for Rails 3.1+</h1>
+<p>In your Gemfile:</p>
+
+<pre><code>gem 'bourbon'
+</code></pre>
+
+<p>Then run:</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Restart your server. Then rename application<code>.css</code> to application<code>.css.scss</code>:</p>
+
+<pre><code>mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+</code></pre>
+
+<p>Delete the sprocket directive in application.css.scss: <a href="https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets">Why?</a></p>
+
+<pre><code>*= require_tree .
+</code></pre>
+
+<p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+
+<pre><code>@import "bourbon";
+@import "home";
+@import "users";
+</code></pre>
+
+<p><a href="https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin">Help! I&#8217;m getting an undefined mixin error.</a></p>
+
+<h5><a href="https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install">Rails 3.0.x Install Instructions</a> | <a href="https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install">Rails 2.3 Install Instructions</a></h5>
+
+<h1><span id="non-rails"></span>Non-Rails projects</h1>
+<p>Bourbon includes an easy way to generate a directory with all the necessary files.<br />
+For command line help: <code>$ bourbon help</code> or visit the <a href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools">Command line tools wiki</a></p>
+
+<h4>Install (Bourbon v3.0+)</h4>
+
+<pre><code>gem install bourbon
+</code></pre>
+
+<p>Install Bourbon into the current directory by generating the <code>bourbon</code> folder:</p>
+
+<pre><code>bourbon install
+</code></pre>
+
+<p>The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.</p>
+
+<p>You can specify a target directory using the <code>path</code> flag:</p>
+
+<pre><code>bourbon install --path my/custom/path/
+</code></pre>
+
+<h4>Import</h4>
+
+<p>Lastly, import the mixins at the beginning of your stylesheet(s):</p>
+
+<pre><code>@import 'bourbon/bourbon';
+</code></pre>
+
+<p>Note: Bourbon no longer requires a custom <code>sass --watch</code> command for Bourbon v3.0+</p>
+
+<h4>Other Commands</h4>
+<p>Visit the <a href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools">Command line tools wiki</a> for a complete list</p>
+
+<pre><code>bourbon help
+bourbon update
+</code></pre>
+
+<h5><a href="https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install">Bourbon v2.x install instructions</a></h5>
+
+<hr />
+<p># <a href="https://github.com/thoughtbot/bourbon/wiki">Changelog</a></p>
+
+<h1><a href="https://github.com/thoughtbot/bourbon/wiki/Browser-Support">Browser support</a></h1>
+<hr />
+
+<h2>Credits</h2>
+
+<p><img src="http://thoughtbot.com/images/tm/logo.png" alt="thoughtbot" /></p>
+
+<p>Bourbon is maintained and funded by <a href="http://thoughtbot.com/community">thoughtbot, inc</a></p>
+
+<p>The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
+
+<p>Got questions? Need help? Tweet at <a href="http://twitter.com/phillapier">@phillapier</a>.</p>
+
+<h2>License</h2>
+
+<p>Bourbon is Copyright © 2011-2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>

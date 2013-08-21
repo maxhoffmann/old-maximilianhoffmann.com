@@ -1,18 +1,122 @@
-<!-- @include article/_header -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="dns-prefetch" href="//use.typekit.com">
+	<title>Filtering Input in CodeIgniter by Maximilian Hoffmann</title>
+	<meta name="description" content="I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.">
+	<meta name="author" content="Maximilian Hoffmann">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel='stylesheet' href='../../f77f5bd24320cc4ccc69c3309d558ccd.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel="author" href="https://plus.google.com/101144444133821135563">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="max_hoffmann">
+	<meta name="twitter:site" content="max_hoffmann">
+	<meta name="twitter:title" content="Filtering Input in CodeIgniter">
+	<meta name="twitter:description" content="I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.">
+	<!--[if lt IE 9]>
+	<script src="/js/ext/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
 
-	<!-- $title Filtering Input in CodeIgniter -->
-	<!-- $url filtering-input-in-codeigniter -->
-	<!-- $date 12th of December, 2012 -->
-	<!-- $description I use CodeIgniter for my backend and have been struggling to find a good way to pass POST or GET data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you. -->
+	<nav class="navigation">
+	<div class="centered navigation-content">
+		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
+	</div>
+</nav>
 
-	<!-- @include article/_meta-header -->
+
+	
+	
+	
+	
+
+	
+<header class="article-meta-header">
+	<div class="article-meta-container">
+		<h2 class="article-date">12th of December, 2012</h2>
+		<h1 class="article-title">Filtering Input in CodeIgniter</h1>
+	</div>
+</header>
 
 	<article class="article">
 
-		<!-- @include _filtering-input-in-codeigniter -->
+		
+<p>I use CodeIgniter for my backend and have been struggling to find a good way to pass <abbr>POST</abbr> or <abbr>GET</abbr> data to its active record functions. This week I’ve found a pretty nice filtering technique I want to share with you.</p>
+
+<p>Let’s start with CodeIgniter’s user guide example of inserting data.</p>
+
+<pre class="language-php"><code>$data = array(
+	'title' =&gt; 'My title',
+	'name' =&gt; 'My Name',
+	'date' =&gt; 'My date'
+);
+
+$this-&gt;db-&gt;insert('mytable', $data);</code></pre>
+
+<p><code>insert</code> accepts two parameters. First is the table name and second is the data to insert provided as an associative array having keys as row names and values as the actual data.</p>
+
+<p>The main problem is building a CodeIgniter compatible array from <abbr>POST</abbr> or <abbr>GET</abbr> data. To create it we will use the <code>elements</code> function, which is provided by CodeIgniter&#8217;s <code>array_helper</code> and lets you fetch a number of items from an array. This is what I’ve come up with:</p>
+
+<pre class="language-php"><code>$filter = array(
+	'name',
+	'age',
+	'gender'
+);
+
+$data = elements($filter, array_filter($this-&gt;input-&gt;post(NULL, TRUE)), NULL);
+$this-&gt;db-&gt;insert('person', $data);
+</code></pre>
+
+<p>At first we create a filter array defining which rows we want to be inserted. You can leave out rows which you don’t want to be influenced by user’s input provided that you’ve set up <abbr>MySQL</abbr> correctly. If any of these rows are not in the <abbr>POST</abbr> array they will be set to <code>NULL</code>, which we have defined with the third parameter of the <code>elements</code> function. This also ensures that fields in your database being set to <code>NOT NULL</code>  will throw an mysql error and the data will be refused. You could leave out the two parameters being passed to <code>post()</code> if you have globals <abbr>XSS</abbr> filtering enabled.</p>
+
+<p>While this works fine for inserting data we need to add another function for updating. This is how it looks like:</p>
+
+<pre class="language-php"><code>$filter = array(
+	'name',
+	'age',
+	'gender'
+	);
+
+$data = array_filter(elements($filter, $this-&gt;input-&gt;post(NULL, TRUE)));
+
+$this-&gt;db-&gt;where('id', $id);
+$this-&gt;db-&gt;update('person', $data);</code></pre>
+
+<p>This time we leave out the third parameter of <code>elements</code>. Its default value is false, that’s why each data not provided by <abbr>POST</abbr>, but required by our filter array will be set to false. Afterwards we filter the result of elements with <code>array_filter</code>, a standard <abbr>PHP</abbr> function, iterating over each element of its input array and passing it to a callback function. We haven’t provided a callback which as a result removes every item with a false value <code>(null, false,'',0)</code>. As post items being always strings <code>NULL</code> and <code>0</code> will still work, but not provided data won’t be passed to the update function. To summarize only items of the filter array will be passed to the update function if any of those are provided.</p>
+
+<p>I hope this could help you and I appreciate your feedback.</p>
+
+<h4>UPDATE:</h4>
+
+<p>I’ve just recognized that you should use <code>array_filter</code> on inserts too, but in reverse order to avoid empty strings being inserted in fields which do not allow <code>NULL</code>. I’ve updated the code sample in the article.</p>
+
 
 	</article>
 
-	<!-- @include article/_meta-footer -->
+	
+<div class="article-meta-container">
+	<div class="article-meta-footer">
+		<a href="https://twitter.com/intent/tweet?text=%22Filtering Input in CodeIgniter%22&url=http://maximilianhoffmann.com/article/filtering-input-in-codeigniter&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
+		<a href="/#filtering-input-in-codeigniter" class="articles">&laquo; back to articles</a>
+	</div>
+</div>
 
-<!-- @include site/_footer  -->
+
+	<footer class="footer">
+		<div class="centered footer-content">
+			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
+		</div>
+	</footer>
+
+	<script>
+	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
+	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
+
+</body>
+</html>
