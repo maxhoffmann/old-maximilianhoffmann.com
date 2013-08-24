@@ -500,12 +500,14 @@ abbr {
 .text-centered {
   text-align: center; }
 
-.navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul, .article-meta-container, .archive {
+.navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul,
+.article ol, .article-meta-container, .archive {
   margin-left: auto;
   margin-right: auto;
   width: 86%; }
   @media screen and (min-width: 30em) {
-    .navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul, .article-meta-container, .archive {
+    .navigation-content, .footer-content, .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article blockquote, .article ul,
+    .article ol, .article-meta-container, .archive {
       width: 80%; } }
 
 .navigation {
@@ -714,13 +716,15 @@ abbr {
     font-weight: 600; }
     .article a:hover {
       color: #4c6f4b; }
-  .article ul {
+  .article ul,
+  .article ol {
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 0;
     max-width: 32em; }
     @media screen and (max-width: 30em) {
-      .article ul {
+      .article ul,
+      .article ol {
         padding-left: 2.4em; } }
   .article .image-inline {
     display: block;
