@@ -382,7 +382,7 @@ abbr {
 
 .wf-loading .navigation > div,
 .wf-loading .footer > div,
-.wf-loading .article-meta > div,
+.wf-loading .article-meta-container,
 .wf-loading .archive,
 .wf-loading .article {
   opacity: 0; }
