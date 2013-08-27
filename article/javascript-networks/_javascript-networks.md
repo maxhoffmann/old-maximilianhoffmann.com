@@ -24,7 +24,7 @@ I guess that’s why ReCaptcha’s slogan is: "stop spam. read books.", which tr
 
 <a href="/images/captcha.png" class="image-inline"><img src="/images/captcha.png" title="captcha that can not be solved"></a>
 
-Back to topic: The bottom line is that everything that breaks on these socials networks does not require JavaScript. Using links with `href` pointing to a valid <abbr>URL</abbr> will enable users to browse your website. Using `form` elements and a server will allow users to post content. Using pagination users may browse a stream of content. Building a web applications doesn’t always mean building a JavaScript applications. I want to end this post with a tweet by Mat Marquis.
+Back to topic: The bottom line is that everything that breaks on these socials networks does not require JavaScript. Using links with `href` pointing to a valid <abbr>URL</abbr> will enable users to browse your website. Using `form` elements and a server will allow users to post content. Using pagination users may browse a stream of content. Building web applications doesn’t always mean building JavaScript applications. I want to end this post with a tweet by Mat Marquis.
 
 > "Webapp (n.): Website where the developers responsible wanted to require JavaScript."<br>
 > — [@wilto](https://twitter.com/wilto/statuses/372080088898367488)
