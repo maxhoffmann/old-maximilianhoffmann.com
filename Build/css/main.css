@@ -653,16 +653,21 @@ abbr {
     margin-top: 0; }
   .article blockquote {
     margin: 1.625em auto;
-    max-width: 13em;
-    font-size: 2.46154em;
-    text-align: center;
+    max-width: 26em;
+    font-size: 1.23077em;
     font-weight: 600;
     line-height: 1.2;
-    color: #bbbbbb; }
-    .article blockquote:before {
-      content: "\201C"; }
-    .article blockquote:after {
-      content: "\201D"; }
+    text-align: center;
+    color: #888888;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+    .article blockquote p {
+      width: 100%; }
+    @media screen and (min-width: 60em) {
+      .article blockquote {
+        max-width: 25em; } }
   .article pre {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

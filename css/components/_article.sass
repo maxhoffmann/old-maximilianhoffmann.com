@@ -77,16 +77,18 @@
 	blockquote
 		@extend %container
 		margin: em(104,64) auto
-		max-width: em(832,64)
-		font-size: em(64,26)
-		text-align: center
+		max-width: em(832,32)
+		font-size: em(32,26)
 		font-weight: 600
 		line-height: 1.2
-		color: #bbb
-		&:before
-			content: '\201C'
-		&:after
-			content: '\201D'
+		text-align: center
+		color: #888
+		+hyphens(auto)
+		p
+			width: 100%
+
+		+when("min-width: 60em")
+			max-width: em(800,32)
 
 	pre
 		+box-sizing(border-box)
