@@ -604,7 +604,8 @@ abbr {
   .article h1,
   .article h2,
   .article h3,
-  .article blockquote {
+  .article blockquote,
+  .article audio {
     margin-left: auto;
     margin-right: auto; }
   .article p {
@@ -731,6 +732,9 @@ abbr {
       .article ul,
       .article ol {
         padding-left: 2.4em; } }
+  .article audio {
+    display: block;
+    max-width: 32em; }
   .article .image-inline {
     display: block;
     margin-top: 2em;
