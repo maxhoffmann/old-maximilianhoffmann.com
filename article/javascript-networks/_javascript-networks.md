@@ -16,7 +16,7 @@ Some interesting quirks I’ve found are that Youtube’s preview images need Ja
 
 <a href="/images/gray-youtube.png" class="image-inline"><img src="/images/gray-youtube.png"></a>
 
-I also had some problems after testing twitter. Apparently twitter thinks bots run without JS, so I had to login again with a captcha. Unfortunately the captcha service seems to be broken, as I couldn’t solve it—or maybe I’m not human enough. After several desperate attempts I tried the audio version. Seriously, have you ever tried the audio version in a captcha? Listen for yourself:
+I also had some problems after testing twitter. Apparently twitter thinks bots run without JS, so I had to login again with a captcha. Unfortunately the captcha service seems to be broken, as I couldn’t solve it—or maybe I’m not human enough. After several desperate attempts I tried the audio version. Seriously, have you ever tried the audio version of a captcha? Listen for yourself:
 
 <p class="text-centered"><audio src="/files/captcha.mp3" controls></audio><a href="/files/captcha.mp3">captcha.mp3</a></p>
 
