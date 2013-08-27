@@ -1,6 +1,6 @@
 Progressive enhancement is fortunately a highly discussed topic in the web community again, thanks to talented people like [Jeremy Keith](http://adactio.com/journal/6246/), [Jake Archibald](http://jakearchibald.com/2013/progressive-enhancement-still-important/http://www.youtube.com/watch?v=li4Y0E_x8zE) and [Nicholas Zakas](http://www.youtube.com/watch?v=li4Y0E_x8zE). Enhancing the user’s experience progressively means essential interactions work without JavaScript, for example if it is loading or doesn’t work, due to bugs or other causes.
 
-Today I wanted to test how some of the biggest social networks progressively enhance their interactions. The most common functionalities of social networks are simple <abbr>CRUD</abbr> operations and authentication: consuming content, posting content, logging in, logging out and navigating the page. This is basic stuff and can be easily done with `forms`, <abbr>GET</abbr>/<abbr>POST</abbr> requests and links. As it turns out the most essential functionality is broken if you turn off JavaScript.
+Today I wanted to test how some of the biggest social networks progressively enhance their interactions. The most common functionalities of social networks are simple <abbr>CRUD</abbr> operations and authentication: consuming content, posting content, logging in, logging out and navigating to different pages. This is basic stuff and can be easily done with `forms`, <abbr>GET</abbr>/<abbr>POST</abbr> requests and links. As it turns out the most essential functionality is broken if you turn off JavaScript.
 
 ### Results
 
