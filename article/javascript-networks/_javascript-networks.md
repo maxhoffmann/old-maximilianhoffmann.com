@@ -1,4 +1,4 @@
-Progressive enhancement is fortunately a highly discussed topic in the web community again, thanks to talented people like [Jeremy Keith](http://adactio.com/journal/6246/), [Jake Archibald](http://jakearchibald.com/2013/progressive-enhancement-still-important/http://www.youtube.com/watch?v=li4Y0E_x8zE) and [Nicholas Zakas](http://www.youtube.com/watch?v=li4Y0E_x8zE). Enhancing the user’s experience progressively means essential interactions work without JavaScript, for example if it is loading or doesn’t work, due to bugs or other causes.
+Progressive enhancement is fortunately a highly discussed topic in the web community again, thanks to talented people like [Jeremy Keith][1], [Jake Archibald][2] and [Nicholas Zakas][3]. Enhancing the user’s experience progressively means essential interactions work without JavaScript, for example if it is loading or doesn’t work, due to bugs or other causes.
 
 Today I wanted to test how some of the biggest social networks progressively enhance their interactions. The most common functionalities of social networks are simple <abbr>CRUD</abbr> operations and authentication: consuming content, posting content, logging in, logging out and navigating to different pages. This is basic stuff and can be easily done with `forms`, <abbr>GET</abbr>/<abbr>POST</abbr> requests and links. As it turns out the most essential functionality is broken if you turn off JavaScript.
 
@@ -27,4 +27,9 @@ I guess that’s why ReCaptcha’s slogan is: "stop spam. read books.", which tr
 Back to topic: The bottom line is that everything that breaks on these socials networks does not require JavaScript. Using links with `href` pointing to a valid <abbr>URL</abbr> will enable users to browse your website. Using `form` elements and a server will allow users to post content. Using pagination users may browse a stream of content. Building web applications doesn’t always mean building JavaScript applications. I want to end this post with a tweet by Mat Marquis.
 
 > "Webapp (n.): Website where the developers responsible wanted to require JavaScript."<br>
-> — [@wilto](https://twitter.com/wilto/statuses/372080088898367488)
+> — [@wilto][4]
+
+[1]: http://adactio.com/journal/6246/
+[2]: http://jakearchibald.com/2013/progressive-enhancement-still-important/
+[3]: http://www.youtube.com/watch?v=li4Y0E_x8zE
+[4]: https://twitter.com/wilto/statuses/372080088898367488
