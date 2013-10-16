@@ -30,7 +30,7 @@ Readability is important. Without parentheses it’s hard to see where functions
     request.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
     request.send()</code></pre>
 
-Now you can see on the first sight which parts of the codes are assignments and which ones are function calls.
+Now you can see on the first sight which parts of the code are assignments and which ones are function calls.
 
 ### 2. always write return if you intend to do so
 
