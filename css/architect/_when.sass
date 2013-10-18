@@ -1,3 +1,21 @@
 @mixin when($condition, $medium: screen)
 	@media #{$medium} and (#{$condition})
 		@content
+
+=mq($min: false, $max: false, $ie: false)
+
+	@if $min and not($max)
+		@media (min-width: $min)
+			@content
+
+	@if $max and not($min)
+		@media (max-width: $max)
+			@content
+
+	@if $min and $max
+		@media (min-width: $min) and (max-width: $max)
+			@content
+
+	@if $ie
+		@content
+
