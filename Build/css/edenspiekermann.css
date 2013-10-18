@@ -508,6 +508,9 @@ table td {
 .text-break {
   word-break: break-all; }
 
+.new-page {
+  page-break-before: always; }
+
 @media (min-width: 33.75em) {
   .date--short {
     min-width: 6em; } }
@@ -542,7 +545,8 @@ table td {
 .navigation {
   margin-top: 2.28571em;
   margin-bottom: 2.28571em;
-  font-family: ff-meta-web-pro, sans-serif; }
+  font-family: ff-meta-web-pro, sans-serif;
+  page-break-after: always; }
 
 .navigation__link {
   display: block;
