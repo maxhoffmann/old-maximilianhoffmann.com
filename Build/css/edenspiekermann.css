@@ -502,6 +502,7 @@ table td {
   clear: both; }
 
 .ss-icon {
+  font-family: "SSStandard", ff-meta-serif-web-pro, serif;
   vertical-align: bottom; }
 
 .ss-icon--inline {
