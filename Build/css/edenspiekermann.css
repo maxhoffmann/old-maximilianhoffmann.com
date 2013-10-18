@@ -422,11 +422,8 @@ h1 {
 h2 {
   margin-top: 2.28571em;
   margin-bottom: 1.14286em;
-  padding-right: 0.4em;
   font-size: 1.33333em;
   text-align: center; }
-  h2 .ss-icon {
-    padding-right: 0.4em; }
 
 h3 {
   font-size: 1em;
@@ -505,8 +502,8 @@ table td {
   font-family: "SSStandard", ff-meta-serif-web-pro, serif;
   vertical-align: bottom; }
 
-.ss-icon--inline {
-  padding: 0 !important; }
+.ss-icon-text {
+  padding-left: 0.3em; }
 
 .text-break {
   word-break: break-all; }
