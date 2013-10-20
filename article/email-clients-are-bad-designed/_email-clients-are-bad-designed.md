@@ -1,8 +1,8 @@
-I’ve never met someone who loved working with emails. If "Inbox Zero" is a term there certainly has to be a design problem. Recently I’ve realized why there is so much frustration when we have to deal with our inbox. The email protocol itself is not the problem. The way email clients are designed is why we are always unsatisfied with our inbox.
+I’ve never met someone who loved working with emails. If “Inbox Zero” is a term there certainly has to be a design problem. Recently I’ve realized why there is so much frustration when we have to deal with our inbox. The email protocol itself is not the problem. The way email clients are designed is why we are always unsatisfied with our inbox.
 
 ### Inbox (52843 messages)
 
-I don’t care how much emails I have received during the last couple of years. Why should this number be important, when the number of all received iMessages, facebook messages or Whatsapp messages is not? The only number I care about is the number of messages I have not yet read. Displaying the total number of emails sends multiple negative messages: "You should delete those emails.", "You have work to do.", "You could be running out of space." and "You work too much."
+I don’t care how much emails I have received during the last couple of years. Why should this number be important, when the number of all received iMessages, facebook messages or Whatsapp messages is not? The only number I care about is the number of messages I have not yet read. Displaying the total number of emails sends multiple negative messages: “You should delete those emails.”, “You have work to do.”, “You could be running out of space.” and “You work too much.”
 
 ### No conversations
 
