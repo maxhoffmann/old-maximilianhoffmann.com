@@ -18,11 +18,11 @@ If you receive an email from facebook or a newsletter from Amazon you could coul
 
 > You would never again pull out your phone just to look at a newsletter that tells you something about a new product you don’t care about.
 
-One could also add an option to disable push notifications for certain contacts and unknown email addresses. Additionally you could display a "unsubscribe" button beside newsletter emails that opens your browser with the address that is at the end of most newsletters behind the tiny, shallow unsubscribe link. The mail program would pull that link out for you, so you don’t have to do it.
+One could also add an option to disable push notifications for certain contacts and unknown email addresses. Additionally you could display a "unsubscribe" button beside newsletter emails that opens your browser with the url that is at the end of most newsletters behind the tiny, shallow unsubscribe link. The mail program would pull that link out for you, so you don’t have to do it.
 
 ### Goodbye Mailboxes
 
-Mailboxes are a anti pattern. Users don’t care which one of their mail addresses received the message. More important is who has sent it. You would add your contacts to lists like _work_, _family_ and _friends_. Whenever you receive an email it automatically gets added to that list and you could filter your inbox. If you want to read an email later just click on a button and it gets added to a list or create your own list.
+Mailboxes are an anti pattern. Users don’t care which one of their mail addresses received the message. More important is who has sent it. You would add your contacts to lists like _work_, _family_ and _friends_. Whenever you receive an email it automatically gets added to that list and you could filter your inbox. If you want to read an email later just click on a button and it gets added to a list or create your own list.
 
 ### Attachments
 
