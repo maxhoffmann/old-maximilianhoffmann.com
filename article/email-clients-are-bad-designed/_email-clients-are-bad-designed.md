@@ -22,7 +22,7 @@ One could also add an option to disable push notifications for certain contacts 
 
 ### Goodbye Mailboxes
 
-Mailboxes are an anti pattern. Users don’t care which one of their mail addresses received the message. More important is who has sent it. You would add your contacts to lists like _work_, _family_ and _friends_. Whenever you receive an email it automatically gets added to that list and you could filter your inbox. If you want to read an email later just click on a button and it gets added to a list or create your own list.
+Mailboxes are an anti pattern. Users don’t care which one of their mail addresses received the message. More important is who has sent it. You would add your contacts to lists like _work_, _family_ and _friends_. Whenever you receive an email it automatically gets added to that list and you could filter your inbox. If you want to read an email later just click on a button and it gets added to a “read later” list or create your own one.
 
 ### Attachments
 
