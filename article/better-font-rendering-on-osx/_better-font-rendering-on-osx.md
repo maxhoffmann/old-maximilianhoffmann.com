@@ -7,7 +7,7 @@ Photoshop doesn’t use the system’s font rendering so that text looks very di
 
 Due to its sub-pixel antialiasing algorithm OS X tends to render light text on dark backgrounds too bold. Using icon fonts sometimes leads to [blurry](http://people.mozilla.org/~jdaggett/tests/social-waterfall.html) rendering.
 
-Fortunately developers can influence how browsers render text on OS X. Webkit/Chromium-based browsers offer `-webkit-font-smoothing` and  Firefox [recently added](https://bugzilla.mozilla.org/show_bug.cgi?id=857142) `-moz-osx-font-smoothing` to version 25 (currently Nightly build).
+Fortunately developers can influence how browsers render text on OS X. Webkit/Chromium-based browsers offer `-webkit-font-smoothing` and  Firefox [recently added](https://bugzilla.mozilla.org/show_bug.cgi?id=857142) `-moz-osx-font-smoothing` to version 25.
 
 These properties switch the rendering algorithm to grayscaling, which will result in a thinner and sharper appearance of fonts. As both are non-standard I’ve created a simple mixin to normalize the syntax differences.
 
@@ -29,4 +29,6 @@ These properties switch the rendering algorithm to grayscaling, which will resul
 .light-on-dark
     +font-smoothing(on)</code></pre>
 
-My website also uses these properties for better rendering. If you are browsing with Firefox (version < 25) try the Nightly build or Chrome to see the difference. Keep in mind that these properties should be used as a solution and [not in general](http://www.usabilitypost.com/2012/11/05/stop-fixing-font-smoothing) as it may lead to worse results.
+My website also uses these properties for better rendering. Keep in mind that these properties should be used as a solution and [not in general](http://www.usabilitypost.com/2012/11/05/stop-fixing-font-smoothing) as it may lead to worse results.
+
+__Update:__ `-moz-osx-font-smoothing` is now supported in stable Firefox.
