@@ -506,7 +506,10 @@ p {
     margin-right: auto; }
   .article footer {
     margin-top: 54px;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    content: " ";
+    display: table;
+    clear: both; }
 
 .article-tweet {
   float: right;
