@@ -426,6 +426,11 @@ p {
     .article p a {
       font-weight: 600;
       color: #618d60; }
+      .article p a:hover {
+        color: #222222;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
   .article ul, .article ol {
     margin-top: 18px;
     margin-top: 1rem;
