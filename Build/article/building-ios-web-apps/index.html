@@ -7,8 +7,8 @@
 	<meta name="description" content="Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered CSS and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest Nightly WebKit, which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found on https://gist.github.com/paulmillr/4056234.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../e7ef18e6adbad87d2e08f84e2c6fb94a.css'>
-	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel='stylesheet' href='../../css/main.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ukz6xxx',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:creator" content="max_hoffmann">
@@ -22,39 +22,37 @@
 </head>
 <body>
 
-	<nav class="navigation">
-	<div class="centered navigation-content">
-		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-	</div>
+	<nav class="container">
+	<a href="/" class="name">Maximilian Hoffmann</a>
 </nav>
 
 
 	
 	
 	
-	
-
-	
-<header class="article-meta-header">
-	<div class="article-meta-container">
-		<h2 class="article-date">22nd of February, 2013</h2>
-		<h1 class="article-title">Building iOS Web Apps</h1>
-	</div>
-</header>
 
 	<article class="article">
 
-		
+		<h1>Building iOS Web Apps</h1>
+
+<h2>22nd of February, 2013</h2>
+
 <h3>Web Inspector</h3>
 <p>Remote debugging web applications is available since iOS6. With remote debugging it is easy to check and alter the rendered <abbr>CSS</abbr> and test the functionality of your app on the device itself. Instead of Safari I recommend you to use the latest <a href="http://nightly.webkit.org/">Nightly WebKit</a>, which has more features and a better interface. Changes to WebKit’s developer tools since Safari 6 can be found <a href="https://gist.github.com/paulmillr/4056234">here</a>.</p>
 
 <p>To enable developer tools on your computer go to <strong>Preferences &gt; Advanced</strong> in Webkit/Safari and check the box next to “Show Develop menu in menu bar”.</p>
 
-<p><a href="/images/AdvancedSettings.png" class="image-inline"><img src="/images/AdvancedSettings.png" /></a>
-On your mobile device go to <strong>Settings &gt; Safari &gt; Advanced</strong> and toggle the Web Inspector there.</p>
+<p><a href="/images/AdvancedSettings.png">
+	<img src="/images/AdvancedSettings.png" alt="Einstellungen" />
+</a></p>
 
-<p><a href="/images/ios_web_inspector.png" class="image-inline"><img class="img-bordered" src="/images/ios_web_inspector.png" /></a>
-Afterwards you can connect the device with your computer using a <strong>cable</strong>. If you have opened a website on mobile Safari, its desktop counterpart should now list your device in its develop menu including your open tabs. Clicking on one of these should open the developer tools for the selected website.</p>
+<p>On your mobile device go to <strong>Settings &gt; Safari &gt; Advanced</strong> and toggle the Web Inspector there.</p>
+
+<p><a href="/images/AdvancedSettings.png">
+	<img src="/images/ios_web_inspector.png" alt="iOS Web Inspector" />
+</a></p>
+
+<p>Afterwards you can connect the device with your computer using a <strong>cable</strong>. If you have opened a website on mobile Safari, its desktop counterpart should now list your device in its develop menu including your open tabs. Clicking on one of these should open the developer tools for the selected website.</p>
 
 <h3>Local Web Server</h3>
 
@@ -82,7 +80,7 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <h3>Your app’s name</h3>
 
-<p>If a user wants to add your site to his homescreen, Safari uses the webpage&#8217;s title as a suggestion for the name of your web app. Since iOS6 you can suggest another name:</p>
+<p>If a user wants to add your site to his homescreen, Safari uses the webpage’s title as a suggestion for the name of your web app. Since iOS6 you can suggest another name:</p>
 
 <pre class="language-markup"><code>&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;My Web App&quot;&gt;</code></pre>
 
@@ -136,36 +134,35 @@ Afterwards you can connect the device with your computer using a <strong>cable</
 
 <p>I have uploaded the complete code with images to <a href="https://github.com/maxhoffmann/ios-web-apps">github</a>. After adding this site to your homescreen it should look like this:</p>
 
-<p><a href="/images/icon.jpg" class="image-inline"><img class="img-bordered" src="/images/icon.jpg" /></a></p>
+<p><a href="/images/icon.jpg">
+	<img src="/images/icon.jpg" alt="screenshot with app icon" />
+</a></p>
 
 <h3>Questions?</h3>
 
 <p>Is anything unclear to you or have you found grammatical errors due to the fact that I am not a native speaker? I’d value your feedback on this article on <a href="http://branch.com/b/building-ios-web-apps-part-1-maximilian-hoffmann/invite_link/m7YHa4NJhx7Mzw">Branch</a>.</p>
 
 
+		
+<footer class="container article-footer">
+	<a href="https://twitter.com/intent/tweet?text=%22Building iOS Web Apps%22&url=http://maximilianhoffmann.com/article/building-ios-web-apps&via=max_hoffmann" class="twitter article-tweet" target="_blank">share on twitter</a>
+	<a href="/#building-ios-web-apps">&laquo; back to articles</a>
+</footer>
+
 	</article>
 
-	
-<div class="article-meta-container">
-	<div class="article-meta-footer">
-		<a href="https://twitter.com/intent/tweet?text=%22Building iOS Web Apps%22&url=http://maximilianhoffmann.com/article/building-ios-web-apps&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
-		<a href="/#building-ios-web-apps" class="articles">&laquo; back to articles</a>
-	</div>
-</div>
 
-
-	<footer class="footer">
-		<div class="centered footer-content">
-			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
-			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
-			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
-		</div>
+	<footer class="container footer">
+			<p>I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p>I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="copy">&copy; Maximilian Hoffmann</a>
 	</footer>
 
 	<script>
 	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
 	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
-	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
+	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)
+	</script>
 
 </body>
 </html>

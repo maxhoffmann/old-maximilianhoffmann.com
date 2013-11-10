@@ -1,3 +1,7 @@
+# Email clients are bad designed
+
+## 20th of October, 2013
+
 I’ve never met someone who loved working with emails. If “Inbox Zero” is a term there certainly has to be a design problem. Recently I’ve realized why there is so much frustration when we have to deal with our inbox. The email protocol itself is not the problem. The way email clients are designed is why we are always unsatisfied with our inbox.
 
 ### Inbox (52843 messages)
@@ -10,7 +14,9 @@ Imagine facebook displaying your messages the way email clients do. You would on
 
 Imagine an email client that looks like this:
 
-<a href="http://maximilianhoffmann.com/images/iMessages.png" class="image-inline"><img src="http://maximilianhoffmann.com/images/iMessages.png" title="iMessages (copyright by apple)"></a>
+[
+	![iMessages (copyright by apple)](http://maximilianhoffmann.com/images/iMessages.png)
+](http://maximilianhoffmann.com/images/iMessages.png)
 
 All emails would be displayed by sender, no matter what the subject is. If you receive a new mail it just gets added to the conversation with the same email address and jumps to the top of the list. If you receive an email from a new address the program asks you if you like to assign a name and a photo to it. It could display public profile pictures from social networks and your address book while you are typing the name, so you would only have to choose the one that’s correct or simply choose one from your disk. If someone has multiple email addresses just add it to the same name. Of course it would also strip out the conversation history at the end of a mail which some email clients include automatically.
 

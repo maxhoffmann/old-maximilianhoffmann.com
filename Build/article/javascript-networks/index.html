@@ -7,8 +7,8 @@
 	<meta name="description" content="I wanted to test how some of the biggest social networks progressively enhance their interactions. As it turns out the most essential functionality is broken if you turn off JavaScript.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../e7ef18e6adbad87d2e08f84e2c6fb94a.css'>
-	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel='stylesheet' href='../../css/main.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ukz6xxx',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:creator" content="max_hoffmann">
@@ -22,86 +22,84 @@
 </head>
 <body>
 
-	<nav class="navigation">
-	<div class="centered navigation-content">
-		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-	</div>
+	<nav class="container">
+	<a href="/" class="name">Maximilian Hoffmann</a>
 </nav>
 
 
 	
 	
 	
-	
-
-	
-<header class="article-meta-header">
-	<div class="article-meta-container">
-		<h2 class="article-date">27th of August, 2013</h2>
-		<h1 class="article-title">JavaScript Networks</h1>
-	</div>
-</header>
 
 	<article class="article">
 
-		<p>Progressive enhancement is fortunately a highly discussed topic in the web community again, thanks to talented people like <a href="http://adactio.com/journal/6246/">Jeremy Keith</a>, <a href="http://jakearchibald.com/2013/progressive-enhancement-still-important/">Jake Archibald</a> and <a href="http://www.youtube.com/watch?v=li4Y0E_x8zE">Nicholas Zakas</a>. Enhancing the user’s experience progressively means essential interactions work without JavaScript, for example if it is loading or doesn’t work, due to bugs or other causes.</p>
+		<h1>JavaScript Networks</h1>
+
+<h2>27th of August, 2013</h2>
+
+<p>Progressive enhancement is fortunately a highly discussed topic in the web community again, thanks to talented people like <a href="http://adactio.com/journal/6246/">Jeremy Keith</a>, <a href="http://jakearchibald.com/2013/progressive-enhancement-still-important/">Jake Archibald</a> and <a href="http://www.youtube.com/watch?v=li4Y0E_x8zE">Nicholas Zakas</a>. Enhancing the user’s experience progressively means essential interactions work without JavaScript, for example if it is loading or doesn’t work, due to bugs or other causes.</p>
 
 <p>Today I wanted to test how some of the biggest social networks progressively enhance their interactions. The most common functionalities of social networks are simple <abbr>CRUD</abbr> operations and authentication: consuming content, posting content, logging in, logging out and navigating to different pages. This is basic stuff and can be easily done with <code>forms</code>, <abbr>GET</abbr>/<abbr>POST</abbr> requests and links. As it turns out the most essential functionality is broken if you turn off JavaScript.</p>
 
 <h3>Results</h3>
 
-<p><a href="/images/JavaScriptNetworks.png" class="image-inline"><img src="/images/JavaScriptNetworks.png" title="Social Networks without JavaScript statistic" /></a></p>
+<p><a href="/images/JavaScriptNetworks.png">
+	<img src="/images/JavaScriptNetworks.png" alt="Social Networks without JavaScript statistic" />
+</a></p>
 
-<p>This graphic shows which interactions work without JavaScript and if a warning is displayed by the network when the user has turned it off. Yellow ticks in the &#8220;consume&#8221; column mean that you only have access to the first page of content because infinite scroll is broken. The yellow tick in Youtube’s row means that you can only navigate your feed if you are already logged in.</p>
+<p>This graphic shows which interactions work without JavaScript and if a warning is displayed by the network when the user has turned it off. Yellow ticks in the “consume” column mean that you only have access to the first page of content because infinite scroll is broken. The yellow tick in Youtube’s row means that you can only navigate your feed if you are already logged in.</p>
 
 <p>The most surprising fact to me is that you can’t post something on any of these social networks without JavaScript. There always is a textbox, but you either don’t have any button or the button doesn’t work.</p>
 
-<p><a href="/images/facebook-no-button.png" class="image-inline"><img src="/images/facebook-no-button.png" title="facebook’s input field without a button" /></a></p>
+<p><a href="/images/facebook-no-button.png">
+	<img src="/images/facebook-no-button.png" alt="facebook’s input field without a button" />
+</a></p>
 
 <p>Some interesting quirks I’ve found are that Youtube’s preview images need JavaScript otherwise you just get grey boxes and that twitter’s wrong password page requires JavaScript too. If you misstype your password you’ll get redirected to another page, which again has a login form, but in contrast to the first one, does not work without <abbr>JS</abbr>.</p>
 
-<p><a href="/images/gray-youtube.png" class="image-inline"><img src="/images/gray-youtube.png" title="Youtube without preview images" /></a></p>
+<p><a href="/images/gray-youtube.png">
+	<img src="/images/gray-youtube.png" alt="Youtube without preview images" />
+</a></p>
 
 <p>I also had some problems after testing twitter. Apparently twitter thinks bots run without <abbr>JS</abbr>, so I had to login again with a captcha. Unfortunately the captcha service seems to be broken, as I couldn’t solve it—or maybe I’m not human enough. After several desperate attempts I tried the audio version. Seriously, have you ever tried the audio version of a captcha? Listen for yourself:</p>
 
 <p class="text-centered"><audio src="/files/captcha.mp3" controls=""></audio><a href="/files/captcha.mp3">captcha.mp3</a></p>
 
-<p>I guess that’s why ReCaptcha’s slogan is: &#8220;stop spam. read books.&#8221;, which translates to: &#8220;Hey you, spammer! Stop posting content on the internet and read a book!&#8221;. The following image is one of the captchas I had to solve. As you can see the image on the left clearly shows a number.</p>
+<p>I guess that’s why ReCaptcha’s slogan is: “stop spam. read books.”, which translates to: “Hey you, spammer! Stop posting content on the internet and read a book!”. The following image is one of the captchas I had to solve. As you can see the image on the left clearly shows a number.</p>
 
-<p><a href="/images/captcha.png" class="image-inline"><img src="/images/captcha.png" title="captcha that can not be solved" /></a></p>
+<p><a href="/images/captcha.png">
+	<img src="/images/captcha.png" alt="captcha that can not be solved" />
+</a></p>
 
 <p>Back to topic: The bottom line is that everything that breaks on these socials networks does not require JavaScript. Using links with <code>href</code> pointing to a valid <abbr>URL</abbr> will enable users to browse your website. Using <code>form</code> elements and a server will allow users to post content. Using pagination users may browse a stream of content. Building web applications doesn’t always mean building JavaScript applications. I want to end this post with a tweet by Mat Marquis.</p>
 
 <blockquote>
-  <p>&#8220;Webapp (n.): Website where the developers responsible wanted to require JavaScript.&#8221;<br />
+  <p>“Webapp (n.): Website where the developers responsible wanted to require JavaScript.”<br />
 — <a href="https://twitter.com/wilto/statuses/372080088898367488">@wilto</a></p>
 </blockquote>
 
 
 
+		
+<footer class="container article-footer">
+	<a href="https://twitter.com/intent/tweet?text=%22JavaScript Networks%22&url=http://maximilianhoffmann.com/article/javascript-networks&via=max_hoffmann" class="twitter article-tweet" target="_blank">share on twitter</a>
+	<a href="/#javascript-networks">&laquo; back to articles</a>
+</footer>
+
 	</article>
 
-	
-<div class="article-meta-container">
-	<div class="article-meta-footer">
-		<a href="https://twitter.com/intent/tweet?text=%22JavaScript Networks%22&url=http://maximilianhoffmann.com/article/javascript-networks&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
-		<a href="/#javascript-networks" class="articles">&laquo; back to articles</a>
-	</div>
-</div>
 
-
-	<footer class="footer">
-		<div class="centered footer-content">
-			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
-			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
-			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
-		</div>
+	<footer class="container footer">
+			<p>I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p>I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="copy">&copy; Maximilian Hoffmann</a>
 	</footer>
 
 	<script>
 	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
 	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
-	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
+	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)
+	</script>
 
 </body>
 </html>

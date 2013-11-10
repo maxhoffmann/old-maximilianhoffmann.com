@@ -1,3 +1,6 @@
+# Placeholder Selectors
+
+## 14th of February, 2013
 
 Introduced with Sass 3.2 placeholder selectors enable us to write better modular <abbr>CSS</abbr> by extending classes, which won’t be included in the compiled file. The main advantage of using placeholder selectors is the reduction of classes in your <abbr>HTML</abbr> __and__ <abbr>CSS</abbr>.
 

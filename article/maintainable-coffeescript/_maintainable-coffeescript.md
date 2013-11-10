@@ -1,3 +1,7 @@
+# Maintainable CoffeeScript
+
+## 8th of August, 2013
+
 In 2012 I decided to master JavaScript. I started with Addy Osmani’s free ["Learning JavaScript Design Patterns"](http://addyosmani.com/resources/essentialjsdesignpatterns/book/), read ["JavaScript: The Good Parts"](http://shop.oreilly.com/product/9780596517748.do) by Douglas Crockford, then went on with ["Effective JavaScript"](http://effectivejs.com) by David Herman, learned about ["Maintainable JavaScript"](http://shop.oreilly.com/product/0636920025245.do) from Nicholas Zakas and am currently half through ["Secrets of the JavaScript Ninja"](http://jsninja.com/) by John Resig and Bear Bibeault. I also had a glimpse into ["Eloquent JavaScript"](http://eloquentjavascript.net/) by Marijn Haverbeke and ["Object Oriented JavaScript"](http://www.packtpub.com/object-oriented-javascript/book) by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: ["Test-Driven JavaScript Development"](http://tddjs.com/) by Christian Johansen.
 
 While learning to avoid the quirks of JavaScript I started to value its good parts and then felt in love with the expressiveness of the language. Having written some web applications without and with frameworks like [Angular.js](http://angularjs.org), I got aware of the boilerplate code one has to write though. Class inheritance is pretty painful without a library and some things like type or existence checking isn’t fun.
@@ -6,7 +10,7 @@ Fortunately the next version of ECMAScript has evolved to a very powerful and be
 
 Until the standard has been implemented in most browsers we can use _compile-to-javascript_ languages like [CoffeeScript](http://coffeescript.org/), which allow us to use some of the ES6 features today. I’ve looked into CoffeeScript before, but I never felt that I was ready for it. I had to learn JavaScript first. This week I stumbled again on CoffeeScript when [these slides](http://aseemk.com/talks/intro-to-coffeescript) by Aseem Kishore made the round on twitter. CoffeeScript itself influenced the new standard and provides some syntactical improvements. I have been playing around with it lately and really like to use arrow functions, class inheritance and splats today, but I think CoffeeScript is too lax when it comes to omitting braces and keywords. Maybe this is just because I’m not used to read it, but as I use CoffeeScript just in the interim until ES6 is useable I defined some conventions I want to share. These should make it easier to read and maintain the code especially for JS developers without a lot of CoffeeScript experience (myself included). On CoffeeScript’s website it says: _“The golden rule of CoffeeScript is: It’s just JavaScript.”_ My conventions try to make CoffeeScript’s syntax more like JavaScript.
 
-## Code Conventions
+### Code Conventions
 
 ### 1. always wrap function parameters in parentheses
 

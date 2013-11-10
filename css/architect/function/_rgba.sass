@@ -1,22 +1,8 @@
-// ------------------ //
-//                    //
-//        RGBA        //
-//                    //
-// ------------------ //
-
-//
-// WHITE
-//
-
 @function white($alpha)
 	@if $alpha < 1
 		@return rgba(255,255,255,$alpha)
 	@else
 		@return #fff
-
-//
-// BLACK
-//
 
 @function black($alpha)
 	@if $alpha < 1

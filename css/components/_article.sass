@@ -1,122 +1,72 @@
-
-// ARTICLE
-
 .article
-	line-height: 1.5
-	padding-top: em(78,26)
-	+when("min-width: 40em")
-		padding-top: em(130,26)
+	+rem(margin-top, 36px)
 
-	p,
-	h1,
-	h2,
-	h3,
-	blockquote,
-	audio
-		+block-center
+	h1,h2,h3,h4,h5,h6,p,ul,ol
+		@extend %container
+
+	h1, h3, h4, h5, h6
+		margin-bottom: 0
+
+	h2
+		color: #aaa
+
+	h6
+		+rem(font-size, 18px)
+		font-weight: 400
+		font-style: italic
 
 	p
-		@extend %container
-		max-width: em(832,26)
-		margin-bottom: em(52,26)
-		+hyphens(auto)
+		margin-bottom: 1.6em
 
 		code
 			display: inline-block
 			padding: 0 .1em
 			font-family: Consolas, Monaco, 'Andale Mono', monospace
-			font-size: em(21,26)
+			font-size: .8em
 			color: #357abb
 
-	h1
-		@extend %container
-		margin-top: em(104,88)
-		margin-bottom: em(52,88)
-		max-width: em(832,88)
-		font-size: em(88,26)
+		a
+			font-weight: 600
+			color: #618d60
 
-	h2
-		@extend %container
-		margin-top: em(78,58.5)
-		margin-bottom: em(52,58.5)
-		max-width: em(832,58.5)
-		font-size: em(58.5,26)
+	ul,ol
+		+rem(margin-top, 18px)
+		+rem(margin-bottom, 36px)
+		padding: 0
+		+mq($max: 50em)
+			padding-left: 1.2em
 
-	h3
-		@extend %container
-		margin-top: em(78,34)
-		margin-bottom: em(26,34)
-		max-width: em(832,34)
-		font-size: em(34,26)
-
-	h1 + h3,
-	h2 + h3
-		margin-top: em(52,34)
-
-	h4,h5,h6
-		@extend %container
-		margin-top: em(52,26)
-		margin-bottom: em(26,26)
-		max-width: em(832,26)
-		font-size: em(26,26)
-
-	h5,h6
-		font-weight: 400
-
-	h5
-		text-transform: uppercase
-
-	h6
-		font-style: italic
-
-
-	h1,h2,h3,h4,h5,h6
-		&:first-child
-			margin-top: 0
-
+	img
+		display: block
+		margin-left: auto
+		margin-right: auto
+		max-width: 100%
 
 	blockquote
-		@extend %container
-		margin: em(104,64) auto
-		max-width: em(832,32)
-		font-size: em(32,26)
-		font-weight: 600
-		line-height: 1.2
+		+rem(margin-top, 45px)
+		+rem(margin-bottom, 36px)
+		font-weight: 900
+		+rem(font-size, 23px)
 		text-align: center
-		color: #888
-		+hyphens(auto)
-		p
-			width: 100%
-
-		+when("min-width: 60em")
-			max-width: em(800,32)
+		+mq($max: 40em)
+			width: 88%
+			margin-left: auto
+			margin-right: auto
+			& p
+				width: 100%
 
 	pre
-		+box-sizing(border-box)
-		margin-top: em(104,18)
-		margin-bottom: em(104,18)
-		margin-left: 0
-		margin-right: 0
-		padding: 2em
+		+rem(margin-top, 18px)
+		+rem(margin-bottom, 36px)
+		padding: 1em
 		width: 100%
-		font-size: em(18,26)
+		+rem(font-size, 14px)
 		background-color: #fff
 		overflow: auto
-		+when("min-width: 60em")
-			margin-top: em(52,18)
-			margin-bottom: em(52,18)
-			max-width: em(832,18)
-			+block-center
-			border-radius: .2em
-			+box-shadow(0 2px 3px black(.1))
-
-	h1 + pre,
-	h2 + pre,
-	h3 + pre,
-	h4 + pre,
-	h5 + pre,
-	h6 + pre,
-		margin-top: em(26,18)
+		+mq($min: 46em)
+			margin-left: auto
+			margin-right: auto
+			+rem(max-width, $container-max)
 
 	code,
 	pre
@@ -129,92 +79,19 @@
 		-o-tab-size: 4
 		tab-size: 4
 		+hyphens(none)
-		-webkit-font-smoothing: subpixel-antialiased
-		-moz-osx-font-smoothing: auto
-
-	a
-		color: #618D60
-		+transition(color .3s)
-		font-weight: 600
-		&:hover
-			color: darken(#618D60,10%)
-
-	ul,
-	ol
-		@extend %container
-		margin-top: em(26,26)
-		margin-bottom: em(52,26)
-		padding: 0
-		max-width: em(832,26)
-		+when("max-width: 30em")
-			padding-left: 2.4em
+		+font-smoothing(off)
 
 	audio
 		display: block
-		max-width: em(832,26)
+		+rem(margin-top, 54px)
+		+rem(margin-bottom, 18px)
+		+rem(max-width, $container-max)
+		margin-left: auto
+		margin-right: auto
 
-	.image-inline
-		display: block
-		margin-top: em(52,26)
-		margin-bottom: em(52,26)
-		width: 100%
-		img
-			display: block
-			+block-center
-			max-width: 100%
+	footer
+		+rem(margin-top, 54px)
 
-	.img-bordered
-		+box-sizing(border-box)
-		padding: .3em
-		background-color: #fff
-		border: .3em solid white
-		border-radius: 0.3em
-		+box-shadow(0 2px 3px black(.2))
-
-	.button
-		font-weight: 400
-
-.article-meta-header
-	padding: 5em 0 3em
-	color: #eee
-	background-color: #222
-
-.article-meta-container
-	@extend %container
-	max-width: em(832, 26)
-
-.article-date
-	margin-bottom: em(26,26)
-	font-size: em(26,26)
-	color: #bbb
-	font-weight: 400
-	font-style: italic
-	+when("min-width: 40em")
-		text-align: center
-
-.article-title
-	line-height: 1.2
-	font-size: 2.5em
-	font-weight: 400
-	+when("min-width: 40em")
-		font-size: 4em
-		text-align: center
-
-.article-meta-footer
-	margin-top: em(104,26)
-	padding: em(52,26) 0
-	border-top: 1px solid #ccc
-
-	a
-		+transition(color .2s)
-		&:hover
-			color: #888
-
-	.articles
-		color: #666
-		vertical-align: top
-
-	.twitter
-		float: right
-		&:hover
-			color: darken(#00ACED, 10%)
+.article-tweet
+	float: right
+	+font-feature-settings(normal)

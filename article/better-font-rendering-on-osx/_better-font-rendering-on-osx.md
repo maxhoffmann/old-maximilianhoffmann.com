@@ -1,3 +1,6 @@
+# Better font-rendering on OS X
+
+## 10th of August, 2013
 
 The two main factors which define how fonts will look on displays are their hinting and the operating system’s rendering algorithm. Therefore trying different fonts on different devices, operating systems, browsers and browser versions is the only way to get an idea how they will be presented to users.
 

@@ -1,3 +1,6 @@
+# How I would love to work
+
+## 9th of July, 2013
 
 During my studies I worked at quite a lot of companies. I’ve tried to change my workplace every semester to gain an insight into different workplaces and workflows. This decision now pays off as I have enough experience to know how I can work best before applying for a real job. I’d like to share my thoughts about this topic as I think that these may help other students looking for a job in the near future.
 

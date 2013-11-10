@@ -1,3 +1,6 @@
+# Building Principles
+
+## 12th of February, 2013
 
 During my internship I have realized that most of my decisions while building websites or web applications are based on three essential principles. Most of them have developed by reading articles and books so you are probably familiar with them, but additionally I want to give some examples where those influence my opinion about certain solutions.
 

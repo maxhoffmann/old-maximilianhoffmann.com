@@ -1,3 +1,7 @@
+# Effective Web Development Teams
+
+## 24th of August, 2013
+
 Some days ago I stumbled across the ["Joel Test"](http://www.joelonsoftware.com/articles/fog0000000043.html) for software teams by Joel Stolsky, which includes 12 steps to better code. His post inspired me to write my own test especially for web development teams as I think it differs in some points. This may also be handy during interviews when it’s your turn to ask questions.
 
 ### Answer these questions with "yes" or "no":

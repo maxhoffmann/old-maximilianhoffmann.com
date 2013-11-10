@@ -1,46 +1,32 @@
+*
+	+box-sizing(border-box)
 
-// BASE
++selection
+	background: black(.1)
 
 html
-	font-size: em(18)
-	font-family: $font-main
-	text-rendering: optimizeLegibility
+	font-size: $type-size
+	font-family: $type-family
+	line-height: $type-line-height
 	color: #222
-	background-color: #eee
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
-	+when("min-width: 40em")
-		font-size: em(23)
-	+when("min-width: 60em")
-		font-size: em(24)
-	+when("min-width: 90em")
-		font-size: em(26)
-
-::-moz-selection
-	color: #fff
-	background: #aaa
-	text-shadow: none
-
-::selection
-	color: #fff
-	background: #aaa
-	text-shadow: none
-
-p, h1, h2, h3, h4, h5, h6, ul
-	margin: 0
+	text-rendering: optimizeLegibility
+	+font-feature-settings("kern", "liga")
+	+font-smoothing(on)
+	+hyphens(auto)
+	+mq($min: 40em)
+		font-size: 23px
 
 a
 	color: inherit
 	text-decoration: none
 
-abbr
-	font-weight: 600
-	color: #777
+h1
+	font-weight: 900
+	line-height: 1
 
-.wf-loading
-	.navigation > div,
-	.footer > div,
-	.article-meta-container,
-	.archive,
-	.article
-		opacity: 0
+h2
+	+rem(font-size, 18px)
+	font-weight: 400
+
+p
+	margin-top: 0

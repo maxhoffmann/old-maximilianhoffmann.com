@@ -1,3 +1,6 @@
+# Mobile First
+
+## 9th of December, 2012
 
 I have been familiar with mobile first and its advantages for a long time, but my blog’s latest iteration is the first site which actually uses this approach. First I had started implementing the new design desktop first and added mobile styles later via media queries, but after having seen Brad Frost’s inspiring talk [“Beyond Media Queries”](https://vimeo.com/55076713) I have finally changed my mind and wrote the <abbr>CSS</abbr> from scratch, which was the best decision I could make.
 

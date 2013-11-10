@@ -7,8 +7,8 @@
 	<meta name="description" content="I have been familiar with mobile first and its advantages for a long time, but my blog’s latest iteration is the first site which actually uses this approach. First I had started implementing the new design desktop first and added mobile styles later via media queries, but after having seen Brad Frost’s inspiring talk “Beyond Media Queries” I have finally changed my mind and wrote the CSS from scratch, which was the best decision I could make. My styles are smaller in file size, easier to maintain and flexible like never before.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../e7ef18e6adbad87d2e08f84e2c6fb94a.css'>
-	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel='stylesheet' href='../../css/main.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ukz6xxx',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:creator" content="max_hoffmann">
@@ -22,29 +22,21 @@
 </head>
 <body>
 
-	<nav class="navigation">
-	<div class="centered navigation-content">
-		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-	</div>
+	<nav class="container">
+	<a href="/" class="name">Maximilian Hoffmann</a>
 </nav>
 
 
 	
 	
 	
-	
-
-	
-<header class="article-meta-header">
-	<div class="article-meta-container">
-		<h2 class="article-date">9th of December, 2012</h2>
-		<h1 class="article-title">Mobile First</h1>
-	</div>
-</header>
 
 	<article class="article">
 
-		
+		<h1>Mobile First</h1>
+
+<h2>9th of December, 2012</h2>
+
 <p>I have been familiar with mobile first and its advantages for a long time, but my blog’s latest iteration is the first site which actually uses this approach. First I had started implementing the new design desktop first and added mobile styles later via media queries, but after having seen Brad Frost’s inspiring talk <a href="https://vimeo.com/55076713">“Beyond Media Queries”</a> I have finally changed my mind and wrote the <abbr>CSS</abbr> from scratch, which was the best decision I could make.</p>
 
 <p>My styles are smaller in file size, easier to maintain and flexible like never before. Additionally I have started my own small Sass framework full of useful components and mixins, which faciliates things like using ems instead of pixels and includes my new way of laying out elements on a page. This “new” way has a lot in common with grids as it uses floats, but I think it is superior to most grids, because of its missing row divs and its mobile first approach.</p>
@@ -141,29 +133,26 @@
 <p><em>Note:</em> This is my first article written in English and I’m really thankful for feedback and critique.</p>
 
 
+		
+<footer class="container article-footer">
+	<a href="https://twitter.com/intent/tweet?text=%22Mobile First%22&url=http://maximilianhoffmann.com/article/mobile-first&via=max_hoffmann" class="twitter article-tweet" target="_blank">share on twitter</a>
+	<a href="/#mobile-first">&laquo; back to articles</a>
+</footer>
+
 	</article>
 
-	
-<div class="article-meta-container">
-	<div class="article-meta-footer">
-		<a href="https://twitter.com/intent/tweet?text=%22Mobile First%22&url=http://maximilianhoffmann.com/article/mobile-first&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
-		<a href="/#mobile-first" class="articles">&laquo; back to articles</a>
-	</div>
-</div>
 
-
-	<footer class="footer">
-		<div class="centered footer-content">
-			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
-			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
-			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
-		</div>
+	<footer class="container footer">
+			<p>I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p>I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="copy">&copy; Maximilian Hoffmann</a>
 	</footer>
 
 	<script>
 	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
 	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
-	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
+	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)
+	</script>
 
 </body>
 </html>

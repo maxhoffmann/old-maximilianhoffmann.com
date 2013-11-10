@@ -1,3 +1,6 @@
+# iOS6 and Web Applications
+
+## 21st of January, 2013
 
 During the first half of 2012 I worked on a project to enhance my JavaScript knowledge and to build something for myself. This project is called [flibbble](http://flibbble.com). My goal was to build a web application which feels like a native one on the latest iPhone.
 

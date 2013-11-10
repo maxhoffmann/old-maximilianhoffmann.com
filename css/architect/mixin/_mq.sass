@@ -1,7 +1,3 @@
-@mixin when($condition, $medium: screen)
-	@media #{$medium} and (#{$condition})
-		@content
-
 =mq($min: false, $max: false, $ie: false)
 
 	@if $min and not($max)

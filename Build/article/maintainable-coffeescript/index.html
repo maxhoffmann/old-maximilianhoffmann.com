@@ -7,8 +7,8 @@
 	<meta name="description" content="In 2012 I decided to master JavaScript. I started with Addy Osmani’s free “Learning JavaScript Design Patterns”, read “JavaScript: The Good Parts” by Douglas Crockford, then went on with “Effective JavaScript” by David Herman, learned about “Maintainable JavaScript” from Nicolas Zarkasas and am currently half through “Secrets of the JavaScript Ninja” by John Resig and Bear Bibeault.">
 	<meta name="author" content="Maximilian Hoffmann">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel='stylesheet' href='../../e7ef18e6adbad87d2e08f84e2c6fb94a.css'>
-	<script type="text/javascript">(function(){var config={kitId:'ffc4zgd',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
+	<link rel='stylesheet' href='../../css/main.css'>
+	<script type="text/javascript">(function(){var config={kitId:'ukz6xxx',scriptTimeout:1000};var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();</script>
 	<link rel="author" href="https://plus.google.com/101144444133821135563">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:creator" content="max_hoffmann">
@@ -22,29 +22,22 @@
 </head>
 <body>
 
-	<nav class="navigation">
-	<div class="centered navigation-content">
-		<a href="/" class="navigation-name">Maximilian Hoffmann</a>
-	</div>
+	<nav class="container">
+	<a href="/" class="name">Maximilian Hoffmann</a>
 </nav>
 
 
 	
 	
 	
-	
-
-	
-<header class="article-meta-header">
-	<div class="article-meta-container">
-		<h2 class="article-date">8th of August, 2013</h2>
-		<h1 class="article-title">Maintainable CoffeeScript</h1>
-	</div>
-</header>
 
 	<article class="article">
 
-		<p>In 2012 I decided to master JavaScript. I started with Addy Osmani’s free <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">&#8220;Learning JavaScript Design Patterns&#8221;</a>, read <a href="http://shop.oreilly.com/product/9780596517748.do">&#8220;JavaScript: The Good Parts&#8221;</a> by Douglas Crockford, then went on with <a href="http://effectivejs.com">&#8220;Effective JavaScript&#8221;</a> by David Herman, learned about <a href="http://shop.oreilly.com/product/0636920025245.do">&#8220;Maintainable JavaScript&#8221;</a> from Nicholas Zakas and am currently half through <a href="http://jsninja.com/">&#8220;Secrets of the JavaScript Ninja&#8221;</a> by John Resig and Bear Bibeault. I also had a glimpse into <a href="http://eloquentjavascript.net/">&#8220;Eloquent JavaScript&#8221;</a> by Marijn Haverbeke and <a href="http://www.packtpub.com/object-oriented-javascript/book">&#8220;Object Oriented JavaScript&#8221;</a> by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: <a href="http://tddjs.com/">&#8220;Test-Driven JavaScript Development&#8221;</a> by Christian Johansen.</p>
+		<h1>Maintainable CoffeeScript</h1>
+
+<h2>8th of August, 2013</h2>
+
+<p>In 2012 I decided to master JavaScript. I started with Addy Osmani’s free <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">“Learning JavaScript Design Patterns”</a>, read <a href="http://shop.oreilly.com/product/9780596517748.do">“JavaScript: The Good Parts”</a> by Douglas Crockford, then went on with <a href="http://effectivejs.com">“Effective JavaScript”</a> by David Herman, learned about <a href="http://shop.oreilly.com/product/0636920025245.do">“Maintainable JavaScript”</a> from Nicholas Zakas and am currently half through <a href="http://jsninja.com/">“Secrets of the JavaScript Ninja”</a> by John Resig and Bear Bibeault. I also had a glimpse into <a href="http://eloquentjavascript.net/">“Eloquent JavaScript”</a> by Marijn Haverbeke and <a href="http://www.packtpub.com/object-oriented-javascript/book">“Object Oriented JavaScript”</a> by Stoyan Stefanov. Each one of these books is a fantastic resource and helped me enormously to enhance my JavaScript knowledge. I already have another book on my reading list: <a href="http://tddjs.com/">“Test-Driven JavaScript Development”</a> by Christian Johansen.</p>
 
 <p>While learning to avoid the quirks of JavaScript I started to value its good parts and then felt in love with the expressiveness of the language. Having written some web applications without and with frameworks like <a href="http://angularjs.org">Angular.js</a>, I got aware of the boilerplate code one has to write though. Class inheritance is pretty painful without a library and some things like type or existence checking isn’t fun.</p>
 
@@ -52,7 +45,7 @@
 
 <p>Until the standard has been implemented in most browsers we can use <em>compile-to-javascript</em> languages like <a href="http://coffeescript.org/">CoffeeScript</a>, which allow us to use some of the ES6 features today. I’ve looked into CoffeeScript before, but I never felt that I was ready for it. I had to learn JavaScript first. This week I stumbled again on CoffeeScript when <a href="http://aseemk.com/talks/intro-to-coffeescript">these slides</a> by Aseem Kishore made the round on twitter. CoffeeScript itself influenced the new standard and provides some syntactical improvements. I have been playing around with it lately and really like to use arrow functions, class inheritance and splats today, but I think CoffeeScript is too lax when it comes to omitting braces and keywords. Maybe this is just because I’m not used to read it, but as I use CoffeeScript just in the interim until ES6 is useable I defined some conventions I want to share. These should make it easier to read and maintain the code especially for JS developers without a lot of CoffeeScript experience (myself included). On CoffeeScript’s website it says: <em>“The golden rule of CoffeeScript is: It’s just JavaScript.”</em> My conventions try to make CoffeeScript’s syntax more like JavaScript.</p>
 
-<h2>Code Conventions</h2>
+<h3>Code Conventions</h3>
 
 <h3>1. always wrap function parameters in parentheses</h3>
 
@@ -156,7 +149,7 @@
 
 <p>CoffeeScript allows me to write JavaScript with some of ES6’s features today and JavaScript’s syntax has parentheses. I still want to write JavaScript and when ES6 is out I’ll switch back. I also think that omitting everything CoffeeScript allows is more error-prone and not good for maintainability. Another factor is readability, which suffers from a too lax syntax. Brendan Eich proposed a <a href="http://brendaneich.com/2010/11/paren-free/">syntax for ES6</a> with less parentheses for conditions and loops, which combines the advantages of both styles in my opinion.</p>
 
-<p>If you want to write CoffeeScript, learn JavaScript first. For beginners I recommend <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">&#8220;Effective JavaScript&#8221;</a>. Afterwards read <a href="http://jsninja.com/">&#8220;Secrets of the JavaScript Ninja&#8221;</a> and the most important thing: write JavaScript—a lot. If you feel that you are ready to move on take a look at CoffeeScript’s documentation <strong>and</strong> at real world code. The example pseudo code is far away from the code you’ll write. Real CoffeeScript looks more like <a href="https://github.com/heelhook/chardin.js/blob/master/chardinjs.coffee">this</a>. If you have learned JavaScript properly the transition to CoffeeScript will be quick and easy.</p>
+<p>If you want to write CoffeeScript, learn JavaScript first. For beginners I recommend <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">“Effective JavaScript”</a>. Afterwards read <a href="http://jsninja.com/">“Secrets of the JavaScript Ninja”</a> and the most important thing: write JavaScript—a lot. If you feel that you are ready to move on take a look at CoffeeScript’s documentation <strong>and</strong> at real world code. The example pseudo code is far away from the code you’ll write. Real CoffeeScript looks more like <a href="https://github.com/heelhook/chardin.js/blob/master/chardinjs.coffee">this</a>. If you have learned JavaScript properly the transition to CoffeeScript will be quick and easy.</p>
 
 <p>I can not wait for the next version of JavaScript and CoffeeScript is a foretaste of what’s to come. ECMAScript.next has powerful features like modules, Proxies, Weakmaps etc. which will make JavaScript more beaufitul and powerful than ever before.</p>
 
@@ -168,29 +161,26 @@
 </ul>
 
 
+		
+<footer class="container article-footer">
+	<a href="https://twitter.com/intent/tweet?text=%22Maintainable CoffeeScript%22&url=http://maximilianhoffmann.com/article/maintainable-coffeescript&via=max_hoffmann" class="twitter article-tweet" target="_blank">share on twitter</a>
+	<a href="/#maintainable-coffeescript">&laquo; back to articles</a>
+</footer>
+
 	</article>
 
-	
-<div class="article-meta-container">
-	<div class="article-meta-footer">
-		<a href="https://twitter.com/intent/tweet?text=%22Maintainable CoffeeScript%22&url=http://maximilianhoffmann.com/article/maintainable-coffeescript&via=max_hoffmann" class="twitter" target="_blank">share on twitter</a>
-		<a href="/#maintainable-coffeescript" class="articles">&laquo; back to articles</a>
-	</div>
-</div>
 
-
-	<footer class="footer">
-		<div class="centered footer-content">
-			<p class="footer-about">I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
-			<p class="footer-social">I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
-			<a href="/" class="footer-copy">&copy; Maximilian Hoffmann</a>
-		</div>
+	<footer class="container footer">
+			<p>I am a front-end developer with a passion for design and typography. I study computer science and media at the Stuttgart Media University in Germany.</p>
+			<p>I also <a href="http://twitter.maximilianhoffmann.com" class="twitter">tweet</a> about web development, share code on <a href="http://github.maximilianhoffmann.com/" class="github">github</a> and follow great designers on <a href="http://dribbble.maximilianhoffmann.com/" class="dribbble">dribbble</a>. For hiring or general information you can contact me via <a href="mailto:hello@maximilianhoffmann.com" class="email">email</a>.</p>
+			<a href="/" class="copy">&copy; Maximilian Hoffmann</a>
 	</footer>
 
 	<script>
 	/* GOOGLE ANALYTICS */var _gaq=[['_setAccount','UA-31494226-1'],['_setDomainName', 'maximilianhoffmann.com'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
 	/* PRISMJS */(function(d,t){var s=d.createElement(t);s.src="/js/ext/prism.min.js";d.body.appendChild(s);}(document,'script'));
-	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)</script>
+	/* TWITTER */(function(w,d){if('forEach' in []){var t=screen.height/2-210,l=screen.width/2-275;[].slice.call(d.querySelectorAll('[href^="https://twitter.com/intent"]')).forEach(function(i){i.onclick=function(e){e.preventDefault();w.open(this.href,"Share on twitter","width=550,height=420,top="+t+",left="+l);}})}})(window,document)
+	</script>
 
 </body>
 </html>
