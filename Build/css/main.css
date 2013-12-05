@@ -341,7 +341,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.container, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article p, .article ul, .article ol {
+.container, #disqus_thread, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article p, .article ul, .article ol {
   width: 88%;
   margin-left: auto;
   margin-right: auto;
@@ -393,6 +393,10 @@ h2 {
 
 p {
   margin-top: 0; }
+
+#disqus_thread {
+  margin-top: 72px;
+  margin-top: 4rem; }
 
 .name {
   display: block;
